@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
+}
+
+model Question {
+  id           Int    @id @default(autoincrement())
+  text         String
+  //  questionType 
+  // (( maybe i need to build models for each question type and put here a list of them as the type of this field?))
+  lesson       Lesson @relation(fields: [lessonId], references: [id])
+  lessonId     Int
+  lastEditDate String
+}
+
+model Lesson {
+  id           Int        @id @default(autoincrement())
+  name         String
+  Questions    Question[]
+  Topic        Topic      @relation(fields: [topicId], references: [id])
+  topicId      Int
+  lastEditDate String
+}
+
+model Topic {
+  id           Int      @id @default(autoincrement())
+  name         String
+  Lessons      Lesson[]
+  lastEditDate String
+}
