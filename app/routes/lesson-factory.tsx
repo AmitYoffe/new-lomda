@@ -13,6 +13,7 @@ import { theme } from "~/components/theme";
 import { getLessons } from "~/utils/lesson.server";
 import { getQuestions } from "~/utils/question.server";
 import { getTopics } from "~/utils/topic.server";
+import { SideBar } from "~/components/SideBar";
 
 type LoaderType = {
   topics: Array<Topic>;
@@ -164,6 +165,7 @@ function BuildLesson() {
 
   return (
     <ThemeProvider theme={theme}>
+      <SideBar selectedTab={null} />
       <Container
         sx={{
           display: 'flex',
@@ -194,15 +196,12 @@ function BuildLesson() {
           }}
         >
           <Box>
-            {/* <SideBar selectedTab={"מפעל השיעורים"} />
-          <BottomBar selectedTab={"מפעל השיעורים"} /> */}
           </Box>
           <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <Box sx={{
               position: 'fixed',
               top: 3,
-              right: 60,
-              paddingRight: 10,
+              left: 260,
             }}>
               <BreadCrumbsComponent
                 onBreadcrumbClick={handleBreadCrumbClick}

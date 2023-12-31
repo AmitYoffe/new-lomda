@@ -6,7 +6,7 @@ export default function Index() {
 
   return (
     <>
-      {/* Right section */}
+      {/* <Particles /> */}
       <Box sx={{
         gap: 1,
       }}>
