@@ -65,6 +65,7 @@ export const theme = createTheme({
                     '& ::-webkit-scrollbar-thumb:hover': {
                         backgroundColor: '#a8bbbf'
                     },
+                    width: '100%', height: '100%'
                 }
             }
         }

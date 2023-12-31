@@ -24,7 +24,7 @@ export async function loader({ request }: LoaderArgs): Promise<LoaderType> {
   const topics = await getTopics();
   const lessons = await getLessons();
   const questions = await getQuestions();
-  // i need to restructure the component so that i can pass these getTopics/lessons/questions dynamicallyl through this file maybe
+  // i need to restructure the component so that i can pass these getTopics/lessons/questions dynamically through this file maybe
   return { topics, lessons, questions }
 }
 
@@ -167,7 +167,9 @@ function BuildLesson() {
       <Container
         sx={{
           display: 'flex',
-          width: '100%',
+          width: '100vm',
+          hegith: '100vh',
+          overflow: "hidden",
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
@@ -211,7 +213,7 @@ function BuildLesson() {
               <Box sx={{ width: "100%", overflow: "hidden", alignItems: 'center' }}>
                 {/* rendering of components */}
                 {selectedComponent === "TopicList" && (
-                  <TopicList onButtonClick={(componentName: string) => handleComponentChange(componentName)} />
+                  <TopicList onButtonClick={(componentName: string) => handleComponentChange(componentName)} dataRow={topics} />
                 )}
                 {selectedComponent === "NewTopic" && (
                   <NewTopic onButtonClick={(componentName: string) => handleComponentChange(componentName)} />
@@ -233,3 +235,62 @@ function BuildLesson() {
 };
 
 export default BuildLesson;
+
+
+// export async function action({ request }: ActionArgs) {
+//   const formData = await request.formData();
+//   // const userId = 1;
+//   const { _action, ...rest } = Object.fromEntries(formData)
+
+//   switch (_action) {
+//     case 'appClicked': {
+//       const { appId } = rest
+//       // TODO: get real user
+//       const userId = await getUser();
+//       await updateAppClick(Number(appId), userId)
+//       break;
+//     }
+//     case 'dashboardClicked': {
+//       const { dashboardId } = rest
+//       // TODO: get real user
+//       const userId = await getUser();
+//       await updateDashboardClick(Number(dashboardId), userId)
+//       break;
+//     }
+//     case 'createContact': {
+//       const body = rest as never as Contact;
+//       const { formData, errors } = await validationAction<createContactInput>({
+//         body,
+//         schema: createContactSchema,
+//       });
+
+//       if (errors) {
+//         return json({ errors }, { status: 400 });
+//       }
+//       // TODO: get real user
+//       const userId = 1
+//       await createContact(formData as Contact, userId)
+//       break;
+//     }
+//     case 'updateContact': {
+//       const body = rest as never as Contact;
+//       const { formData, errors } = await validationAction<updateContactInput>({
+//         body,
+//         schema: updateContactSchema,
+//       });
+
+//       if (errors) {
+//         return json({ errors }, { status: 400 });
+//       }
+
+//       const { id, ...updatedContact } = formData
+//       // TODO: get real user
+//       const userId = 1
+//       await updateContact(id, updatedContact as Contact, userId)
+//       break;
+//     }
+//     default:
+//       break;
+//   }
+//   return null;
+// }
