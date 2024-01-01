@@ -1,6 +1,7 @@
 import CreateNewFolderOutlinedIcon from '@mui/icons-material/CreateNewFolderOutlined';
-import { Box, Button, Grow } from '@mui/material';
+import { Box, Button, Grow, InputAdornment, TextField, Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
+import SearchIcon from '@mui/icons-material/Search';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -8,10 +9,14 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+import { Lesson, Question, Topic } from '@prisma/client';
 import * as React from 'react';
 
-interface LessonListProps {
-  onButtonClick: (componentName: string) => void;
+interface ILessonListProps {
+  onButtonClick: (componentName: string, selectedTopic?: Topic) => void;
+  dataRow: Lesson[];
+  dataRowChildren: Question[];
+  selectedTopic: Topic | null;
 }
 
 interface Column {
@@ -46,41 +51,12 @@ const columns: readonly Column[] = [
   }
 ];
 
-interface Data {
-  name: string;
-  questionAmount: number;
-  lastEditDate: string;
-}
-
-function createData(
-  name: string,
-  questionAmount: number,
-  lastEditDate: string,
-): Data {
-  const isoDate = new Date(lastEditDate).toISOString();
-  // Format the ISO date as dd/mm/yyyy
-  const formatDate = (date: Date) => {
-    const day = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const year = date.getFullYear();
-    return `${day}/${month}/${year}`;
-  };
-
-  return {
-    name, questionAmount, lastEditDate: formatDate(new Date(isoDate))
-  };
-}
-const rows = [
-  createData('מתקפת פרל הרבור', 2, '2021-12-22'),
-  createData('עלייתו של מוסליני', 23, '2022-11-02'),
-  createData('פסיכולוגיה של היטלר', 35, '2021-09-13'),
-  createData('הפרכת שמועות', 0, '2021-02-22'),
-  createData('האיסלאם במלחמות העולם', 145, '1992-04-03'),
-];
-
-export default function LessonList({ onButtonClick }: LessonListProps) {
+export default function LessonList({ onButtonClick, dataRow, dataRowChildren, selectedTopic }: ILessonListProps) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [searchInput, setSearchInput] = React.useState<string>('');
+
+  // console.log('selectedTopic in LessonList.tsx:', selectedTopic);
 
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
@@ -91,31 +67,85 @@ export default function LessonList({ onButtonClick }: LessonListProps) {
     setPage(0);
   };
 
+  function handleSearchInputChange(
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ): void {
+    setSearchInput(event.target.value);
+  }
+
   const handleLessonRowClick = () => {
     onButtonClick('QuestionList');
+    //should take you to the relevant question list
   }
 
   const handleButtonClick = () => {
     onButtonClick('NewLesson');
   };
 
+  const filteredRows = dataRow
+    .filter((lesson) => selectedTopic && lesson.topicId === selectedTopic.id)
+    .map((lesson) => {
+      const questionsInLesson = dataRowChildren.filter(
+        (question) => question.lessonId === lesson.id
+      );
+      return {
+        ...lesson,
+        questionAmount: questionsInLesson.length,
+      };
+    })
+    .filter((row) => row.name.toLowerCase().includes(searchInput.toLowerCase()));
+
   return (
-    <Box display="flex" justifyContent="center" flexDirection={'column'} alignItems={'center'} gap={1}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, height: '100%', }}>
+      <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 1, }}>
+        <Paper>
+          <TextField
+            sx={{
+              padding: "0.1em",
+              borderRadius: '3px',
+              "& input": {
+                width: '14ch',
+                transition: 'width 0.2s ease-in-out',
+                '&:focus': {
+                  width: '20ch',
+                },
+              },
+            }}
+            size="small"
+            value={searchInput}
+            onChange={handleSearchInputChange}
+            placeholder="חפש"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon />
+                </InputAdornment>
+              ),
+            }}
+          />
+        </Paper>
+        <Paper>
+          <Button variant="outlined" color="warning" onClick={handleButtonClick} >
+            <CreateNewFolderOutlinedIcon /> ליצירת נושא חדש
+          </Button>
+        </Paper>
+      </Box>
       <Paper elevation={8} sx={{ width: '100%', overflow: 'hidden' }}>
-        <TableContainer sx={{
-          maxHeight: 440,
-          "&::-webkit-scrollbar": {
-            width: "6px",
-          },
-          "&::-webkit-scrollbar-thumb": {
-            background: "#b5ac9a",
-            borderRadius: "10px",
-          },
-          "&::-webkit-scrollbar-thumb:hover": {
-            background: "#b89e6a",
-          },
-          overflowX: 'hidden'
-        }}>
+        <TableContainer
+          sx={{
+            maxHeight: 440,
+            "&::-webkit-scrollbar": {
+              width: "6px",
+            },
+            "&::-webkit-scrollbar-thumb": {
+              background: "#b5ac9a",
+              borderRadius: "10px",
+            },
+            "&::-webkit-scrollbar-thumb:hover": {
+              background: "#b89e6a",
+            },
+            overflowX: 'hidden'
+          }}>
           <Table stickyHeader aria-label="sticky table">
             <TableHead >
               <TableRow>
@@ -123,7 +153,7 @@ export default function LessonList({ onButtonClick }: LessonListProps) {
                   <TableCell
                     key={column.id}
                     align={column.align}
-                    style={{ minWidth: column.minWidth, backgroundColor: '#E6B791' }}
+                    style={{ minWidth: column.minWidth, backgroundColor: 'rgba(248, 206, 172)' }}
                   >
                     {column.label}
                   </TableCell>
@@ -131,14 +161,29 @@ export default function LessonList({ onButtonClick }: LessonListProps) {
               </TableRow>
             </TableHead>
             <TableBody>
-              {rows
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row, index) => {
-                  return (
+              {filteredRows.length === 0 ? (
+                <TableRow>
+                  <TableCell colSpan={columns.length}>
+                    <Box sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      textAlign: 'center',
+                    }}>
+                      <Typography variant="h6">
+                        לא נמצאו נושאים מתאימים לערך החיפוש
+                      </Typography>
+                    </Box>
+                  </TableCell>
+                </TableRow>
+              ) : (
+                filteredRows
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map((row, index) => (
                     <Grow key={row.name} timeout={(index + 1) * 100} in={true} style={{ transformOrigin: '0 0 0' }}>
                       <TableRow hover role="checkbox" tabIndex={-1} onClick={handleLessonRowClick}>
                         {columns.map((column) => {
-                          const value = row[column.id];
+                          const value = row[column.id as keyof typeof row];
                           return (
                             <TableCell key={column.id} align={column.align}>
                               {column.format && typeof value === 'number'
@@ -149,26 +194,20 @@ export default function LessonList({ onButtonClick }: LessonListProps) {
                         })}
                       </TableRow>
                     </Grow>
-                  );
-                })}
+                  )))}
             </TableBody>
           </Table>
         </TableContainer>
         <TablePagination
           rowsPerPageOptions={[10, 25, 100]}
           component="div"
-          count={rows.length}
+          count={dataRow.length}
           rowsPerPage={rowsPerPage}
           page={page}
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </Paper>
-      <Paper>
-        <Button variant="outlined" color="warning" onClick={handleButtonClick}>
-          <CreateNewFolderOutlinedIcon /> ליצירת שיעור חדש
-        </Button>
-      </Paper>
-    </Box>
+    </Box >
   );
 }

@@ -10,10 +10,12 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import * as React from 'react';
 import { Topic } from '@prisma/client';
+import { Lesson } from '@prisma/client';
 
 interface ITopicListProps {
-  onButtonClick: (componentName: string) => void;
+  onButtonClick: (componentName: string, selectedTopic?: Topic) => void;
   dataRow: Topic[];
+  dataRowChildren: Lesson[];
 }
 
 interface Column {
@@ -48,7 +50,7 @@ const columns: readonly Column[] = [
   },
 ];
 
-export default function TopicList({ onButtonClick, dataRow }: ITopicListProps) {
+export default function TopicList({ onButtonClick, dataRow, dataRowChildren }: ITopicListProps) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [searchInput, setSearchInput] = React.useState<string>('');
@@ -68,15 +70,22 @@ export default function TopicList({ onButtonClick, dataRow }: ITopicListProps) {
     setSearchInput(event.target.value);
   }
 
-  const handleTopicRowClick = () => {
-    onButtonClick('LessonList');
+  const handleTopicRowClick = (selectedTopic: Topic) => {
+    onButtonClick('LessonList', selectedTopic);
+    // console.log('selectedTopic in TopicList.tsx:', selectedTopic);
   };
 
   const handleButtonClick = () => {
     onButtonClick('NewTopic');
   };
 
-  const filteredRows = dataRow.filter((row) =>
+  const filteredRows = dataRow.map((topic) => {
+    const lessonsInTopic = dataRowChildren.filter((lesson) => lesson.topicId === topic.id);
+    return {
+      ...topic,
+      lessonAmount: lessonsInTopic.length,
+    };
+  }).filter((row) =>
     row.name.toLowerCase().includes(searchInput.toLowerCase())
   );
 
@@ -166,7 +175,7 @@ export default function TopicList({ onButtonClick, dataRow }: ITopicListProps) {
                   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                   .map((row, index) => (
                     <Grow key={row.name} timeout={(index + 1) * 100} in={true} style={{ transformOrigin: '0 0 0' }}>
-                      <TableRow hover role="checkbox" tabIndex={-1} onClick={handleTopicRowClick}>
+                      <TableRow hover role="checkbox" tabIndex={-1} onClick={() => handleTopicRowClick(row)}>
                         {columns.map((column) => {
                           const value = row[column.id as keyof typeof row];
                           return (
@@ -179,7 +188,8 @@ export default function TopicList({ onButtonClick, dataRow }: ITopicListProps) {
                         })}
                       </TableRow>
                     </Grow>
-                  )))}
+                  ))
+              )}
             </TableBody>
           </Table>
         </TableContainer>

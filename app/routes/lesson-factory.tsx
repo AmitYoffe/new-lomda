@@ -1,4 +1,4 @@
-import { Box, Container, Link, ThemeProvider } from "@mui/material";
+import { Box, Link, ThemeProvider } from "@mui/material";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import React, { useState } from "react";
 import NewLesson from '~/LessonComponents/HierarchyCreation/NewLesson';
@@ -25,7 +25,6 @@ export async function loader({ request }: LoaderArgs): Promise<LoaderType> {
   const topics = await getTopics();
   const lessons = await getLessons();
   const questions = await getQuestions();
-  // i need to restructure the component so that i can pass these getTopics/lessons/questions dynamically through this file maybe
   return { topics, lessons, questions }
 }
 
@@ -154,9 +153,18 @@ const BreadCrumbsComponent: React.FC<BreadCrumbsProps> = ({
 function BuildLesson() {
   const { topics, lessons, questions } = useLoaderData<LoaderType>()
   const [selectedComponent, setSelectedComponent] = useState("TopicList");
+  const [lessonsByTopicID, setLessonsByTopicID] = useState<Topic | null>(null);
 
-  const handleComponentChange = (componentName: string) => {
+  console.log('Lessons by Topic ID:', lessonsByTopicID);
+
+  const handleComponentChange = (componentName: string, selectedTopic?: Topic) => {
+
+    console.log('Selected Topic:', selectedTopic);
+
     setSelectedComponent(componentName);
+    if (selectedTopic !== undefined) {
+      setLessonsByTopicID(selectedTopic);
+    }
   };
 
   const handleBreadCrumbClick = (componentName: string) => {
@@ -196,15 +204,23 @@ function BuildLesson() {
             />
           </Box>
           <Box sx={{ width: "100%", overflow: "hidden", alignItems: 'center', height: '100%' }}>
-            {/* rendering of components */}
             {selectedComponent === "TopicList" && (
-              <TopicList onButtonClick={(componentName: string) => handleComponentChange(componentName)} dataRow={topics} />
+              <TopicList
+                onButtonClick={(componentName: string) => handleComponentChange(componentName)}
+                dataRow={topics}
+                dataRowChildren={lessons}
+              />
             )}
             {selectedComponent === "NewTopic" && (
               <NewTopic onButtonClick={(componentName: string) => handleComponentChange(componentName)} />
             )}
             {selectedComponent === "LessonList" && (
-              <LessonList onButtonClick={(componentName: string) => handleComponentChange(componentName)} />
+              <LessonList
+                onButtonClick={(componentName: string) => handleComponentChange(componentName)}
+                dataRow={lessons}
+                dataRowChildren={questions}
+                selectedTopic={lessonsByTopicID}
+              />
             )}
             {selectedComponent === "NewLesson" && (
               <NewLesson onButtonClick={(componentName: string) => handleComponentChange(componentName)} />
