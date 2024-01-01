@@ -16,7 +16,7 @@ interface ILessonListProps {
   onButtonClick: (componentName: string, selectedTopic?: Topic) => void;
   dataRow: Lesson[];
   dataRowChildren: Question[];
-  selectedTopic: Topic | null;
+  selectedTopic?: Topic | null;
 }
 
 interface Column {

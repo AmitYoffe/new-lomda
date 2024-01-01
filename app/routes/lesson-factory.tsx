@@ -150,21 +150,15 @@ const BreadCrumbsComponent: React.FC<BreadCrumbsProps> = ({
   );
 };
 
-function BuildLesson() {
+export default function BuildLesson() {
   const { topics, lessons, questions } = useLoaderData<LoaderType>()
   const [selectedComponent, setSelectedComponent] = useState("TopicList");
-  const [lessonsByTopicID, setLessonsByTopicID] = useState<Topic | null>(null);
-
-  console.log('Lessons by Topic ID:', lessonsByTopicID);
+  const [selectedTopic, setSelectedTopic] = useState<Topic | undefined>(undefined);
 
   const handleComponentChange = (componentName: string, selectedTopic?: Topic) => {
-
     console.log('Selected Topic:', selectedTopic);
-
+    setSelectedTopic(selectedTopic)
     setSelectedComponent(componentName);
-    if (selectedTopic !== undefined) {
-      setLessonsByTopicID(selectedTopic);
-    }
   };
 
   const handleBreadCrumbClick = (componentName: string) => {
@@ -219,7 +213,7 @@ function BuildLesson() {
                 onButtonClick={(componentName: string) => handleComponentChange(componentName)}
                 dataRow={lessons}
                 dataRowChildren={questions}
-                selectedTopic={lessonsByTopicID}
+                selectedTopic={selectedTopic}
               />
             )}
             {selectedComponent === "NewLesson" && (
@@ -232,8 +226,6 @@ function BuildLesson() {
     </ThemeProvider>
   );
 };
-
-export default BuildLesson;
 
 // export async function action({ request }: ActionArgs) {
 //   const formData = await request.formData();

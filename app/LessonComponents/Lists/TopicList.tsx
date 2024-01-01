@@ -72,7 +72,7 @@ export default function TopicList({ onButtonClick, dataRow, dataRowChildren }: I
 
   const handleTopicRowClick = (selectedTopic: Topic) => {
     onButtonClick('LessonList', selectedTopic);
-    // console.log('selectedTopic in TopicList.tsx:', selectedTopic);
+    console.log('selectedTopic in TopicList.tsx:', selectedTopic);
   };
 
   const handleButtonClick = () => {
@@ -176,6 +176,7 @@ export default function TopicList({ onButtonClick, dataRow, dataRowChildren }: I
                   .map((row, index) => (
                     <Grow key={row.name} timeout={(index + 1) * 100} in={true} style={{ transformOrigin: '0 0 0' }}>
                       <TableRow hover role="checkbox" tabIndex={-1} onClick={() => handleTopicRowClick(row)}>
+                        {/* can it recognize 'row' as topic? */}
                         {columns.map((column) => {
                           const value = row[column.id as keyof typeof row];
                           return (
