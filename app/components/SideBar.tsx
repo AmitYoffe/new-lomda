@@ -1,7 +1,7 @@
 import type { ComponentProps } from "react";
 import { useState } from "react";
-// import type { Tab } from "./BottomBar";
-import { Box, Button, Link, Switch, Typography } from "@mui/material";
+import { Box, Button, Link, Paper, Switch, Typography } from "@mui/material";
+import { ThemeProvider } from "@emotion/react";
 
 type SideBarItems = {
   name: Tab;
@@ -152,11 +152,14 @@ export const SideBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
 
   return (
     <>
+      {/* <ThemeProvider theme={undefined} children={undefined}> */}
       <Box sx={{
         right: 0,
         top: 0,
-        width: '250px',
+        width: '230px',
+        height: '100%',
         backgroundColor: '#f0dfbf',
+        zIndex: 2,
       }}>
         <Box sx={{
           display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingTop: 1,
@@ -177,19 +180,19 @@ export const SideBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
               <Link
                 href={item.href}
                 sx={{
-                  display: 'flex', flexDirection: 'row',
-                  paddingTop: '0.25rem',
-                  paddingBottom: '0.25rem',
-                  gap: '0.75rem',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  paddingY: '0.25rem',
+                  gap: '1rem',
                   alignItems: 'center',
+                  border: '2px solid #e5e5e5',
                   borderRadius: '0.75rem',
-                  borderWidth: '2px',
                   fontSize: '0.875rem',
-                  lineHeight: '1.25rem',
+                  textDecoration: 'none',
+                  color: '#9CA3AF',
                   '&:hover': { backgroundColor: '#F3F4e6' },
                   ...(selectedTab === item.name
                     ? {
-                      color: '#9CA3AF',
                       borderColor: '#84d8ff',
                       background: '#ddf4ff',
                     }
@@ -197,7 +200,7 @@ export const SideBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
                 }}
               >
                 {item.icon}
-                <Typography >
+                <Typography>
                   {item.name}
                 </Typography>
               </Link>
@@ -205,8 +208,8 @@ export const SideBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
           ))}
           <Box
             sx={{
-              display: "flex", paddingTop: "0.25rem", paddingBottom: "0.25rem", paddingLeft: "0.5rem", paddingRight: "0.5rem", gap: "0.75rem", alignItems: "center",
-              borderRadius: "0.75rem", fontWeight: 700, color: "#9CA3AF", cursor: "default", "&:hover": { backgroundColor: "#F3F4e6" }
+              display: "flex", paddingY: "0.25rem", paddingX: "0.5rem", gap: "0.75rem", alignItems: "center",
+              borderRadius: "0.75rem", color: "#9CA3AF", cursor: "default", "&:hover": { backgroundColor: "#F3F4e6" }
             }}
             onMouseEnter={() => setMoreMenuShown(true)}
             onMouseLeave={() => setMoreMenuShown(false)}
@@ -215,17 +218,14 @@ export const SideBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
           >
             {/* More info tab */}
             <LeftBarMoreMenuSvg />
-            <Typography sx={{ fontSize: "0.875rem", lineHeight: "1.25rem", "@media (min-width: 1024px)": { display: "inline" } }}>לעוד</Typography>
-            <Box
+            <Typography sx={{ fontSize: "1rem", }}>לעוד</Typography>
+            <Paper
               sx={{
                 position: "absolute",
-                right: "full",
-                top: "-10px",
-                minWidth: "300px",
+                top: 250,
+                left: 220,
+                minWidth: '270px',
                 borderRadius: "2xl",
-                border: "2px solid gray.300",
-                backgroundColor: "white",
-                color: "gray.400",
                 display: moreMenuShown ? "block" : "none",
                 "&:hover": {
                   display: "block",
@@ -235,61 +235,58 @@ export const SideBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
               onMouseLeave={() => setMoreMenuShown(false)}
             >
               <Box sx={{
-                display: 'flex', flexDirection: "column", borderColor: "#D1D5DB", paddingTop: 1,
+                display: 'flex', flexDirection: "column", borderColor: "#D1D5DB",
               }}>
-                <Box sx={{
-                  display: 'flex', flexDirection: "column", borderColor: "#D1D5DB", paddingTop: 1,
-                }}>
-                  < Button
-                    sx={{ paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { "backgroundColor": "#F3F4F6" } }}
-                  // onClick={() => setLoginScreenState("SIGNUP")}
-                  >
-                    צור פרופיל
-                  </Button>
-                  <Link
-                    sx={{ paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { "backgroundColor": "#F3F4F6" } }}
-                  // href={loggedIn ? "/settings/account" : "/settings/sound"}
-                  >
-                    הגדרות
-                  </Link>
-                  <Button
-                    sx={{ paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { "backgroundColor": "#F3F4F6" } }}
-                  // onClick={() => setLoginScreenState("LOGIN")}
-                  >
-                    התחברות
-                  </Button>
-                  <Button
-                    sx={{ paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { "backgroundColor": "#F3F4F6" } }}
-                  // onClick={logOut}
-                  >
-                    התנתקות
-                  </Button>
-                  {/* added state for darkmode, now i need to apply it on different components */}
-                  <Box
-                    sx={{
-                      marginTop: "auto",
-                      paddingX: 5,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <Box sx={{ display: "flex", alignItems: "center" }}>
-                      <Typography sx={{ fontSize: "1rem", fontWeight: "normal" }}>מצב</Typography>
-                      {isDarkModeChecked ? (
-                        <Typography sx={{ color: "amber.800", marginRight: 2, fontWeight: "medium" }}>לילה</Typography>
-                      ) : (
-                        <Typography sx={{ color: "amber.400", marginRight: 2, fontWeight: "medium" }}>יום</Typography>
-                      )}
-                    </Box>
-                    <Switch defaultChecked={isDarkModeChecked} color="warning" onChange={handleChange} />
+                <Button
+                  sx={{ paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { "backgroundColor": "#2e1d02" } }}
+                // onClick={() => setLoginScreenState("SIGNUP")}
+                >
+                  צור פרופיל
+                </Button>
+                <Button
+                  sx={{ paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { "backgroundColor": "#2e1d02" } }}
+                // href={loggedIn ? "/settings/account" : "/settings/sound"}
+                >
+                  הגדרות
+                </Button>
+                <Button
+                  sx={{ paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { "backgroundColor": "#2e1d02" } }}
+                // onClick={() => setLoginScreenState("LOGIN")}
+                >
+                  התחברות
+                </Button>
+                <Button
+                  sx={{ paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { "backgroundColor": "#2e1d02" } }}
+                // onClick={logOut}
+                >
+                  התנתקות
+                </Button>
+                {/* added state for darkmode, now i need to apply it on different components */}
+                <Box
+                  sx={{
+                    marginTop: "auto",
+                    paddingX: 4,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Box sx={{ display: "flex", alignItems: "center" }}>
+                    <Typography sx={{ fontSize: "1rem", fontWeight: "normal" }}>מצב</Typography>
+                    {isDarkModeChecked ? (
+                      <Typography sx={{ color: '#784c06', marginRight: 2, fontWeight: "medium" }}>לילה</Typography>
+                    ) : (
+                      <Typography sx={{ color: '#ffb238', marginRight: 2, fontWeight: "medium" }}>יום</Typography>
+                    )}
                   </Box>
+                  <Switch defaultChecked={isDarkModeChecked} color="warning" onChange={handleChange} />
                 </Box>
               </Box>
-            </Box>
+            </Paper>
           </Box>
         </Box >
       </Box >
+      {/* </ThemeProvider> */}
     </>
   );
 };

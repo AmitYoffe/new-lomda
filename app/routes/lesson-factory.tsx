@@ -5,7 +5,6 @@ import NewLesson from '~/LessonComponents/HierarchyCreation/NewLesson';
 import NewTopic from "~/LessonComponents/HierarchyCreation/NewTopic";
 import LessonList from "~/LessonComponents/Lists/LessonList";
 import TopicList from "~/LessonComponents/Lists/TopicList";
-
 import type { Lesson, Question, Topic } from "@prisma/client";
 import { LoaderArgs } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
@@ -14,6 +13,7 @@ import { getLessons } from "~/utils/lesson.server";
 import { getQuestions } from "~/utils/question.server";
 import { getTopics } from "~/utils/topic.server";
 import { SideBar } from "~/components/SideBar";
+import Particles from "react-tsparticles";
 
 type LoaderType = {
   topics: Array<Topic>;
@@ -165,76 +165,59 @@ function BuildLesson() {
 
   return (
     <ThemeProvider theme={theme}>
-      <SideBar selectedTab={null} />
-      <Container
+      <Box
         sx={{
           display: 'flex',
-          width: '100vm',
-          hegith: '100vh',
-          overflow: "hidden",
-          flexDirection: 'column',
-          alignItems: 'center',
+          width: 'full',
           justifyContent: 'center',
+          alignItems: 'center',
           backgroundColor: '#235390',
-          color: 'white',
+          paddingX: 4,
+          paddingY: 16,
         }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            width: 'full',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: 3,
-            paddingX: 4,
-            paddingY: 16,
-            md: {
-              flexDirection: 'row',
-              gap: 36,
-            },
-          }}
-        >
-          <Box>
+        {/* <Particles /> */}
+        <Box sx={{
+          position: 'fixed', top: 0, left: 0, height: '100%'
+        }}>
+          <SideBar selectedTab={"מפעל השיעורים"} />
+        </Box>
+        <Box sx={{
+          display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '1920px',
+        }}>
+          <Box sx={{
+            position: 'fixed',
+            top: 3,
+            left: 238,
+          }}>
+            <BreadCrumbsComponent
+              onBreadcrumbClick={handleBreadCrumbClick}
+              selectedComponent={selectedComponent}
+            />
           </Box>
-          <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <Box sx={{
-              position: 'fixed',
-              top: 3,
-              left: 260,
-            }}>
-              <BreadCrumbsComponent
-                onBreadcrumbClick={handleBreadCrumbClick}
-                selectedComponent={selectedComponent}
-              />
-            </Box>
-            <Box>
-              <Box sx={{ width: "100%", overflow: "hidden", alignItems: 'center' }}>
-                {/* rendering of components */}
-                {selectedComponent === "TopicList" && (
-                  <TopicList onButtonClick={(componentName: string) => handleComponentChange(componentName)} dataRow={topics} />
-                )}
-                {selectedComponent === "NewTopic" && (
-                  <NewTopic onButtonClick={(componentName: string) => handleComponentChange(componentName)} />
-                )}
-                {selectedComponent === "LessonList" && (
-                  <LessonList onButtonClick={(componentName: string) => handleComponentChange(componentName)} />
-                )}
-                {selectedComponent === "NewLesson" && (
-                  <NewLesson onButtonClick={(componentName: string) => handleComponentChange(componentName)} />
-                )}
-                {/* Add more components as needed */}
-              </Box>
-            </Box>
+          <Box sx={{ width: "100%", overflow: "hidden", alignItems: 'center', height: '100%' }}>
+            {/* rendering of components */}
+            {selectedComponent === "TopicList" && (
+              <TopicList onButtonClick={(componentName: string) => handleComponentChange(componentName)} dataRow={topics} />
+            )}
+            {selectedComponent === "NewTopic" && (
+              <NewTopic onButtonClick={(componentName: string) => handleComponentChange(componentName)} />
+            )}
+            {selectedComponent === "LessonList" && (
+              <LessonList onButtonClick={(componentName: string) => handleComponentChange(componentName)} />
+            )}
+            {selectedComponent === "NewLesson" && (
+              <NewLesson onButtonClick={(componentName: string) => handleComponentChange(componentName)} />
+            )}
+            {/* Add more components as needed */}
           </Box>
         </Box>
-      </Container>
+      </Box>
     </ThemeProvider>
   );
 };
 
 export default BuildLesson;
-
 
 // export async function action({ request }: ActionArgs) {
 //   const formData = await request.formData();
