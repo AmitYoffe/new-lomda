@@ -126,7 +126,7 @@ export default function LessonList({ onButtonClick, dataRow, dataRowChildren, se
         </Paper>
         <Paper>
           <Button variant="outlined" color="warning" onClick={handleButtonClick} >
-            <CreateNewFolderOutlinedIcon /> ליצירת נושא חדש
+            <CreateNewFolderOutlinedIcon /> ליצירת שיעור חדש
           </Button>
         </Paper>
       </Box>
@@ -171,7 +171,7 @@ export default function LessonList({ onButtonClick, dataRow, dataRowChildren, se
                       textAlign: 'center',
                     }}>
                       <Typography variant="h6">
-                        לא נמצאו נושאים מתאימים לערך החיפוש
+                        לא נמצאו שיעורים מתאימים לערך החיפוש
                       </Typography>
                     </Box>
                   </TableCell>

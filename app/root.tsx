@@ -44,7 +44,9 @@ export default function App() {
         <CacheProvider value={cacheRtl}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
+            {/* <Layout> */}
             <Outlet />
+            {/* </Layout> */}
           </ThemeProvider>
           <ScrollRestoration />
           <Scripts />

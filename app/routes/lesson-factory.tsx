@@ -200,24 +200,24 @@ export default function BuildLesson() {
           <Box sx={{ width: "100%", overflow: "hidden", alignItems: 'center', height: '100%' }}>
             {selectedComponent === "TopicList" && (
               <TopicList
-                onButtonClick={(componentName: string) => handleComponentChange(componentName)}
+                onButtonClick={handleComponentChange}
                 dataRow={topics}
                 dataRowChildren={lessons}
               />
             )}
             {selectedComponent === "NewTopic" && (
-              <NewTopic onButtonClick={(componentName: string) => handleComponentChange(componentName)} />
+              <NewTopic onButtonClick={handleComponentChange} />
             )}
             {selectedComponent === "LessonList" && (
               <LessonList
-                onButtonClick={(componentName: string) => handleComponentChange(componentName)}
+                onButtonClick={handleComponentChange}
                 dataRow={lessons}
                 dataRowChildren={questions}
                 selectedTopic={selectedTopic}
               />
             )}
             {selectedComponent === "NewLesson" && (
-              <NewLesson onButtonClick={(componentName: string) => handleComponentChange(componentName)} />
+              <NewLesson onButtonClick={handleComponentChange} />
             )}
             {/* Add more components as needed */}
           </Box>
