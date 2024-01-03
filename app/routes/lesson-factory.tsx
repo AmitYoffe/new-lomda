@@ -1,19 +1,18 @@
 import { Box, Link, ThemeProvider } from "@mui/material";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
+import type { Lesson, Question, Topic } from "@prisma/client";
+import { LoaderArgs } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import React, { useState } from "react";
 import NewLesson from '~/LessonComponents/HierarchyCreation/NewLesson';
 import NewTopic from "~/LessonComponents/HierarchyCreation/NewTopic";
 import LessonList from "~/LessonComponents/Lists/LessonList";
 import TopicList from "~/LessonComponents/Lists/TopicList";
-import type { Lesson, Question, Topic } from "@prisma/client";
-import { LoaderArgs } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { SideBar } from "~/components/SideBar";
 import { theme } from "~/components/theme";
 import { getLessons } from "~/utils/lesson.server";
 import { getQuestions } from "~/utils/question.server";
 import { getTopics } from "~/utils/topic.server";
-import { SideBar } from "~/components/SideBar";
-import Particles from "react-tsparticles";
 
 type LoaderType = {
   topics: Array<Topic>;
@@ -178,7 +177,6 @@ export default function BuildLesson() {
           paddingY: 16,
         }}
       >
-        {/* <Particles /> */}
         <Box sx={{
           position: 'fixed', top: 0, left: 0, height: '100%'
         }}>

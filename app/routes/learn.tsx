@@ -33,7 +33,7 @@ import Box from '@mui/material/Box';
 // import { useBoundStore } from "~/hooks/useBoundStore";
 import type { Tile, TileType, Unit } from "~/utils/units";
 import { units } from "~/utils/units";
-import { Link } from "@mui/material";
+import { Button, Link, Typography } from "@mui/material";
 
 type TileStatus = "LOCKED" | "ACTIVE" | "COMPLETE";
 
@@ -103,39 +103,39 @@ const TileIcon = ({
   }
 };
 
-const tileLeftClassNames = [
-  "left-0",
-  "left-[-45px]",
-  "left-[-70px]",
-  "left-[-45px]",
-  "left-0",
-  "left-[45px]",
-  "left-[70px]",
-  "left-[45px]",
-] as const;
+// const tileLeftClassNames = [
+//   "left-0",
+//   "left-[-45px]",
+//   "left-[-70px]",
+//   "left-[-45px]",
+//   "left-0",
+//   "left-[45px]",
+//   "left-[70px]",
+//   "left-[45px]",
+// ] as const;
 
-type TileLeftClassName = (typeof tileLeftClassNames)[number];
+// type TileLeftClassName = (typeof tileLeftClassNames)[number];
 
-const getTileLeftClassName = ({
-  index,
-  unitNumber,
-  tilesLength,
-}: {
-  index: number;
-  unitNumber: number;
-  tilesLength: number;
-}): TileLeftClassName => {
-  if (index >= tilesLength - 1) {
-    return "left-0";
-  }
+// const getTileLeftClassName = ({
+//   index,
+//   unitNumber,
+//   tilesLength,
+// }: {
+//   index: number;
+//   unitNumber: number;
+//   tilesLength: number;
+// }): TileLeftClassName => {
+//   if (index >= tilesLength - 1) {
+//     return "left-0";
+//   }
 
-  const classNames =
-    unitNumber % 2 === 1
-      ? tileLeftClassNames
-      : [...tileLeftClassNames.slice(4), ...tileLeftClassNames.slice(0, 4)];
+//   const classNames =
+//     unitNumber % 2 === 1
+//       ? tileLeftClassNames
+//       : [...tileLeftClassNames.slice(4), ...tileLeftClassNames.slice(0, 4)];
 
-  return classNames[index % classNames.length] ?? "left-0";
-};
+//   return classNames[index % classNames.length] ?? "left-0";
+// };
 
 const tileTooltipLeftOffsets = [140, 95, 70, 95, 140, 185, 210, 185] as const;
 
@@ -300,6 +300,7 @@ const TileTooltip = ({
 const UnitSection = ({ unit }: { unit: Unit }): JSX.Element => {
   // const router = useRouter();
 
+  const [isHovered, setHovered] = useState(false);
   const [selectedTile, setSelectedTile] = useState<null | number>(null);
 
   useEffect(() => {
@@ -326,7 +327,14 @@ const UnitSection = ({ unit }: { unit: Unit }): JSX.Element => {
         backgroundColor={unit.backgroundColor}
         borderColor={unit.borderColor}
       />
-      <div className="relative mb-8 mt-[67px] flex max-w-2xl flex-col items-center gap-4">
+      <Box sx={{
+        display: 'flex',
+        position: 'relative',
+        flexDirection: 'column',
+        gap: '1rem',
+        alignItems: 'center',
+        maxWidth: '42rem',
+      }}>
         {unit.tiles.map((tile, i): JSX.Element => {
           const status = tileStatus(tile, lessonsCompleted);
           return (
@@ -340,24 +348,34 @@ const UnitSection = ({ unit }: { unit: Unit }): JSX.Element => {
                   case "fast-forward":
                     if (tile.type === "trophy" && status === "COMPLETE") {
                       return (
-                        <div className="relative">
+                        <Box className="relative">
                           <TileIcon tileType={tile.type} status={status} />
-                          <div className="absolute left-0 right-0 top-6 flex justify-center text-lg font-bold text-yellow-700">
+                          <Typography sx={{
+                            display: 'flex',
+                            position: 'absolute',
+                            right: 0,
+                            left: 0,
+                            top: '1.5rem',
+                            justifyContent: 'center',
+                            fontSize: '1.125rem',
+                            fontweight: 700,
+                            color: '#B45309',
+                          }}>
                             {unit.unitNumber}
-                          </div>
-                        </div>
+                          </Typography>
+                        </Box>
                       );
                     }
                     return (
-                      <div
-                        className={[
-                          "relative -mb-4 h-[93px] w-[98px]",
-                          getTileLeftClassName({
-                            index: i,
-                            unitNumber: unit.unitNumber,
-                            tilesLength: unit.tiles.length,
-                          }),
-                        ].join(" ")}
+                      <Button
+                      // className={[
+                      //   "relative -mb-4 h-[93px] w-[98px]",
+                      //   getTileLeftClassName({
+                      //     index: i,
+                      //     unitNumber: unit.unitNumber,
+                      //     tilesLength: unit.tiles.length,
+                      //   }),
+                      // ].join(" ")}
                       >
                         {tile.type === "fast-forward" && status === "LOCKED" ? (
                           <HoverLabel
@@ -371,15 +389,19 @@ const UnitSection = ({ unit }: { unit: Unit }): JSX.Element => {
                           lessonsCompleted={lessonsCompleted}
                           status={status}
                         />
-                        <button
-                          className={[
-                            "absolute m-3 rounded-full border-b-8 p-4",
-                            getTileColors({
-                              tileType: tile.type,
-                              status,
-                              defaultColors: `${unit.borderColor} ${unit.backgroundColor}`,
-                            }),
-                          ].join(" ")}
+                        <Box
+                          sx={{
+                            position: 'relative',
+                            padding: '1rem',
+                            margin: ' 0.75rem',
+                            borderRadius: '9999px',
+                            borderBottomWidth: '8px',
+                            "&:hover": {
+                              "& > .tooltip": {
+                                opacity: 1,
+                              },
+                            },
+                          }}
                         // onClick={() => {
                         //   if (
                         //     tile.type === "fast-forward" &&
@@ -394,9 +416,22 @@ const UnitSection = ({ unit }: { unit: Unit }): JSX.Element => {
                         // }}
                         >
                           <TileIcon tileType={tile.type} status={status} />
-                          <span className="sr-only">Show lesson</span>
-                        </button>
-                      </div>
+                          <Typography
+                            className="tooltip"
+                            sx={{
+                              position: 'absolute',
+                              top: '100%',
+                              left: 0,
+                              opacity: isHovered ? 1 : 0,
+                              transition: 'opacity 0.3s ease-in-out',
+                            }}
+                            onMouseEnter={() => setHovered(true)}
+                            onMouseLeave={() => setHovered(false)}
+                          >
+                            הצג שיעור
+                          </Typography>
+                        </Box>
+                      </Button>
                     );
                 }
               })()}
@@ -425,34 +460,33 @@ const UnitSection = ({ unit }: { unit: Unit }): JSX.Element => {
             </Fragment>
           );
         })}
-      </div>
+      </Box >
     </>
   );
 };
 
-const getTopBarColors = (
-  scrollY: number
-): {
-  backgroundColor: `bg-${string}`;
-  borderColor: `border-${string}`;
-} => {
-  const defaultColors = {
-    backgroundColor: "bg-[#58cc02]",
-    borderColor: "border-[#46a302]",
-  } as const;
+// const getTopBarColors = (
+//   scrollY: number
+// ): {
+//   backgroundColor: `bg-${string}`;
+//   borderColor: `border-${string}`;
+// } => {
+//   const defaultColors = {
+//     backgroundColor: "bg-[#58cc02]",
+//     borderColor: "border-[#46a302]",
+//   } as const;
 
-  if (scrollY < 680) {
-    return defaultColors;
-  } else if (scrollY < 1830) {
-    return units[1] ?? defaultColors;
-  } else {
-    return units[2] ?? defaultColors;
-  }
-};
+//   if (scrollY < 680) {
+//     return defaultColors;
+//   } else if (scrollY < 1830) {
+//     return units[1] ?? defaultColors;
+//   } else {
+//     return units[2] ?? defaultColors;
+//   }
+// };
 
 export default function Learn() {
   // const { loginScreenState, setLoginScreenState } = useLoginScreen();
-
   const [scrollY, setScrollY] = useState(0);
   useEffect(() => {
     const updateScrollY = () => setScrollY(globalThis.scrollY ?? scrollY);
@@ -461,42 +495,63 @@ export default function Learn() {
     return () => document.removeEventListener("scroll", updateScrollY);
   }, [scrollY]);
 
-  const topBarColors = getTopBarColors(scrollY);
+  // const topBarColors = getTopBarColors(scrollY);
 
   return (
     <Box sx={{ overflowX: 'hidden' }}>
-      {/* <TopBar
-        backgroundColor={topBarColors.backgroundColor}
-        borderColor={topBarColors.borderColor}
-      /> */}
-      <SideBar selectedTab="למידה" />
-      <div className="flex justify-end gap-3 pt-14 sm:p-6 sm:pt-10 md:mr-24 lg:mr-64 lg:gap-12" style={{ overflowY: 'hidden' }}>
-        <div className="flex max-w-3xl grow flex-col">
+      <Box sx={{
+        position: 'fixed', top: 0, left: 0, height: '100%'
+      }}>
+        <SideBar selectedTab={"מפעל השיעורים"} />
+      </Box>
+      <Box sx={{
+        display: 'flex', flexDirection: 'row', justifyContent: 'center', marginRight: '6rem', backgroundColor: '#d0a34c'
+      }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: '1', maxWidth: '48rem', }}>
           {units.map((unit) => (
             <UnitSection unit={unit} key={unit.unitNumber} />
           ))}
-          <div className="sticky bottom-28 left-0 right-0 flex items-end justify-between" >
+          <Box sx={{
+            display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end',
+            position: 'sticky', right: 0, left: 0, bottom: '7rem',
+          }} >
             <Link
               href="/lesson?practice"
-              className="absolute left-4 flex h-16 w-16 items-center justify-center rounded-full border-2 border-b-4 border-gray-200 bg-white transition hover:bg-gray-50 hover:brightness-90 md:left-0"
+              sx={{
+                display: 'flex', position: 'absolute', right: '1rem', justifyContent: 'center',
+                alignItems: 'center', borderRadius: '9999px', borderWidth: '2px', borderBottomWidth: '4px',
+                borderColor: '#E5E7EB', width: '4rem', height: '4rem', backgroundColor: '#ffffff',
+              }}
             >
-              <span className="sr-only">חזרות תירגול</span>
-              <PracticeExerciseSvg className="h-8 w-8" />
+              <Typography>חזרות תירגול</Typography>
+              <PracticeExerciseSvg style={{ width: '2rem', height: '2rem' }} />
             </Link>
             {scrollY > 100 && (
-              <button
-                className="absolute right-4 flex h-14 w-14 items-center justify-center self-end rounded-2xl border-2 border-b-4 border-gray-200 bg-white transition hover:bg-gray-50 hover:brightness-90 md:right-0"
+              <Button
+                sx={{
+                  display: 'flex',
+                  position: 'absolute',
+                  right: '1rem',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  alignDelf: 'flex-end',
+                  borderRadius: '1rem',
+                  borderWidth: '2px',
+                  borderBottomWidth: '4px',
+                  borderColor: '#E5E7EB',
+                  width: '3.5rem',
+                  height: '3.5rem',
+                  backgroundColor: '#ffffff',
+                }}
                 onClick={() => scrollTo(0, 0)}
               >
-                <span className="sr-only">חזרה להתחלה</span>
+                <Typography>חזרה להתחלה</Typography>
                 <UpArrowSvg />
-              </button>
+              </Button>
             )}
-          </div>
-        </div>
-        <SideBar selectedTab={'למידה'} />
-      </div>
-      <div className="pt-[90px]"></div>
+          </Box>
+        </Box>
+      </Box>
       {/* <LoginScreen
         loginScreenState={loginScreenState}
         setLoginScreenState={setLoginScreenState}
