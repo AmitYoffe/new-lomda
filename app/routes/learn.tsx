@@ -502,7 +502,7 @@ export default function Learn() {
       <Box sx={{
         position: 'fixed', top: 0, left: 0, height: '100%'
       }}>
-        <SideBar selectedTab={"מפעל השיעורים"} />
+        <SideBar selectedTab={"למידה"} />
       </Box>
       <Box sx={{
         display: 'flex', flexDirection: 'row', justifyContent: 'center', marginRight: '6rem', backgroundColor: '#d0a34c'
