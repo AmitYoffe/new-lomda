@@ -1,7 +1,7 @@
-import { Box, Link, ThemeProvider } from "@mui/material";
+import { Box, Link } from "@mui/material";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import type { Lesson, Question, Topic } from "@prisma/client";
-import { LoaderArgs } from "@remix-run/node";
+import type { LoaderArgs } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import React, { useState } from "react";
 import NewLesson from '~/LessonComponents/HierarchyCreation/NewLesson';
@@ -9,7 +9,6 @@ import NewTopic from "~/LessonComponents/HierarchyCreation/NewTopic";
 import LessonList from "~/LessonComponents/Lists/LessonList";
 import TopicList from "~/LessonComponents/Lists/TopicList";
 import { SideBar } from "~/components/SideBar";
-import { theme } from "~/components/theme";
 import { getLessons } from "~/utils/lesson.server";
 import { getQuestions } from "~/utils/question.server";
 import { getTopics } from "~/utils/topic.server";
@@ -58,26 +57,26 @@ const breadcrumbHierarchy: Breadcrumb[] = [
   },
 ];
 
-const getParent = (breadcrumbs: Breadcrumb[], componentName: string): Breadcrumb | undefined => {
-  for (const breadcrumb of breadcrumbs) {
-    if (breadcrumb.children) {
-      const child = breadcrumb.children.find(
-        (childBreadcrumb) => childBreadcrumb.componentName === componentName
-      );
+// const getParent = (breadcrumbs: Breadcrumb[], componentName: string): Breadcrumb | undefined => {
+//   for (const breadcrumb of breadcrumbs) {
+//     if (breadcrumb.children) {
+//       const child = breadcrumb.children.find(
+//         (childBreadcrumb) => childBreadcrumb.componentName === componentName
+//       );
 
-      if (child) {
-        return breadcrumb;
-      } else {
-        const parent = getParent(breadcrumb.children, componentName);
-        if (parent) {
-          return parent;
-        }
-      }
-    }
-  }
+//       if (child) {
+//         return breadcrumb;
+//       } else {
+//         const parent = getParent(breadcrumb.children, componentName);
+//         if (parent) {
+//           return parent;
+//         }
+//       }
+//     }
+//   }
 
-  return undefined;
-};
+//   return undefined;
+// };
 
 // Populate parent property dynamically
 const populateParentProperty = (breadcrumbs: Breadcrumb[]) => {
@@ -165,7 +164,6 @@ export default function BuildLesson() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
       <Box
         sx={{
           display: 'flex',
@@ -221,9 +219,9 @@ export default function BuildLesson() {
           </Box>
         </Box>
       </Box>
-    </ThemeProvider>
+    // </ThemeProvider>
   );
-};
+}
 
 // export async function action({ request }: ActionArgs) {
 //   const formData = await request.formData();

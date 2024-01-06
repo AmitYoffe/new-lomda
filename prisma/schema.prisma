@@ -11,22 +11,27 @@ datasource db {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String?
 }
 
 model Question {
-  id           Int    @id @default(autoincrement())
-  text         String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  id        Int      @id @default(autoincrement())
+  text      String
   //  questionType 
   // (( maybe i need to build models for each question type and put here a list of them as the type of this field?))
-  lesson       Lesson @relation(fields: [lessonId], references: [id])
-  lessonId     Int
-  lastEditDate String
+  lesson    Lesson   @relation(fields: [lessonId], references: [id])
+  lessonId  Int
 }
 
 model Lesson {
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
   id           Int        @id @default(autoincrement())
   name         String
   Questions    Question[]
@@ -36,8 +41,11 @@ model Lesson {
 }
 
 model Topic {
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
   id           Int      @id @default(autoincrement())
   name         String
   Lessons      Lesson[]
+  // delete in the past
   lastEditDate String
 }

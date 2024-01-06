@@ -1,7 +1,7 @@
 import type { ComponentProps } from "react";
 import { useState } from "react";
 import { Box, Button, Link, Paper, Switch, Typography } from "@mui/material";
-import { ThemeProvider } from "@emotion/react";
+import orevIconSrc from '/public/images/orev-icon-portrait.png'
 
 type SideBarItems = {
   name: Tab;
@@ -152,7 +152,6 @@ export const SideBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
 
   return (
     <>
-      {/* <ThemeProvider theme={undefined} children={undefined}> */}
       <Box sx={{
         right: 0,
         top: 0,
@@ -171,7 +170,7 @@ export const SideBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
             לומדת עורב
           </Typography>
           <Link href="/" sx={{ paddingLeft: 2, margin: 'auto' }}>
-            <img src="../images/orev-icon-portrait.png" alt="orev logo" width={'78px'} height={'78px'} />
+            <img src={orevIconSrc} alt="orev logo" width={'78px'} height={'78px'} />
           </Link>
         </Box>
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
@@ -286,7 +285,6 @@ export const SideBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
           </Box>
         </Box >
       </Box >
-      {/* </ThemeProvider> */}
     </>
   );
 };

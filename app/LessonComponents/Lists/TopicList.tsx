@@ -8,9 +8,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+import { Lesson, Topic } from '@prisma/client';
 import * as React from 'react';
-import { Topic } from '@prisma/client';
-import { Lesson } from '@prisma/client';
 
 interface ITopicListProps {
   onButtonClick: (componentName: string, selectedTopic?: Topic) => void;

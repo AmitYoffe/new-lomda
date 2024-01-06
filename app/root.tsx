@@ -14,7 +14,6 @@ import rtlPlugin from 'stylis-plugin-rtl';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { prefixer } from 'stylis';
-// import Layout from "./Layout";
 import indexStyle from "~/index.css"
 
 // Create rtl cache
@@ -44,9 +43,7 @@ export default function App() {
         <CacheProvider value={cacheRtl}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
-            {/* <Layout> */}
             <Outlet />
-            {/* </Layout> */}
           </ThemeProvider>
           <ScrollRestoration />
           <Scripts />
