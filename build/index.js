@@ -24,13 +24,10 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 )), __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: !0 }), mod);
 
-// css-bundle-update-plugin-ns:C:\Users\user\Desktop\new-lomda\node_modules\@remix-run\css-bundle\dist\index.js
-var require_dist = __commonJS({
-  "css-bundle-update-plugin-ns:C:\\Users\\user\\Desktop\\new-lomda\\node_modules\\@remix-run\\css-bundle\\dist\\index.js"(exports) {
+// app/routes/lesson-factory.tsx
+var require_lesson_factory = __commonJS({
+  "app/routes/lesson-factory.tsx"() {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: !0 });
-    var cssBundleHref2;
-    exports.cssBundleHref = cssBundleHref2;
   }
 });
 
@@ -41,6 +38,7 @@ __export(stdin_exports, {
   assetsBuildDirectory: () => assetsBuildDirectory,
   entry: () => entry,
   future: () => future,
+  mode: () => mode,
   publicPath: () => publicPath,
   routes: () => routes
 });
@@ -79,7 +77,7 @@ function handleBotRequest(request, responseStatusCode, responseHeaders, remixCon
         !1,
         {
           fileName: "app/entry.server.tsx",
-          lineNumber: 48,
+          lineNumber: 49,
           columnNumber: 7
         },
         this
@@ -87,9 +85,9 @@ function handleBotRequest(request, responseStatusCode, responseHeaders, remixCon
       {
         onAllReady() {
           shellRendered = !0;
-          let body = new import_node_stream.PassThrough();
+          let body = new import_node_stream.PassThrough(), stream = (0, import_node.createReadableStreamFromReadable)(body);
           responseHeaders.set("Content-Type", "text/html"), resolve(
-            new import_node.Response(body, {
+            new Response(stream, {
               headers: responseHeaders,
               status: responseStatusCode
             })
@@ -120,7 +118,7 @@ function handleBrowserRequest(request, responseStatusCode, responseHeaders, remi
         !1,
         {
           fileName: "app/entry.server.tsx",
-          lineNumber: 97,
+          lineNumber: 99,
           columnNumber: 7
         },
         this
@@ -128,9 +126,9 @@ function handleBrowserRequest(request, responseStatusCode, responseHeaders, remi
       {
         onShellReady() {
           shellRendered = !0;
-          let body = new import_node_stream.PassThrough();
+          let body = new import_node_stream.PassThrough(), stream = (0, import_node.createReadableStreamFromReadable)(body);
           responseHeaders.set("Content-Type", "text/html"), resolve(
-            new import_node.Response(body, {
+            new Response(stream, {
               headers: responseHeaders,
               status: responseStatusCode
             })
@@ -154,7 +152,7 @@ __export(root_exports, {
   default: () => App,
   links: () => links
 });
-var import_css_bundle = __toESM(require_dist()), import_react2 = require("@remix-run/react");
+var import_react2 = require("@remix-run/react");
 
 // app/theme.ts
 var import_styles = require("@mui/material/styles");
@@ -245,8 +243,8 @@ var import_jsx_dev_runtime2 = require("react/jsx-dev-runtime"), cacheRtl = (0, i
   key: "muirtl",
   stylisPlugins: [import_stylis.prefixer, import_stylis_plugin_rtl.default]
 }), links = () => [
-  ...import_css_bundle.cssBundleHref ? [
-    { rel: "stylesheet", href: import_css_bundle.cssBundleHref }
+  ...void 0 ? [
+    { rel: "stylesheet", href: void 0 }
   ] : [],
   { rel: "stylesheet", href: app_default }
 ];
@@ -326,9 +324,9 @@ function App() {
   }, this);
 }
 
-// app/routes/lessons.$topicId.$lessonId.tsx
-var lessons_topicId_lessonId_exports = {};
-__export(lessons_topicId_lessonId_exports, {
+// app/routes/admin.lessons.$topicId.$lessonId.tsx
+var admin_lessons_topicId_lessonId_exports = {};
+__export(admin_lessons_topicId_lessonId_exports, {
   default: () => QuestionList,
   loader: () => loader
 });
@@ -362,7 +360,7 @@ function FullFeaturedCrudGrid({
     return setRows(rows.map((row) => row.id === newRow.id ? updatedRow : row)), updatedRow;
   }, handleRowModesModelChange = (newRowModesModel) => {
     setRowModesModel(newRowModesModel);
-  }, columns3 = [
+  }, columns = [
     ...columnProps,
     {
       field: "actions",
@@ -370,122 +368,119 @@ function FullFeaturedCrudGrid({
       headerName: "\u05E4\u05E2\u05D5\u05DC\u05D5\u05EA",
       width: 100,
       cellClassName: "actions",
-      getActions: ({ id }) => {
-        var _a;
-        return ((_a = rowModesModel[id]) == null ? void 0 : _a.mode) === import_x_data_grid.GridRowModes.Edit ? [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            import_x_data_grid.GridActionsCellItem,
-            {
-              icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_Save.default, {}, void 0, !1, {
-                fileName: "app/LessonComponents/DataGrid.tsx",
-                lineNumber: 100,
-                columnNumber: 21
-              }, this),
-              label: "Save",
-              sx: {
-                color: "primary.main"
-              },
-              onClick: handleSaveClick(id)
-            },
-            "Save",
-            !1,
-            {
+      getActions: ({ id }) => rowModesModel[id]?.mode === import_x_data_grid.GridRowModes.Edit ? [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
+          import_x_data_grid.GridActionsCellItem,
+          {
+            icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_Save.default, {}, void 0, !1, {
               fileName: "app/LessonComponents/DataGrid.tsx",
-              lineNumber: 98,
-              columnNumber: 13
+              lineNumber: 100,
+              columnNumber: 21
+            }, this),
+            label: "Save",
+            sx: {
+              color: "primary.main"
             },
-            this
-          ),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            import_x_data_grid.GridActionsCellItem,
-            {
-              icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_Close.default, {}, void 0, !1, {
-                fileName: "app/LessonComponents/DataGrid.tsx",
-                lineNumber: 109,
-                columnNumber: 21
-              }, this),
-              label: "Cancel",
-              className: "textPrimary",
-              onClick: handleCancelClick(id),
-              color: "inherit"
-            },
-            "Cancel",
-            !1,
-            {
+            onClick: handleSaveClick(id)
+          },
+          "Save",
+          !1,
+          {
+            fileName: "app/LessonComponents/DataGrid.tsx",
+            lineNumber: 98,
+            columnNumber: 13
+          },
+          this
+        ),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
+          import_x_data_grid.GridActionsCellItem,
+          {
+            icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_Close.default, {}, void 0, !1, {
               fileName: "app/LessonComponents/DataGrid.tsx",
-              lineNumber: 107,
-              columnNumber: 13
-            },
-            this
-          )
-        ] : editable ? [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            import_x_data_grid.GridActionsCellItem,
-            {
-              icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_Edit.default, {}, void 0, !1, {
-                fileName: "app/LessonComponents/DataGrid.tsx",
-                lineNumber: 122,
-                columnNumber: 23
-              }, this),
-              label: "Edit",
-              className: "textPrimary",
-              onClick: handleEditClick(id),
-              color: "inherit"
-            },
-            "Edit",
-            !1,
-            {
+              lineNumber: 109,
+              columnNumber: 21
+            }, this),
+            label: "Cancel",
+            className: "textPrimary",
+            onClick: handleCancelClick(id),
+            color: "inherit"
+          },
+          "Cancel",
+          !1,
+          {
+            fileName: "app/LessonComponents/DataGrid.tsx",
+            lineNumber: 107,
+            columnNumber: 13
+          },
+          this
+        )
+      ] : editable ? [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
+          import_x_data_grid.GridActionsCellItem,
+          {
+            icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_Edit.default, {}, void 0, !1, {
               fileName: "app/LessonComponents/DataGrid.tsx",
-              lineNumber: 120,
-              columnNumber: 15
-            },
-            this
-          ),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            import_x_data_grid.GridActionsCellItem,
-            {
-              icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_DeleteOutlined.default, {}, void 0, !1, {
-                fileName: "app/LessonComponents/DataGrid.tsx",
-                lineNumber: 130,
-                columnNumber: 23
-              }, this),
-              label: "Delete",
-              onClick: handleDeleteClick(id),
-              color: "inherit"
-            },
-            "Delete",
-            !1,
-            {
+              lineNumber: 122,
+              columnNumber: 23
+            }, this),
+            label: "Edit",
+            className: "textPrimary",
+            onClick: handleEditClick(id),
+            color: "inherit"
+          },
+          "Edit",
+          !1,
+          {
+            fileName: "app/LessonComponents/DataGrid.tsx",
+            lineNumber: 120,
+            columnNumber: 15
+          },
+          this
+        ),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
+          import_x_data_grid.GridActionsCellItem,
+          {
+            icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_DeleteOutlined.default, {}, void 0, !1, {
               fileName: "app/LessonComponents/DataGrid.tsx",
-              lineNumber: 128,
-              columnNumber: 15
-            },
-            this
-          )
-        ] : [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            import_x_data_grid.GridActionsCellItem,
-            {
-              icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_DeleteOutlined.default, {}, void 0, !1, {
-                fileName: "app/LessonComponents/DataGrid.tsx",
-                lineNumber: 139,
-                columnNumber: 23
-              }, this),
-              label: "Delete",
-              onClick: handleDeleteClick(id),
-              color: "inherit"
-            },
-            "Delete",
-            !1,
-            {
+              lineNumber: 130,
+              columnNumber: 23
+            }, this),
+            label: "Delete",
+            onClick: handleDeleteClick(id),
+            color: "inherit"
+          },
+          "Delete",
+          !1,
+          {
+            fileName: "app/LessonComponents/DataGrid.tsx",
+            lineNumber: 128,
+            columnNumber: 15
+          },
+          this
+        )
+      ] : [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
+          import_x_data_grid.GridActionsCellItem,
+          {
+            icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_DeleteOutlined.default, {}, void 0, !1, {
               fileName: "app/LessonComponents/DataGrid.tsx",
-              lineNumber: 137,
-              columnNumber: 15
-            },
-            this
-          )
-        ];
-      }
+              lineNumber: 139,
+              columnNumber: 23
+            }, this),
+            label: "Delete",
+            onClick: handleDeleteClick(id),
+            color: "inherit"
+          },
+          "Delete",
+          !1,
+          {
+            fileName: "app/LessonComponents/DataGrid.tsx",
+            lineNumber: 137,
+            columnNumber: 15
+          },
+          this
+        )
+      ]
     },
     {
       field: "navigation",
@@ -538,7 +533,7 @@ function FullFeaturedCrudGrid({
     import_x_data_grid.DataGrid,
     {
       rows,
-      columns: columns3,
+      columns,
       editMode: "row",
       rowModesModel,
       onRowModesModelChange: handleRowModesModelChange,
@@ -564,9 +559,6 @@ var import_client = require("@prisma/client"), prisma;
 global.__db || (global.__db = new import_client.PrismaClient(), global.__db.$connect()), prisma = global.__db;
 
 // app/utils/question.server.ts
-async function getQuestions() {
-  return await prisma.question.findMany();
-}
 async function getQuestionsByLessonId(lessonId) {
   return await prisma.question.findMany({
     where: {
@@ -575,7 +567,7 @@ async function getQuestionsByLessonId(lessonId) {
   });
 }
 
-// app/routes/lessons.$topicId.$lessonId.tsx
+// app/routes/admin.lessons.$topicId.$lessonId.tsx
 var import_jsx_dev_runtime4 = require("react/jsx-dev-runtime");
 async function loader({ params }) {
   let { lessonId } = params;
@@ -584,6 +576,39 @@ async function loader({ params }) {
 function QuestionList() {
   let { questions } = (0, import_react5.useLoaderData)();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_jsx_dev_runtime4.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(FullFeaturedCrudGrid, { editable: !0, rows: questions, setRows: (oldRows) => {
+  }, columnProps: [
+    { field: "text", headerName: "\u05E9\u05DD \u05E9\u05D0\u05DC\u05D4", width: 180, editable: !0 },
+    { field: "updatedAt", headerName: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4", width: 180, editable: !1 }
+  ] }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.$topicId.$lessonId.tsx",
+    lineNumber: 25,
+    columnNumber: 9
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.$topicId.$lessonId.tsx",
+    lineNumber: 24,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.$topicId.$lessonId.tsx",
+    lineNumber: 23,
+    columnNumber: 5
+  }, this);
+}
+
+// app/routes/lessons.$topicId.$lessonId.tsx
+var lessons_topicId_lessonId_exports = {};
+__export(lessons_topicId_lessonId_exports, {
+  default: () => QuestionList2,
+  loader: () => loader2
+});
+var import_react6 = require("@remix-run/react");
+var import_jsx_dev_runtime5 = require("react/jsx-dev-runtime");
+async function loader2({ params }) {
+  let { lessonId } = params;
+  return { questions: await getQuestionsByLessonId(Number(lessonId)) };
+}
+function QuestionList2() {
+  let { questions } = (0, import_react6.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_jsx_dev_runtime5.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(FullFeaturedCrudGrid, { editable: !0, rows: questions, setRows: (oldRows) => {
   }, columnProps: [
     { field: "text", headerName: "\u05E9\u05DD \u05E9\u05D0\u05DC\u05D4", width: 180, editable: !0 },
     { field: "updatedAt", headerName: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4", width: 180, editable: !1 }
@@ -602,13 +627,13 @@ function QuestionList() {
   }, this);
 }
 
-// app/routes/lessons.$topicId.tsx
-var lessons_topicId_exports = {};
-__export(lessons_topicId_exports, {
+// app/routes/admin.lessons.$topicId.tsx
+var admin_lessons_topicId_exports = {};
+__export(admin_lessons_topicId_exports, {
   default: () => LessonsList,
-  loader: () => loader2
+  loader: () => loader3
 });
-var import_react6 = require("@remix-run/react");
+var import_react7 = require("@remix-run/react");
 
 // app/utils/lesson.server.ts
 async function getLessonsByTopicId(topicId) {
@@ -622,19 +647,50 @@ async function getLessonsByTopicId(topicId) {
     }
   });
 }
-async function getLessons() {
-  return await prisma.lesson.findMany();
-}
 
-// app/routes/lessons.$topicId.tsx
-var import_jsx_dev_runtime5 = require("react/jsx-dev-runtime");
-async function loader2({ params }) {
+// app/routes/admin.lessons.$topicId.tsx
+var import_jsx_dev_runtime6 = require("react/jsx-dev-runtime");
+async function loader3({ params }) {
   let { topicId } = params;
   return { lessons: (await getLessonsByTopicId(Number(topicId))).map((lesson) => ({ ...lesson, _count: lesson._count.Questions })) };
 }
 function LessonsList() {
-  let { lessons } = (0, import_react6.useLoaderData)();
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_jsx_dev_runtime5.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(FullFeaturedCrudGrid, { editable: !0, rows: lessons, setRows: (oldRows) => {
+  let { lessons } = (0, import_react7.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_jsx_dev_runtime6.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(FullFeaturedCrudGrid, { editable: !0, rows: lessons, setRows: (oldRows) => {
+  }, columnProps: [
+    { field: "name", headerName: "\u05E9\u05DD \u05E9\u05D9\u05E2\u05D5\u05E8", width: 180, editable: !0 },
+    { field: "updatedAt", headerName: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4", width: 180, editable: !1 },
+    { field: "_count", headerName: "\u05DE\u05E1\u05E4\u05E8 \u05E9\u05D0\u05DC\u05D5\u05EA", width: 180, editable: !1 }
+  ] }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.$topicId.tsx",
+    lineNumber: 27,
+    columnNumber: 9
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.$topicId.tsx",
+    lineNumber: 26,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.$topicId.tsx",
+    lineNumber: 25,
+    columnNumber: 5
+  }, this);
+}
+
+// app/routes/lessons.$topicId.tsx
+var lessons_topicId_exports = {};
+__export(lessons_topicId_exports, {
+  default: () => LessonsList2,
+  loader: () => loader4
+});
+var import_react8 = require("@remix-run/react");
+var import_jsx_dev_runtime7 = require("react/jsx-dev-runtime");
+async function loader4({ params }) {
+  let { topicId } = params;
+  return { lessons: (await getLessonsByTopicId(Number(topicId))).map((lesson) => ({ ...lesson, _count: lesson._count.Questions })) };
+}
+function LessonsList2() {
+  let { lessons } = (0, import_react8.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_jsx_dev_runtime7.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(FullFeaturedCrudGrid, { editable: !0, rows: lessons, setRows: (oldRows) => {
   }, columnProps: [
     { field: "name", headerName: "\u05E9\u05DD \u05E9\u05D9\u05E2\u05D5\u05E8", width: 180, editable: !0 },
     { field: "updatedAt", headerName: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4", width: 180, editable: !1 },
@@ -654,715 +710,273 @@ function LessonsList() {
   }, this);
 }
 
-// app/routes/lesson-factory.tsx
-var lesson_factory_exports = {};
-__export(lesson_factory_exports, {
-  default: () => BuildLesson,
-  loader: () => loader3
+// server-entry-module:@remix-run/dev/server-build
+var route5 = __toESM(require_lesson_factory());
+
+// app/routes/admin.lessons.tsx
+var admin_lessons_exports = {};
+__export(admin_lessons_exports, {
+  default: () => TopicList,
+  loader: () => loader5
 });
-var import_material7 = require("@mui/material"), import_Breadcrumbs = __toESM(require("@mui/material/Breadcrumbs")), import_react10 = require("@remix-run/react"), import_react11 = require("react");
+var import_react9 = require("@remix-run/react");
 
-// app/LessonComponents/HierarchyCreation/NewLesson.tsx
-var import_material2 = require("@mui/material"), import_react7 = require("react"), import_jsx_dev_runtime6 = require("react/jsx-dev-runtime");
-function NewTopic({ onButtonClick }) {
-  let [isInputEmpty, setIsInputEmpty] = (0, import_react7.useState)(!0);
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_material2.Paper, { sx: {
-    display: "flex",
-    flexDirection: "column",
-    padding: 2
-  }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_material2.Box, { sx: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-around",
-      gap: 1,
-      alignItems: "baseline"
-    }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_material2.Typography, { variant: "h6", children: "\u05DC\u05D9\u05E6\u05D9\u05E8\u05EA \u05E9\u05D9\u05E2\u05D5\u05E8 \u05D7\u05D3\u05E9:" }, void 0, !1, {
-        fileName: "app/LessonComponents/HierarchyCreation/NewLesson.tsx",
-        lineNumber: 33,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(
-        import_material2.TextField,
+// app/utils/topic.server.ts
+async function getTopics() {
+  return await prisma.topic.findMany({
+    include: {
+      _count: {
+        select: {
+          Lessons: !0
+        }
+      }
+    }
+  });
+}
+
+// app/routes/admin.lessons.tsx
+var import_jsx_dev_runtime8 = require("react/jsx-dev-runtime");
+async function loader5() {
+  return { topics: (await getTopics()).map((topic) => ({ ...topic, _count: topic._count.Lessons })) };
+}
+function TopicList() {
+  let { topics } = (0, import_react9.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_jsx_dev_runtime8.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
+    FullFeaturedCrudGrid,
+    {
+      editable: !0,
+      rows: topics,
+      setRows: (oldRows) => {
+      },
+      columnProps: [
+        { field: "name", headerName: "\u05E9\u05DD \u05E0\u05D5\u05E9\u05D0", width: 180, editable: !0 },
         {
-          id: "outlined-basic",
-          label: "\u05E9\u05DD \u05D4\u05E9\u05D9\u05E2\u05D5\u05E8",
-          variant: "outlined",
-          size: "small",
-          onChange: (event) => {
-            setIsInputEmpty(event.target.value.trim() === "" && event.target.value.length === 0);
-          }
+          field: "updatedAt",
+          headerName: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4",
+          width: 180,
+          editable: !1
         },
-        void 0,
-        !1,
         {
-          fileName: "app/LessonComponents/HierarchyCreation/NewLesson.tsx",
-          lineNumber: 36,
-          columnNumber: 9
-        },
-        this
-      )
-    ] }, void 0, !0, {
-      fileName: "app/LessonComponents/HierarchyCreation/NewLesson.tsx",
-      lineNumber: 26,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_material2.Typography, { sx: {
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "baseline",
-      justifyContent: "center"
-    }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_material2.Box, { sx: { marginLeft: "3px" }, children: [
-        "\u05D0\u05E0\u05D0 \u05D5\u05D5\u05D3\u05D0\u05D5 \u05DB\u05D9 \u05E9\u05D9\u05E2\u05D5\u05E8 \u05D6\u05D4 \u05D0\u05D9\u05E0\u05D5 \u05DB\u05D1\u05E8 \u05E7\u05D9\u05D9\u05DD",
-        " "
-      ] }, void 0, !0, {
-        fileName: "app/LessonComponents/HierarchyCreation/NewLesson.tsx",
-        lineNumber: 50,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(
-        import_material2.Link,
-        {
-          component: "button",
-          onClick: () => onButtonClick("LessonList"),
-          children: "\u05D1\u05E8\u05E9\u05D9\u05DE\u05D4"
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/LessonComponents/HierarchyCreation/NewLesson.tsx",
-          lineNumber: 53,
-          columnNumber: 9
-        },
-        this
-      )
-    ] }, void 0, !0, {
-      fileName: "app/LessonComponents/HierarchyCreation/NewLesson.tsx",
-      lineNumber: 44,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_material2.Box, { sx: {
-      paddingTop: 2,
-      display: "flex",
-      justifyContent: "center"
-    }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_material2.Button, { variant: "outlined", onClick: () => {
-      onButtonClick("LessonList");
-    }, disabled: isInputEmpty, fullWidth: !0, children: "\u05E6\u05D5\u05E8 \u05E9\u05D9\u05E2\u05D5\u05E8" }, void 0, !1, {
-      fileName: "app/LessonComponents/HierarchyCreation/NewLesson.tsx",
-      lineNumber: 65,
+          field: "_count",
+          headerName: "\u05DE\u05E1\u05E4\u05E8 \u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD",
+          width: 180,
+          editable: !1
+        }
+      ]
+    },
+    void 0,
+    !1,
+    {
+      fileName: "app/routes/admin.lessons.tsx",
+      lineNumber: 37,
       columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/LessonComponents/HierarchyCreation/NewLesson.tsx",
-      lineNumber: 60,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/LessonComponents/HierarchyCreation/NewLesson.tsx",
-    lineNumber: 21,
+    },
+    this
+  ) }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.tsx",
+    lineNumber: 36,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.tsx",
+    lineNumber: 35,
     columnNumber: 5
   }, this);
 }
 
-// app/LessonComponents/HierarchyCreation/NewTopic.tsx
-var import_material3 = require("@mui/material"), import_react8 = require("react"), import_jsx_dev_runtime7 = require("react/jsx-dev-runtime");
-function NewTopic2({ onButtonClick }) {
-  let [isInputEmpty, setIsInputEmpty] = (0, import_react8.useState)(!0);
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_material3.Paper, { sx: {
-    display: "flex",
-    flexDirection: "column",
-    padding: 2
-  }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_material3.Box, { sx: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-around",
-      gap: 1,
-      alignItems: "baseline"
-    }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_material3.Typography, { variant: "h6", children: "\u05DC\u05D9\u05E6\u05D9\u05E8\u05EA \u05E0\u05D5\u05E9\u05D0 \u05D7\u05D3\u05E9:" }, void 0, !1, {
-        fileName: "app/LessonComponents/HierarchyCreation/NewTopic.tsx",
-        lineNumber: 33,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(
-        import_material3.TextField,
+// app/routes/lessons.tsx
+var lessons_exports = {};
+__export(lessons_exports, {
+  default: () => TopicList2,
+  loader: () => loader6
+});
+var import_react10 = require("@remix-run/react");
+var import_jsx_dev_runtime9 = require("react/jsx-dev-runtime");
+async function loader6() {
+  return { topics: (await getTopics()).map((topic) => ({ ...topic, _count: topic._count.Lessons })) };
+}
+function TopicList2() {
+  let { topics } = (0, import_react10.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_jsx_dev_runtime9.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(
+    FullFeaturedCrudGrid,
+    {
+      editable: !0,
+      rows: topics,
+      setRows: (oldRows) => {
+      },
+      columnProps: [
+        { field: "name", headerName: "\u05E9\u05DD \u05E0\u05D5\u05E9\u05D0", width: 180, editable: !0 },
         {
-          id: "outlined-basic",
-          label: "\u05E9\u05DD \u05D4\u05E0\u05D5\u05E9\u05D0",
-          variant: "outlined",
-          size: "small",
-          onChange: (event) => {
-            setIsInputEmpty(event.target.value.trim() === "" && event.target.value.length === 0);
-          }
+          field: "updatedAt",
+          headerName: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4",
+          width: 180,
+          editable: !1
         },
-        void 0,
-        !1,
         {
-          fileName: "app/LessonComponents/HierarchyCreation/NewTopic.tsx",
-          lineNumber: 36,
-          columnNumber: 9
-        },
-        this
-      )
-    ] }, void 0, !0, {
-      fileName: "app/LessonComponents/HierarchyCreation/NewTopic.tsx",
-      lineNumber: 26,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_material3.Typography, { sx: {
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "baseline",
-      justifyContent: "center"
-    }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_material3.Box, { sx: { marginLeft: "3px" }, children: [
-        "\u05D0\u05E0\u05D0 \u05D5\u05D5\u05D3\u05D0\u05D5 \u05DB\u05D9 \u05E0\u05D5\u05E9\u05D0 \u05D6\u05D4 \u05D0\u05D9\u05E0\u05D5 \u05DB\u05D1\u05E8 \u05E7\u05D9\u05D9\u05DD",
-        " "
-      ] }, void 0, !0, {
-        fileName: "app/LessonComponents/HierarchyCreation/NewTopic.tsx",
-        lineNumber: 50,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(
-        import_material3.Link,
-        {
-          component: "button",
-          onClick: () => onButtonClick("TopicList"),
-          children: "\u05D1\u05E8\u05E9\u05D9\u05DE\u05D4"
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/LessonComponents/HierarchyCreation/NewTopic.tsx",
-          lineNumber: 53,
-          columnNumber: 9
-        },
-        this
-      )
-    ] }, void 0, !0, {
-      fileName: "app/LessonComponents/HierarchyCreation/NewTopic.tsx",
-      lineNumber: 44,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_material3.Box, { sx: {
-      paddingTop: 2,
-      display: "flex",
-      justifyContent: "center"
-    }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_material3.Button, { variant: "outlined", onClick: () => {
-      onButtonClick("TopicList");
-    }, disabled: isInputEmpty, fullWidth: !0, children: "\u05E6\u05D5\u05E8 \u05E0\u05D5\u05E9\u05D0" }, void 0, !1, {
-      fileName: "app/LessonComponents/HierarchyCreation/NewTopic.tsx",
-      lineNumber: 65,
+          field: "_count",
+          headerName: "\u05DE\u05E1\u05E4\u05E8 \u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD",
+          width: 180,
+          editable: !1
+        }
+      ]
+    },
+    void 0,
+    !1,
+    {
+      fileName: "app/routes/lessons.tsx",
+      lineNumber: 37,
       columnNumber: 9
-    }, this) }, void 0, !1, {
-      fileName: "app/LessonComponents/HierarchyCreation/NewTopic.tsx",
-      lineNumber: 60,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/LessonComponents/HierarchyCreation/NewTopic.tsx",
-    lineNumber: 21,
+    },
+    this
+  ) }, void 0, !1, {
+    fileName: "app/routes/lessons.tsx",
+    lineNumber: 36,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/lessons.tsx",
+    lineNumber: 35,
     columnNumber: 5
   }, this);
 }
 
-// app/LessonComponents/Lists/LessonList.tsx
-var import_CreateNewFolderOutlined = __toESM(require("@mui/icons-material/CreateNewFolderOutlined")), import_material4 = require("@mui/material"), import_Paper = __toESM(require("@mui/material/Paper")), import_Search = __toESM(require("@mui/icons-material/Search")), import_Table = __toESM(require("@mui/material/Table")), import_TableBody = __toESM(require("@mui/material/TableBody")), import_TableCell = __toESM(require("@mui/material/TableCell")), import_TableContainer = __toESM(require("@mui/material/TableContainer")), import_TableHead = __toESM(require("@mui/material/TableHead")), import_TablePagination = __toESM(require("@mui/material/TablePagination")), import_TableRow = __toESM(require("@mui/material/TableRow")), React2 = __toESM(require("react")), import_jsx_dev_runtime8 = require("react/jsx-dev-runtime"), columns = [
-  {
-    id: "name",
-    label: "\u05E9\u05DD \u05E9\u05D9\u05E2\u05D5\u05E8",
-    minWidth: 250,
-    align: "center"
-  },
-  {
-    id: "lastEditDate",
-    label: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4",
-    minWidth: 250,
-    align: "center"
-  },
-  {
-    id: "questionAmount",
-    label: "\u05DE\u05E1\u05E4\u05E8 \u05E9\u05D0\u05DC\u05D5\u05EA",
-    minWidth: 250,
-    align: "center",
-    format: (value) => typeof value == "number" ? value.toLocaleString("he-IL") : String(value)
-  }
-];
-function LessonList({ onButtonClick, dataRow, dataRowChildren, selectedTopic }) {
-  let [page, setPage] = React2.useState(0), [rowsPerPage, setRowsPerPage] = React2.useState(10), [searchInput, setSearchInput] = React2.useState(""), handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  }, handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(+event.target.value), setPage(0);
-  };
-  function handleSearchInputChange(event) {
-    setSearchInput(event.target.value);
-  }
-  let handleLessonRowClick = () => {
-    onButtonClick("QuestionList");
-  }, handleButtonClick = () => {
-    onButtonClick("NewLesson");
-  }, filteredRows = dataRow.filter((lesson) => selectedTopic && lesson.topicId === selectedTopic.id).map((lesson) => {
-    let questionsInLesson = dataRowChildren.filter(
-      (question) => question.lessonId === lesson.id
-    );
-    return {
-      ...lesson,
-      questionAmount: questionsInLesson.length
-    };
-  }).filter((row) => row.name.toLowerCase().includes(searchInput.toLowerCase()));
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material4.Box, { sx: { display: "flex", flexDirection: "column", gap: 1, height: "100%" }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material4.Box, { sx: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 1 }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_Paper.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
-        import_material4.TextField,
-        {
-          sx: {
-            padding: "0.1em",
-            borderRadius: "3px",
-            "& input": {
-              width: "14ch",
-              transition: "width 0.2s ease-in-out",
-              "&:focus": {
-                width: "20ch"
-              }
-            }
-          },
-          size: "small",
-          value: searchInput,
-          onChange: handleSearchInputChange,
-          placeholder: "\u05D7\u05E4\u05E9",
-          InputProps: {
-            startAdornment: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material4.InputAdornment, { position: "start", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_Search.default, {}, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/LessonList.tsx",
-              lineNumber: 121,
-              columnNumber: 19
-            }, this) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/LessonList.tsx",
-              lineNumber: 120,
-              columnNumber: 17
-            }, this)
-          }
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/LessonComponents/Lists/LessonList.tsx",
-          lineNumber: 102,
-          columnNumber: 11
-        },
-        this
-      ) }, void 0, !1, {
-        fileName: "app/LessonComponents/Lists/LessonList.tsx",
-        lineNumber: 101,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_Paper.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material4.Button, { variant: "outlined", color: "warning", onClick: handleButtonClick, children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_CreateNewFolderOutlined.default, {}, void 0, !1, {
-          fileName: "app/LessonComponents/Lists/LessonList.tsx",
-          lineNumber: 129,
-          columnNumber: 13
-        }, this),
-        " \u05DC\u05D9\u05E6\u05D9\u05E8\u05EA \u05E9\u05D9\u05E2\u05D5\u05E8 \u05D7\u05D3\u05E9"
-      ] }, void 0, !0, {
-        fileName: "app/LessonComponents/Lists/LessonList.tsx",
-        lineNumber: 128,
+// app/routes/_index.tsx
+var index_exports = {};
+__export(index_exports, {
+  default: () => Index
+});
+var import_material2 = require("@mui/material"), import_jsx_dev_runtime10 = require("react/jsx-dev-runtime");
+function Index() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_jsx_dev_runtime10.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material2.Typography, { children: "waka wakak" }, void 0, !1, {
+    fileName: "app/routes/_index.tsx",
+    lineNumber: 6,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/_index.tsx",
+    lineNumber: 5,
+    columnNumber: 5
+  }, this);
+}
+
+// app/routes/admin.tsx
+var admin_exports = {};
+__export(admin_exports, {
+  default: () => admin
+});
+var import_react11 = require("@remix-run/react"), import_jsx_dev_runtime11 = require("react/jsx-dev-runtime");
+function admin() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_jsx_dev_runtime11.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { children: [
+    "admin",
+    /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_react11.Outlet, {}, void 0, !1, {
+      fileName: "app/routes/admin.tsx",
+      lineNumber: 8,
+      columnNumber: 9
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/admin.tsx",
+    lineNumber: 6,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/admin.tsx",
+    lineNumber: 5,
+    columnNumber: 5
+  }, this);
+}
+
+// app/routes/index.tsx
+var routes_exports = {};
+__export(routes_exports, {
+  default: () => Index2
+});
+var import_material3 = require("@mui/material"), import_react_tsparticles = __toESM(require("react-tsparticles"));
+
+// app/components/UserGreetings.tsx
+function UserGreetings({ firstname, lastname }) {
+  let currentHour = (/* @__PURE__ */ new Date()).getHours();
+  return currentHour >= 5 && currentHour < 12 ? `\u05D1\u05D5\u05E7\u05E8 \u05D8\u05D5\u05D1, ${firstname} ${lastname}` : currentHour >= 12 && currentHour < 17 ? `\u05E6\u05D4\u05E8\u05D9\u05D9\u05DD \u05D8\u05D5\u05D1\u05D9\u05DD, ${firstname} ${lastname}` : currentHour >= 17 && currentHour < 22 ? `\u05E2\u05E8\u05D1 \u05D8\u05D5\u05D1, ${firstname} ${lastname}` : `\u05DC\u05D9\u05DC\u05D4 \u05D8\u05D5\u05D1, ${firstname} ${lastname}`;
+}
+var UserGreetings_default = UserGreetings;
+
+// app/routes/index.tsx
+var import_jsx_dev_runtime12 = require("react/jsx-dev-runtime");
+function Index2() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_jsx_dev_runtime12.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material3.Box, { sx: {
+    gap: 1
+  }, children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material3.Box, { sx: { position: "absolute", top: "18px", left: "18px", color: "white" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(UserGreetings_default, { firstname: "\u05D7\u05D9\u05D9\u05DE\u05D5\u05DF", lastname: "\u05D7\u05D9\u05D9\u05DE\u05E7\u05D4" }, void 0, !1, {
+      fileName: "app/routes/index.tsx",
+      lineNumber: 14,
+      columnNumber: 11
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/index.tsx",
+      lineNumber: 13,
+      columnNumber: 9
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_react_tsparticles.default, { id: "tsparticles" }, void 0, !1, {
+      fileName: "app/routes/index.tsx",
+      lineNumber: 16,
+      columnNumber: 9
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material3.Box, { sx: { display: "flex", justify: "center", color: "white" }, children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material3.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
+        fileName: "app/routes/index.tsx",
+        lineNumber: 18,
         columnNumber: 11
-      }, this) }, void 0, !1, {
-        fileName: "app/LessonComponents/Lists/LessonList.tsx",
-        lineNumber: 127,
-        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material3.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
+        fileName: "app/routes/index.tsx",
+        lineNumber: 19,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material3.Button, { children: " ahhhhh " }, void 0, !1, {
+        fileName: "app/routes/index.tsx",
+        lineNumber: 20,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material3.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
+        fileName: "app/routes/index.tsx",
+        lineNumber: 21,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material3.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
+        fileName: "app/routes/index.tsx",
+        lineNumber: 22,
+        columnNumber: 11
       }, this)
     ] }, void 0, !0, {
-      fileName: "app/LessonComponents/Lists/LessonList.tsx",
-      lineNumber: 100,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_Paper.default, { elevation: 8, sx: { width: "100%", overflow: "hidden" }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
-        import_TableContainer.default,
-        {
-          sx: {
-            maxHeight: 440,
-            "&::-webkit-scrollbar": {
-              width: "6px"
-            },
-            "&::-webkit-scrollbar-thumb": {
-              background: "#b5ac9a",
-              borderRadius: "10px"
-            },
-            "&::-webkit-scrollbar-thumb:hover": {
-              background: "#b89e6a"
-            },
-            overflowX: "hidden"
-          },
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_Table.default, { stickyHeader: !0, "aria-label": "sticky table", children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_TableHead.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_TableRow.default, { children: columns.map((column) => /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
-              import_TableCell.default,
-              {
-                align: column.align,
-                style: { minWidth: column.minWidth, backgroundColor: "rgba(248, 206, 172)" },
-                children: column.label
-              },
-              column.id,
-              !1,
-              {
-                fileName: "app/LessonComponents/Lists/LessonList.tsx",
-                lineNumber: 153,
-                columnNumber: 19
-              },
-              this
-            )) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/LessonList.tsx",
-              lineNumber: 151,
-              columnNumber: 15
-            }, this) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/LessonList.tsx",
-              lineNumber: 150,
-              columnNumber: 13
-            }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_TableBody.default, { children: filteredRows.length === 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_TableRow.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_TableCell.default, { colSpan: columns.length, children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material4.Box, { sx: {
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center"
-            }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material4.Typography, { variant: "h6", children: "\u05DC\u05D0 \u05E0\u05DE\u05E6\u05D0\u05D5 \u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD \u05DE\u05EA\u05D0\u05D9\u05DE\u05D9\u05DD \u05DC\u05E2\u05E8\u05DA \u05D4\u05D7\u05D9\u05E4\u05D5\u05E9" }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/LessonList.tsx",
-              lineNumber: 173,
-              columnNumber: 23
-            }, this) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/LessonList.tsx",
-              lineNumber: 167,
-              columnNumber: 21
-            }, this) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/LessonList.tsx",
-              lineNumber: 166,
-              columnNumber: 19
-            }, this) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/LessonList.tsx",
-              lineNumber: 165,
-              columnNumber: 17
-            }, this) : filteredRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material4.Grow, { timeout: (index + 1) * 100, in: !0, style: { transformOrigin: "0 0 0" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_TableRow.default, { hover: !0, role: "checkbox", tabIndex: -1, onClick: handleLessonRowClick, children: columns.map((column) => {
-              let value = row[column.id];
-              return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_TableCell.default, { align: column.align, children: column.format && typeof value == "number" ? column.format(value) : String(value) }, column.id, !1, {
-                fileName: "app/LessonComponents/Lists/LessonList.tsx",
-                lineNumber: 188,
-                columnNumber: 29
-              }, this);
-            }) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/LessonList.tsx",
-              lineNumber: 184,
-              columnNumber: 23
-            }, this) }, row.name, !1, {
-              fileName: "app/LessonComponents/Lists/LessonList.tsx",
-              lineNumber: 183,
-              columnNumber: 21
-            }, this)) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/LessonList.tsx",
-              lineNumber: 163,
-              columnNumber: 13
-            }, this)
-          ] }, void 0, !0, {
-            fileName: "app/LessonComponents/Lists/LessonList.tsx",
-            lineNumber: 149,
-            columnNumber: 11
-          }, this)
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/LessonComponents/Lists/LessonList.tsx",
-          lineNumber: 134,
-          columnNumber: 9
-        },
-        this
-      ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
-        import_TablePagination.default,
-        {
-          rowsPerPageOptions: [10, 25, 100],
-          component: "div",
-          count: dataRow.length,
-          rowsPerPage,
-          page,
-          onPageChange: handleChangePage,
-          onRowsPerPageChange: handleChangeRowsPerPage
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/LessonComponents/Lists/LessonList.tsx",
-          lineNumber: 201,
-          columnNumber: 9
-        },
-        this
-      )
-    ] }, void 0, !0, {
-      fileName: "app/LessonComponents/Lists/LessonList.tsx",
-      lineNumber: 133,
-      columnNumber: 7
+      fileName: "app/routes/index.tsx",
+      lineNumber: 17,
+      columnNumber: 9
     }, this)
   ] }, void 0, !0, {
-    fileName: "app/LessonComponents/Lists/LessonList.tsx",
-    lineNumber: 99,
+    fileName: "app/routes/index.tsx",
+    lineNumber: 10,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/index.tsx",
+    lineNumber: 8,
     columnNumber: 5
   }, this);
 }
 
-// app/LessonComponents/Lists/TopicList.tsx
-var import_CreateNewFolderOutlined2 = __toESM(require("@mui/icons-material/CreateNewFolderOutlined")), import_Search2 = __toESM(require("@mui/icons-material/Search")), import_material5 = require("@mui/material"), import_Paper2 = __toESM(require("@mui/material/Paper")), import_Table2 = __toESM(require("@mui/material/Table")), import_TableCell2 = __toESM(require("@mui/material/TableCell")), import_TableContainer2 = __toESM(require("@mui/material/TableContainer")), import_TableHead2 = __toESM(require("@mui/material/TableHead")), import_TablePagination2 = __toESM(require("@mui/material/TablePagination")), import_TableRow2 = __toESM(require("@mui/material/TableRow")), React3 = __toESM(require("react")), import_jsx_dev_runtime9 = require("react/jsx-dev-runtime"), columns2 = [
-  {
-    id: "name",
-    label: "\u05E9\u05DD \u05E0\u05D5\u05E9\u05D0",
-    minWidth: 250,
-    align: "center"
-  },
-  {
-    id: "lastEditDate",
-    label: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4",
-    minWidth: 250,
-    align: "center"
-  },
-  {
-    id: "lessonAmount",
-    label: "\u05DE\u05E1\u05E4\u05E8 \u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD",
-    minWidth: 250,
-    align: "center",
-    format: (value) => typeof value == "number" ? value.toLocaleString("he-IL") : String(value)
-  }
-];
-function TopicList({ onButtonClick, dataRow, dataRowChildren }) {
-  let [page, setPage] = React3.useState(0), [rowsPerPage, setRowsPerPage] = React3.useState(10), [searchInput, setSearchInput] = React3.useState(""), handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  }, handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(+event.target.value), setPage(0);
-  };
-  function handleSearchInputChange(event) {
-    setSearchInput(event.target.value);
-  }
-  let handleTopicRowClick = (selectedTopic) => {
-    onButtonClick("LessonList", selectedTopic), console.log("selectedTopic in TopicList.tsx:", selectedTopic);
-  }, handleButtonClick = () => {
-    onButtonClick("NewTopic");
-  }, filteredRows = dataRow.map((topic) => {
-    let lessonsInTopic = dataRowChildren.filter((lesson) => lesson.topicId === topic.id);
-    return {
-      ...topic,
-      lessonAmount: lessonsInTopic.length
-    };
-  }).filter(
-    (row) => row.name.toLowerCase().includes(searchInput.toLowerCase())
-  );
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.Box, { sx: { display: "flex", flexDirection: "column", gap: 1, hegith: "100%" }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.Box, { sx: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 1 }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_Paper2.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(
-        import_material5.TextField,
-        {
-          sx: {
-            padding: "0.1em",
-            borderRadius: "3px",
-            "& input": {
-              width: "14ch",
-              transition: "width 0.2s ease-in-out",
-              "&:focus": {
-                width: "20ch"
-              }
-            }
-          },
-          size: "small",
-          value: searchInput,
-          onChange: handleSearchInputChange,
-          placeholder: "\u05D7\u05E4\u05E9",
-          InputProps: {
-            startAdornment: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.InputAdornment, { position: "start", children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_Search2.default, {}, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/TopicList.tsx",
-              lineNumber: 114,
-              columnNumber: 19
-            }, this) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/TopicList.tsx",
-              lineNumber: 113,
-              columnNumber: 17
-            }, this)
-          }
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/LessonComponents/Lists/TopicList.tsx",
-          lineNumber: 95,
-          columnNumber: 11
-        },
-        this
-      ) }, void 0, !1, {
-        fileName: "app/LessonComponents/Lists/TopicList.tsx",
-        lineNumber: 94,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_Paper2.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.Button, { variant: "outlined", color: "warning", onClick: handleButtonClick, children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_CreateNewFolderOutlined2.default, {}, void 0, !1, {
-          fileName: "app/LessonComponents/Lists/TopicList.tsx",
-          lineNumber: 122,
-          columnNumber: 13
-        }, this),
-        " \u05DC\u05D9\u05E6\u05D9\u05E8\u05EA \u05E0\u05D5\u05E9\u05D0 \u05D7\u05D3\u05E9"
-      ] }, void 0, !0, {
-        fileName: "app/LessonComponents/Lists/TopicList.tsx",
-        lineNumber: 121,
-        columnNumber: 11
-      }, this) }, void 0, !1, {
-        fileName: "app/LessonComponents/Lists/TopicList.tsx",
-        lineNumber: 120,
-        columnNumber: 9
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/LessonComponents/Lists/TopicList.tsx",
-      lineNumber: 93,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_Paper2.default, { elevation: 8, sx: { width: "100%", overflow: "hidden" }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(
-        import_TableContainer2.default,
-        {
-          sx: {
-            maxHeight: 440,
-            "&::-webkit-scrollbar": {
-              width: "6px"
-            },
-            "&::-webkit-scrollbar-thumb": {
-              background: "#b5ac9a",
-              borderRadius: "10px"
-            },
-            "&::-webkit-scrollbar-thumb:hover": {
-              background: "#b89e6a"
-            },
-            overflowX: "hidden"
-          },
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_Table2.default, { stickyHeader: !0, "aria-label": "sticky table", children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_TableHead2.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_TableRow2.default, { children: columns2.map((column) => /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(
-              import_TableCell2.default,
-              {
-                align: column.align,
-                style: { minWidth: column.minWidth, backgroundColor: "rgba(248, 206, 172)" },
-                children: column.label
-              },
-              column.id,
-              !1,
-              {
-                fileName: "app/LessonComponents/Lists/TopicList.tsx",
-                lineNumber: 146,
-                columnNumber: 19
-              },
-              this
-            )) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/TopicList.tsx",
-              lineNumber: 144,
-              columnNumber: 15
-            }, this) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/TopicList.tsx",
-              lineNumber: 143,
-              columnNumber: 13
-            }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.TableBody, { children: filteredRows.length === 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_TableRow2.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_TableCell2.default, { colSpan: columns2.length, children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.Box, { sx: {
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center"
-            }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.Typography, { variant: "h6", children: "\u05DC\u05D0 \u05E0\u05DE\u05E6\u05D0\u05D5 \u05E0\u05D5\u05E9\u05D0\u05D9\u05DD \u05DE\u05EA\u05D0\u05D9\u05DE\u05D9\u05DD \u05DC\u05E2\u05E8\u05DA \u05D4\u05D7\u05D9\u05E4\u05D5\u05E9" }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/TopicList.tsx",
-              lineNumber: 166,
-              columnNumber: 23
-            }, this) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/TopicList.tsx",
-              lineNumber: 160,
-              columnNumber: 21
-            }, this) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/TopicList.tsx",
-              lineNumber: 159,
-              columnNumber: 19
-            }, this) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/TopicList.tsx",
-              lineNumber: 158,
-              columnNumber: 17
-            }, this) : filteredRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.Grow, { timeout: (index + 1) * 100, in: !0, style: { transformOrigin: "0 0 0" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_TableRow2.default, { hover: !0, role: "checkbox", tabIndex: -1, onClick: () => handleTopicRowClick(row), children: columns2.map((column) => {
-              let value = row[column.id];
-              return /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_TableCell2.default, { align: column.align, children: column.format && typeof value == "number" ? column.format(value) : String(value) }, column.id, !1, {
-                fileName: "app/LessonComponents/Lists/TopicList.tsx",
-                lineNumber: 182,
-                columnNumber: 29
-              }, this);
-            }) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/TopicList.tsx",
-              lineNumber: 177,
-              columnNumber: 23
-            }, this) }, row.name, !1, {
-              fileName: "app/LessonComponents/Lists/TopicList.tsx",
-              lineNumber: 176,
-              columnNumber: 21
-            }, this)) }, void 0, !1, {
-              fileName: "app/LessonComponents/Lists/TopicList.tsx",
-              lineNumber: 156,
-              columnNumber: 13
-            }, this)
-          ] }, void 0, !0, {
-            fileName: "app/LessonComponents/Lists/TopicList.tsx",
-            lineNumber: 142,
-            columnNumber: 11
-          }, this)
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/LessonComponents/Lists/TopicList.tsx",
-          lineNumber: 127,
-          columnNumber: 9
-        },
-        this
-      ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(
-        import_TablePagination2.default,
-        {
-          rowsPerPageOptions: [10, 25, 100],
-          component: "div",
-          count: dataRow.length,
-          rowsPerPage,
-          page,
-          onPageChange: handleChangePage,
-          onRowsPerPageChange: handleChangeRowsPerPage
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/LessonComponents/Lists/TopicList.tsx",
-          lineNumber: 196,
-          columnNumber: 9
-        },
-        this
-      )
-    ] }, void 0, !0, {
-      fileName: "app/LessonComponents/Lists/TopicList.tsx",
-      lineNumber: 126,
-      columnNumber: 7
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/LessonComponents/Lists/TopicList.tsx",
-    lineNumber: 92,
-    columnNumber: 5
-  }, this);
-}
+// app/routes/learn.tsx
+var learn_exports = {};
+__export(learn_exports, {
+  default: () => Learn
+});
+var import_react13 = require("react");
 
 // app/components/SideBar.tsx
-var import_react9 = require("react"), import_material6 = require("@mui/material");
+var import_react12 = require("react"), import_material4 = require("@mui/material");
 
 // app/images/orev-icon-portrait.png
 var orev_icon_portrait_default = "/build/_assets/orev-icon-portrait-GVLD24GP.png";
 
 // app/components/SideBar.tsx
-var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = [
+var import_jsx_dev_runtime13 = require("react/jsx-dev-runtime"), sideBarItems = [
   {
     name: "\u05DC\u05DE\u05D9\u05D3\u05D4",
     href: "/learn",
-    icon: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("svg", { width: "46", height: "46", viewBox: "0 0 32 32", fill: "none", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+    icon: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("svg", { width: "46", height: "46", viewBox: "0 0 32 32", fill: "none", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           d: "M24.5852 25.2658C24.2883 26.8243 22.9257 27.9519 21.3392 27.9519H10.6401C9.05354 27.9519 7.69094 26.8243 7.39408 25.2658L4.98096 12.5969L15.9001 4.52225L26.9988 12.5941L24.5852 25.2658Z",
@@ -1377,7 +991,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           opacity: "0.5",
@@ -1395,7 +1009,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           d: "M19.4785 16.2998C19.4785 18.2208 17.9212 19.778 16.0002 19.778C14.0792 19.778 12.522 18.2208 12.522 16.2998C12.522 14.3788 14.0792 12.8215 16.0002 12.8215C17.9212 12.8215 19.4785 14.3788 19.4785 16.2998Z",
@@ -1410,7 +1024,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           d: "M16.1685 2.84462C16.6431 2.84231 17.1233 2.98589 17.5361 3.28558L17.5368 3.2861L29.9455 12.2319C30.9781 12.9822 31.207 14.4275 30.4568 15.4601C29.7067 16.4924 28.262 16.7215 27.2294 15.9719L27.2286 15.9714L16.1602 7.99185L5.09208 15.9712L5.09121 15.9719C4.05865 16.7213 2.61395 16.4923 1.86391 15.4599C1.11367 14.4273 1.34258 12.982 2.3752 12.2318L2.37679 12.2306L14.7839 3.28596L14.7846 3.28544C15.2022 2.98229 15.6887 2.83889 16.1685 2.84462Z",
@@ -1434,8 +1048,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
   {
     name: "\u05E4\u05E8\u05D5\u05E4\u05D9\u05DC",
     href: "/profile",
-    icon: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("svg", { width: "46", height: "46", viewBox: "0 0 46 46", fill: "none", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+    icon: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("svg", { width: "46", height: "46", viewBox: "0 0 46 46", fill: "none", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           fillRule: "evenodd",
@@ -1452,7 +1066,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           d: "M11.1826 21.002C11.1826 14.3745 16.5552 9.00195 23.1826 9.00195C29.81 9.00195 35.1826 14.3745 35.1826 21.002V29.002C35.1826 35.6294 29.81 41.002 23.1826 41.002C16.5552 41.002 11.1826 35.6294 11.1826 29.002V21.002Z",
@@ -1467,7 +1081,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           d: "M7.18262 24.502C7.18262 22.0167 9.19734 20.002 11.6826 20.002H34.6826C37.1679 20.002 39.1826 22.0167 39.1826 24.502C39.1826 26.9872 37.1679 29.002 34.6826 29.002H11.6826C9.19734 29.002 7.18262 26.9872 7.18262 24.502Z",
@@ -1482,7 +1096,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           d: "M18.1826 20.502C18.1826 19.6735 18.8542 19.002 19.6826 19.002C20.511 19.002 21.1826 19.6735 21.1826 20.502V24.502C21.1826 25.3304 20.511 26.002 19.6826 26.002C18.8542 26.002 18.1826 25.3304 18.1826 24.502V20.502Z",
@@ -1497,7 +1111,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           d: "M24.1826 20.502C24.1826 19.6735 24.8542 19.002 25.6826 19.002C26.511 19.002 27.1826 19.6735 27.1826 20.502V24.502C27.1826 25.3304 26.511 26.002 25.6826 26.002C24.8542 26.002 24.1826 25.3304 24.1826 24.502V20.502Z",
@@ -1512,7 +1126,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           d: "M17.1826 29.0445C17.1826 28.4687 17.6494 28.002 18.2252 28.002H27.1401C27.7159 28.002 28.1826 28.4687 28.1826 29.0445V29.502C28.1826 32.5395 25.7202 35.002 22.6826 35.002C19.6451 35.002 17.1826 32.5395 17.1826 29.502V29.0445Z",
@@ -1527,7 +1141,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           d: "M7.18262 21.0062V21.002C7.18262 12.1654 14.3461 5.00195 23.1826 5.00195C26.0199 5.00195 28.6847 5.74049 30.9953 7.0358C29.7326 15.5 22.2386 22.002 13.1826 22.002C11.0788 22.002 9.05929 21.6511 7.18262 21.0062Z",
@@ -1552,8 +1166,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
     //TODO: if user role is admin ONLY!
     name: "\u05DE\u05E4\u05E2\u05DC \u05D4\u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD",
     href: "/lesson-factory",
-    icon: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("svg", { width: "44", height: "44", viewBox: "0 0 512 512", fill: "none", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+    icon: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("svg", { width: "44", height: "44", viewBox: "0 0 512 512", fill: "none", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           style: { fill: "#792A18" },
@@ -1568,7 +1182,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           style: { fill: "#95341D" },
@@ -1583,7 +1197,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           style: { fill: "#AB5D4A" },
@@ -1598,7 +1212,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "polygon",
         {
           style: { fill: "#A99E9B" },
@@ -1613,7 +1227,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           style: { fill: "#C1B8B5" },
@@ -1628,7 +1242,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           style: { fill: "#D8D1D0" },
@@ -1643,7 +1257,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "polygon",
         {
           style: { fill: "#E26142" },
@@ -1658,7 +1272,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "polygon",
         {
           style: { fill: "#C1B8B5" },
@@ -1673,7 +1287,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           style: { fill: "#D8D1D0" },
@@ -1688,7 +1302,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           style: { fill: "#F0EBEA" },
@@ -1703,7 +1317,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "rect",
         {
           x: "301.011",
@@ -1721,8 +1335,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("g", { children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("g", { children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
           "path",
           {
             style: { fill: "#7F7774" },
@@ -1737,7 +1351,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
           },
           this
         ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
           "path",
           {
             style: { fill: "#7F7774" },
@@ -1752,7 +1366,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
           },
           this
         ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
           "path",
           {
             style: { fill: "#7F7774" },
@@ -1767,7 +1381,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
           },
           this
         ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
           "path",
           {
             style: { fill: "#7F7774" },
@@ -1782,7 +1396,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
           },
           this
         ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
           "path",
           {
             style: { fill: "#7F7774" },
@@ -1802,7 +1416,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         lineNumber: 133,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "path",
         {
           style: { fill: "#554F4E" },
@@ -1824,8 +1438,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
     }, this)
   }
   // maybe add in the future a settings page about page and so on
-], LeftBarMoreMenuSvg = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("svg", { width: "46", height: "46", viewBox: "0 0 46 46", fill: "none", ...props, children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+], LeftBarMoreMenuSvg = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("svg", { width: "46", height: "46", viewBox: "0 0 46 46", fill: "none", ...props, children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
     "circle",
     {
       cx: "23",
@@ -1844,17 +1458,17 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("circle", { cx: "15", cy: "23", r: "2", fill: "white" }, void 0, !1, {
+  /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("circle", { cx: "15", cy: "23", r: "2", fill: "white" }, void 0, !1, {
     fileName: "app/components/SideBar.tsx",
     lineNumber: 176,
     columnNumber: 7
   }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("circle", { cx: "23", cy: "23", r: "2", fill: "white" }, void 0, !1, {
+  /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("circle", { cx: "23", cy: "23", r: "2", fill: "white" }, void 0, !1, {
     fileName: "app/components/SideBar.tsx",
     lineNumber: 177,
     columnNumber: 7
   }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("circle", { cx: "31", cy: "23", r: "2", fill: "white" }, void 0, !1, {
+  /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("circle", { cx: "31", cy: "23", r: "2", fill: "white" }, void 0, !1, {
     fileName: "app/components/SideBar.tsx",
     lineNumber: 178,
     columnNumber: 7
@@ -1864,11 +1478,11 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
   lineNumber: 167,
   columnNumber: 5
 }, this), SideBar = ({ selectedTab }) => {
-  let [moreMenuShown, setMoreMenuShown] = (0, import_react9.useState)(!1), [isDarkModeChecked, setisDarkModeChecked] = (0, import_react9.useState)(!1), handleChange = () => {
+  let [moreMenuShown, setMoreMenuShown] = (0, import_react12.useState)(!1), [isDarkModeChecked, setisDarkModeChecked] = (0, import_react12.useState)(!1), handleChange = () => {
     setisDarkModeChecked((prevChecked) => !prevChecked);
   };
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_jsx_dev_runtime10.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-    import_material6.Box,
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_jsx_dev_runtime13.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+    import_material4.Box,
     {
       sx: {
         right: 0,
@@ -1879,8 +1493,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
         zIndex: 2
       },
       children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-          import_material6.Box,
+        /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+          import_material4.Box,
           {
             sx: {
               display: "flex",
@@ -1892,8 +1506,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
               borderBottom: "2px solid #e5e5e5"
             },
             children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-                import_material6.Typography,
+              /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+                import_material4.Typography,
                 {
                   sx: {
                     fontSize: "1.7rem",
@@ -1915,7 +1529,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
                 },
                 this
               ),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.Link, { href: "/", sx: { paddingLeft: 2, margin: "auto" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+              /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material4.Link, { href: "/", sx: { paddingLeft: 2, margin: "auto" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
                 "img",
                 {
                   src: orev_icon_portrait_default,
@@ -1947,9 +1561,9 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
           },
           this
         ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.Box, { sx: { display: "flex", flexDirection: "column" }, children: [
-          sideBarItems.map((item) => /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.Box, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-            import_material6.Link,
+        /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material4.Box, { sx: { display: "flex", flexDirection: "column" }, children: [
+          sideBarItems.map((item) => /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material4.Box, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+            import_material4.Link,
             {
               href: item.href,
               sx: {
@@ -1971,7 +1585,7 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
               },
               children: [
                 item.icon,
-                /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.Typography, { children: item.name }, void 0, !1, {
+                /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material4.Typography, { children: item.name }, void 0, !1, {
                   fileName: "app/components/SideBar.tsx",
                   lineNumber: 262,
                   columnNumber: 17
@@ -1991,8 +1605,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
             lineNumber: 238,
             columnNumber: 13
           }, this)),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-            import_material6.Box,
+          /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+            import_material4.Box,
             {
               sx: {
                 display: "flex",
@@ -2010,18 +1624,18 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
               role: "button",
               tabIndex: 0,
               children: [
-                /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(LeftBarMoreMenuSvg, {}, void 0, !1, {
+                /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(LeftBarMoreMenuSvg, {}, void 0, !1, {
                   fileName: "app/components/SideBar.tsx",
                   lineNumber: 284,
                   columnNumber: 13
                 }, this),
-                /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.Typography, { sx: { fontSize: "1rem" }, children: "\u05DC\u05E2\u05D5\u05D3" }, void 0, !1, {
+                /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material4.Typography, { sx: { fontSize: "1rem" }, children: "\u05DC\u05E2\u05D5\u05D3" }, void 0, !1, {
                   fileName: "app/components/SideBar.tsx",
                   lineNumber: 285,
                   columnNumber: 13
                 }, this),
-                /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-                  import_material6.Paper,
+                /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+                  import_material4.Paper,
                   {
                     sx: {
                       position: "absolute",
@@ -2036,8 +1650,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
                     },
                     onMouseEnter: () => setMoreMenuShown(!0),
                     onMouseLeave: () => setMoreMenuShown(!1),
-                    children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-                      import_material6.Box,
+                    children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+                      import_material4.Box,
                       {
                         sx: {
                           display: "flex",
@@ -2045,8 +1659,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
                           borderColor: "#D1D5DB"
                         },
                         children: [
-                          /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-                            import_material6.Button,
+                          /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+                            import_material4.Button,
                             {
                               sx: {
                                 paddingTop: "0.5rem",
@@ -2065,8 +1679,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
                             },
                             this
                           ),
-                          /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-                            import_material6.Button,
+                          /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+                            import_material4.Button,
                             {
                               sx: {
                                 paddingTop: "0.5rem",
@@ -2085,8 +1699,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
                             },
                             this
                           ),
-                          /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-                            import_material6.Button,
+                          /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+                            import_material4.Button,
                             {
                               sx: {
                                 paddingTop: "0.5rem",
@@ -2105,8 +1719,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
                             },
                             this
                           ),
-                          /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-                            import_material6.Button,
+                          /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+                            import_material4.Button,
                             {
                               sx: {
                                 paddingTop: "0.5rem",
@@ -2125,8 +1739,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
                             },
                             this
                           ),
-                          /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-                            import_material6.Box,
+                          /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+                            import_material4.Box,
                             {
                               sx: {
                                 marginTop: "auto",
@@ -2136,14 +1750,14 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
                                 justifyContent: "space-between"
                               },
                               children: [
-                                /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.Box, { sx: { display: "flex", alignItems: "center" }, children: [
-                                  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.Typography, { sx: { fontSize: "1rem", fontWeight: "normal" }, children: "\u05DE\u05E6\u05D1" }, void 0, !1, {
+                                /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material4.Box, { sx: { display: "flex", alignItems: "center" }, children: [
+                                  /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material4.Typography, { sx: { fontSize: "1rem", fontWeight: "normal" }, children: "\u05DE\u05E6\u05D1" }, void 0, !1, {
                                     fileName: "app/components/SideBar.tsx",
                                     lineNumber: 363,
                                     columnNumber: 21
                                   }, this),
-                                  isDarkModeChecked ? /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-                                    import_material6.Typography,
+                                  isDarkModeChecked ? /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+                                    import_material4.Typography,
                                     {
                                       sx: {
                                         color: "#784c06",
@@ -2160,8 +1774,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
                                       columnNumber: 23
                                     },
                                     this
-                                  ) : /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-                                    import_material6.Typography,
+                                  ) : /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+                                    import_material4.Typography,
                                     {
                                       sx: {
                                         color: "#ffb238",
@@ -2184,8 +1798,8 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
                                   lineNumber: 362,
                                   columnNumber: 19
                                 }, this),
-                                /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-                                  import_material6.Switch,
+                                /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+                                  import_material4.Switch,
                                   {
                                     defaultChecked: isDarkModeChecked,
                                     color: "warning",
@@ -2264,369 +1878,6 @@ var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), sideBarItems = 
     columnNumber: 5
   }, this);
 };
-
-// app/utils/topic.server.ts
-async function getTopics() {
-  return await prisma.topic.findMany({
-    include: {
-      _count: {
-        select: {
-          Lessons: !0
-        }
-      }
-    }
-  });
-}
-
-// app/routes/lesson-factory.tsx
-var import_jsx_dev_runtime11 = require("react/jsx-dev-runtime");
-async function loader3({ request }) {
-  let topics = await getTopics(), lessons = await getLessons(), questions = await getQuestions();
-  return { topics, lessons, questions };
-}
-var breadcrumbHierarchy = [
-  {
-    label: "\u05E0\u05D5\u05E9\u05D0",
-    componentName: "TopicList",
-    children: [
-      { label: "\u05D9\u05E6\u05D9\u05E8\u05EA \u05E0\u05D5\u05E9\u05D0", componentName: "NewTopic" },
-      {
-        label: "\u05E9\u05D9\u05E2\u05D5\u05E8",
-        componentName: "LessonList",
-        children: [
-          { label: "\u05D9\u05E6\u05D9\u05E8\u05EA \u05E9\u05D9\u05E2\u05D5\u05E8", componentName: "NewLesson" },
-          {
-            label: "\u05E9\u05D0\u05DC\u05D4",
-            componentName: "QuestionList",
-            children: [{ label: "\u05D9\u05E6\u05D9\u05E8\u05EA \u05E9\u05D0\u05DC\u05D4", componentName: "NewQuestion" }]
-          }
-        ]
-      }
-    ]
-  }
-], populateParentProperty = (breadcrumbs) => {
-  for (let breadcrumb of breadcrumbs)
-    if (breadcrumb.children) {
-      for (let child of breadcrumb.children)
-        child.parent = breadcrumb;
-      populateParentProperty(breadcrumb.children);
-    }
-};
-populateParentProperty(breadcrumbHierarchy);
-var BreadCrumbsComponent = ({
-  selectedComponent,
-  onBreadcrumbClick
-}) => {
-  let findBreadcrumb = (breadcrumbs, componentName) => {
-    for (let breadcrumb of breadcrumbs) {
-      if (breadcrumb.componentName === componentName)
-        return breadcrumb;
-      if (breadcrumb.children) {
-        let foundChild = findBreadcrumb(breadcrumb.children, componentName);
-        if (foundChild)
-          return foundChild;
-      }
-    }
-  }, getVisibleBreadcrumbs = () => {
-    let selectedBreadcrumb = findBreadcrumb(breadcrumbHierarchy, selectedComponent);
-    return selectedBreadcrumb ? [...getAncestors(selectedBreadcrumb), selectedBreadcrumb] : [];
-  }, getAncestors = (breadcrumb) => {
-    let ancestors = [], currentBreadcrumb = breadcrumb;
-    for (; currentBreadcrumb.parent; )
-      ancestors.unshift(currentBreadcrumb.parent), currentBreadcrumb = currentBreadcrumb.parent;
-    return ancestors;
-  }, handleBreadcrumbClick = (breadcrumb) => {
-    onBreadcrumbClick(breadcrumb.componentName);
-  };
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_Breadcrumbs.default, { separator: "\u203A", "aria-label": "breadcrumb", sx: { color: "white", cursor: "pointer" }, children: getVisibleBreadcrumbs().map((breadcrumb, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
-    import_material7.Link,
-    {
-      underline: "hover",
-      color: "#ffa111",
-      onClick: () => handleBreadcrumbClick(breadcrumb),
-      children: breadcrumb.label
-    },
-    index,
-    !1,
-    {
-      fileName: "app/routes/lesson-factory.tsx",
-      lineNumber: 138,
-      columnNumber: 9
-    },
-    this
-  )) }, void 0, !1, {
-    fileName: "app/routes/lesson-factory.tsx",
-    lineNumber: 136,
-    columnNumber: 5
-  }, this);
-};
-function BuildLesson() {
-  let { topics, lessons, questions } = (0, import_react10.useLoaderData)(), [selectedComponent, setSelectedComponent] = (0, import_react11.useState)("TopicList"), [selectedTopic, setSelectedTopic] = (0, import_react11.useState)(void 0), handleComponentChange = (componentName, selectedTopic2) => {
-    console.log("Selected Topic:", selectedTopic2), setSelectedTopic(selectedTopic2), setSelectedComponent(componentName);
-  };
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
-    import_material7.Box,
-    {
-      sx: {
-        display: "flex",
-        width: "full",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#235390",
-        paddingX: 4,
-        paddingY: 16
-      },
-      children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material7.Box, { sx: {
-          position: "fixed",
-          top: 0,
-          left: 0,
-          height: "100%"
-        }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(SideBar, { selectedTab: "\u05DE\u05E4\u05E2\u05DC \u05D4\u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD" }, void 0, !1, {
-          fileName: "app/routes/lesson-factory.tsx",
-          lineNumber: 181,
-          columnNumber: 11
-        }, this) }, void 0, !1, {
-          fileName: "app/routes/lesson-factory.tsx",
-          lineNumber: 178,
-          columnNumber: 9
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material7.Box, { sx: {
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "1920px"
-        }, children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material7.Box, { sx: {
-            position: "fixed",
-            top: 3,
-            left: 238
-          }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
-            BreadCrumbsComponent,
-            {
-              onBreadcrumbClick: (componentName) => {
-                setSelectedComponent(componentName);
-              },
-              selectedComponent
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/lesson-factory.tsx",
-              lineNumber: 191,
-              columnNumber: 13
-            },
-            this
-          ) }, void 0, !1, {
-            fileName: "app/routes/lesson-factory.tsx",
-            lineNumber: 186,
-            columnNumber: 11
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material7.Box, { sx: { width: "100%", overflow: "hidden", alignItems: "center", height: "100%" }, children: [
-            selectedComponent === "TopicList" && /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
-              TopicList,
-              {
-                onButtonClick: handleComponentChange,
-                dataRow: topics,
-                dataRowChildren: lessons
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/lesson-factory.tsx",
-                lineNumber: 198,
-                columnNumber: 15
-              },
-              this
-            ),
-            selectedComponent === "NewTopic" && /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(NewTopic2, { onButtonClick: handleComponentChange }, void 0, !1, {
-              fileName: "app/routes/lesson-factory.tsx",
-              lineNumber: 205,
-              columnNumber: 15
-            }, this),
-            selectedComponent === "LessonList" && /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
-              LessonList,
-              {
-                onButtonClick: handleComponentChange,
-                dataRow: lessons,
-                dataRowChildren: questions,
-                selectedTopic
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/routes/lesson-factory.tsx",
-                lineNumber: 208,
-                columnNumber: 15
-              },
-              this
-            ),
-            selectedComponent === "NewLesson" && /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(NewTopic, { onButtonClick: handleComponentChange }, void 0, !1, {
-              fileName: "app/routes/lesson-factory.tsx",
-              lineNumber: 216,
-              columnNumber: 15
-            }, this)
-          ] }, void 0, !0, {
-            fileName: "app/routes/lesson-factory.tsx",
-            lineNumber: 196,
-            columnNumber: 11
-          }, this)
-        ] }, void 0, !0, {
-          fileName: "app/routes/lesson-factory.tsx",
-          lineNumber: 183,
-          columnNumber: 9
-        }, this)
-      ]
-    },
-    void 0,
-    !0,
-    {
-      fileName: "app/routes/lesson-factory.tsx",
-      lineNumber: 167,
-      columnNumber: 7
-    },
-    this
-  );
-}
-
-// app/routes/lessons.tsx
-var lessons_exports = {};
-__export(lessons_exports, {
-  default: () => TopicList2,
-  loader: () => loader4
-});
-var import_react12 = require("@remix-run/react");
-var import_jsx_dev_runtime12 = require("react/jsx-dev-runtime");
-async function loader4() {
-  return { topics: (await getTopics()).map((topic) => ({ ...topic, _count: topic._count.Lessons })) };
-}
-function TopicList2() {
-  let { topics } = (0, import_react12.useLoaderData)();
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_jsx_dev_runtime12.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
-    FullFeaturedCrudGrid,
-    {
-      editable: !0,
-      rows: topics,
-      setRows: (oldRows) => {
-      },
-      columnProps: [
-        { field: "name", headerName: "\u05E9\u05DD \u05E0\u05D5\u05E9\u05D0", width: 180, editable: !0 },
-        {
-          field: "updatedAt",
-          headerName: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4",
-          width: 180,
-          editable: !1
-        },
-        {
-          field: "_count",
-          headerName: "\u05DE\u05E1\u05E4\u05E8 \u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD",
-          width: 180,
-          editable: !1
-        }
-      ]
-    },
-    void 0,
-    !1,
-    {
-      fileName: "app/routes/lessons.tsx",
-      lineNumber: 37,
-      columnNumber: 9
-    },
-    this
-  ) }, void 0, !1, {
-    fileName: "app/routes/lessons.tsx",
-    lineNumber: 36,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/lessons.tsx",
-    lineNumber: 35,
-    columnNumber: 5
-  }, this);
-}
-
-// app/routes/index.tsx
-var routes_exports = {};
-__export(routes_exports, {
-  default: () => Index
-});
-var import_material8 = require("@mui/material"), import_react_tsparticles = __toESM(require("react-tsparticles"));
-
-// app/components/UserGreetings.tsx
-function UserGreetings({ firstname, lastname }) {
-  let currentHour = (/* @__PURE__ */ new Date()).getHours();
-  return currentHour >= 5 && currentHour < 12 ? `\u05D1\u05D5\u05E7\u05E8 \u05D8\u05D5\u05D1, ${firstname} ${lastname}` : currentHour >= 12 && currentHour < 17 ? `\u05E6\u05D4\u05E8\u05D9\u05D9\u05DD \u05D8\u05D5\u05D1\u05D9\u05DD, ${firstname} ${lastname}` : currentHour >= 17 && currentHour < 22 ? `\u05E2\u05E8\u05D1 \u05D8\u05D5\u05D1, ${firstname} ${lastname}` : `\u05DC\u05D9\u05DC\u05D4 \u05D8\u05D5\u05D1, ${firstname} ${lastname}`;
-}
-var UserGreetings_default = UserGreetings;
-
-// app/routes/index.tsx
-var import_jsx_dev_runtime13 = require("react/jsx-dev-runtime");
-function Index() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_jsx_dev_runtime13.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Box, { sx: {
-    gap: 1
-  }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Box, { sx: { position: "absolute", top: "18px", left: "18px", color: "white" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(UserGreetings_default, { firstname: "\u05D7\u05D9\u05D9\u05DE\u05D5\u05DF", lastname: "\u05D7\u05D9\u05D9\u05DE\u05E7\u05D4" }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 14,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 13,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_react_tsparticles.default, { id: "tsparticles" }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 16,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Box, { sx: { display: "flex", justify: "center", color: "white" }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 18,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 19,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Button, { children: " ahhhhh " }, void 0, !1, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 20,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 21,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 22,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 17,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/index.tsx",
-    lineNumber: 10,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/index.tsx",
-    lineNumber: 8,
-    columnNumber: 5
-  }, this);
-}
-
-// app/routes/learn.tsx
-var learn_exports = {};
-__export(learn_exports, {
-  default: () => Learn
-});
-var import_react13 = require("react");
 
 // app/components/Svgs.tsx
 var import_jsx_dev_runtime14 = require("react/jsx-dev-runtime");
@@ -4410,7 +3661,7 @@ var units = [
 ];
 
 // app/routes/learn.tsx
-var import_material9 = require("@mui/material"), import_jsx_dev_runtime15 = require("react/jsx-dev-runtime"), tileStatus = (tile, lessonsCompleted) => {
+var import_material5 = require("@mui/material"), import_jsx_dev_runtime15 = require("react/jsx-dev-runtime"), tileStatus = (tile, lessonsCompleted) => {
   let tilesCompleted = Math.floor(lessonsCompleted / 4), tileIndex = units.flatMap((unit) => unit.tiles).findIndex((t) => t === tile);
   return tileIndex < tilesCompleted ? "COMPLETE" : tileIndex > tilesCompleted ? "LOCKED" : "ACTIVE";
 }, TileIcon = ({
@@ -4514,14 +3765,13 @@ var TileTooltip = ({
   let tileTooltipRef = (0, import_react13.useRef)(null);
   (0, import_react13.useEffect)(() => {
     let containsTileTooltip = (event) => {
-      var _a;
-      selectedTile !== index || (_a = tileTooltipRef.current) != null && _a.contains(
+      selectedTile !== index || tileTooltipRef.current?.contains(
         event.target
       ) || closeTooltip();
     };
     return window.addEventListener("click", containsTileTooltip, !0), () => window.removeEventListener("click", containsTileTooltip, !0);
   }, [selectedTile, tileTooltipRef, closeTooltip, index]);
-  let unit = units.find((unit2) => unit2.unitNumber === unitNumber), activeBackgroundColor = (unit == null ? void 0 : unit.backgroundColor) ?? "bg-green-500", activeTextColor = (unit == null ? void 0 : unit.textColor) ?? "text-green-500";
+  let unit = units.find((unit2) => unit2.unitNumber === unitNumber), activeBackgroundColor = unit?.backgroundColor ?? "bg-green-500", activeTextColor = unit?.textColor ?? "text-green-500";
   return /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
     "div",
     {
@@ -4579,7 +3829,7 @@ var TileTooltip = ({
               this
             ),
             status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
-              import_material9.Link,
+              import_material5.Link,
               {
                 href: "/lesson",
                 className: [
@@ -4612,7 +3862,7 @@ var TileTooltip = ({
               },
               this
             ) : /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
-              import_material9.Link,
+              import_material5.Link,
               {
                 href: "/lesson",
                 className: "flex w-full items-center justify-center rounded-xl border-b-4 border-yellow-200 bg-white p-3 uppercase text-yellow-400",
@@ -4696,7 +3946,7 @@ var TileTooltip = ({
                   lineNumber: 352,
                   columnNumber: 27
                 }, this),
-                /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_material9.Typography, { sx: {
+                /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_material5.Typography, { sx: {
                   display: "flex",
                   position: "absolute",
                   right: 0,
@@ -4716,7 +3966,7 @@ var TileTooltip = ({
                 lineNumber: 351,
                 columnNumber: 25
               }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
-                import_material9.Button,
+                import_material5.Button,
                 {
                   children: [
                     tile.type === "fast-forward" && status === "LOCKED" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
@@ -4775,7 +4025,7 @@ var TileTooltip = ({
                             columnNumber: 27
                           }, this),
                           /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
-                            import_material9.Typography,
+                            import_material5.Typography,
                             {
                               className: "tooltip",
                               sx: {
@@ -4911,7 +4161,7 @@ function Learn() {
         bottom: "7rem"
       }, children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
-          import_material9.Link,
+          import_material5.Link,
           {
             href: "/lesson?practice",
             sx: {
@@ -4929,7 +4179,7 @@ function Learn() {
               backgroundColor: "#ffffff"
             },
             children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_material9.Typography, { children: "\u05D7\u05D6\u05E8\u05D5\u05EA \u05EA\u05D9\u05E8\u05D2\u05D5\u05DC" }, void 0, !1, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_material5.Typography, { children: "\u05D7\u05D6\u05E8\u05D5\u05EA \u05EA\u05D9\u05E8\u05D2\u05D5\u05DC" }, void 0, !1, {
                 fileName: "app/routes/learn.tsx",
                 lineNumber: 526,
                 columnNumber: 15
@@ -4951,7 +4201,7 @@ function Learn() {
           this
         ),
         scrollY > 100 && /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
-          import_material9.Button,
+          import_material5.Button,
           {
             sx: {
               display: "flex",
@@ -4970,7 +4220,7 @@ function Learn() {
             },
             onClick: () => scrollTo(0, 0),
             children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_material9.Typography, { children: "\u05D7\u05D6\u05E8\u05D4 \u05DC\u05D4\u05EA\u05D7\u05DC\u05D4" }, void 0, !1, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_material5.Typography, { children: "\u05D7\u05D6\u05E8\u05D4 \u05DC\u05D4\u05EA\u05D7\u05DC\u05D4" }, void 0, !1, {
                 fileName: "app/routes/learn.tsx",
                 lineNumber: 548,
                 columnNumber: 17
@@ -5050,12 +4300,10 @@ var LessonCompletionSvg = ({
   text,
   textColor
 }) => {
-  var _a;
   let hoverElement = (0, import_react13.useRef)(null), [width, setWidth] = (0, import_react13.useState)(72);
   return (0, import_react13.useEffect)(() => {
-    var _a2;
-    setWidth(((_a2 = hoverElement.current) == null ? void 0 : _a2.clientWidth) ?? width);
-  }, [(_a = hoverElement.current) == null ? void 0 : _a.clientWidth, width]), /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+    setWidth(hoverElement.current?.clientWidth ?? width);
+  }, [hoverElement.current?.clientWidth, width]), /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
     "div",
     {
       className: `absolute z-10 w-max animate-bounce rounded-lg border-2 border-gray-200 bg-white px-3 py-2 font-bold uppercase ${textColor}`,
@@ -5124,7 +4372,7 @@ var LessonCompletionSvg = ({
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
-        import_material9.Link,
+        import_material5.Link,
         {
           className: [
             "flex items-center gap-3 rounded-2xl border-2 border-b-4 p-3 transition hover:text-gray-100",
@@ -5169,10 +4417,10 @@ var LessonCompletionSvg = ({
 );
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-HFOEGIHJ.js", imports: ["/build/_shared/chunk-OERKWWD6.js", "/build/_shared/chunk-TFAVYZDK.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-DN2MTAKU.js", imports: ["/build/_shared/chunk-I2BD6JMB.js", "/build/_shared/chunk-7PJKZZRR.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-UO25TEAF.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/learn": { id: "routes/learn", parentId: "root", path: "learn", index: void 0, caseSensitive: void 0, module: "/build/routes/learn-WL5YRQOS.js", imports: ["/build/_shared/chunk-4LGO57B3.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/lesson-factory": { id: "routes/lesson-factory", parentId: "root", path: "lesson-factory", index: void 0, caseSensitive: void 0, module: "/build/routes/lesson-factory-UQQKTUPW.js", imports: ["/build/_shared/chunk-RM3PVU74.js", "/build/_shared/chunk-OXIWLU4Q.js", "/build/_shared/chunk-Q57CA2YT.js", "/build/_shared/chunk-O26DJ66J.js", "/build/_shared/chunk-4LGO57B3.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/lessons": { id: "routes/lessons", parentId: "root", path: "lessons", index: void 0, caseSensitive: void 0, module: "/build/routes/lessons-B23T7N7K.js", imports: ["/build/_shared/chunk-U7FHF7RV.js", "/build/_shared/chunk-Q57CA2YT.js", "/build/_shared/chunk-O26DJ66J.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/lessons.$topicId": { id: "routes/lessons.$topicId", parentId: "root", path: "lessons/:topicId", index: void 0, caseSensitive: void 0, module: "/build/routes/lessons.$topicId-RF7EXI76.js", imports: ["/build/_shared/chunk-OXIWLU4Q.js", "/build/_shared/chunk-U7FHF7RV.js", "/build/_shared/chunk-O26DJ66J.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/lessons.$topicId.$lessonId": { id: "routes/lessons.$topicId.$lessonId", parentId: "root", path: "lessons/:topicId/:lessonId", index: void 0, caseSensitive: void 0, module: "/build/routes/lessons.$topicId.$lessonId-27UP2IZZ.js", imports: ["/build/_shared/chunk-RM3PVU74.js", "/build/_shared/chunk-U7FHF7RV.js", "/build/_shared/chunk-O26DJ66J.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "de35bbb0", hmr: void 0, url: "/build/manifest-DE35BBB0.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-ZZIPRPOO.js", imports: ["/build/_shared/chunk-OAPPX4FA.js", "/build/_shared/chunk-BYA6JZU3.js", "/build/_shared/chunk-WEAPBHQG.js", "/build/_shared/chunk-7PHB3BFD.js", "/build/_shared/chunk-CJ4MY3PQ.js", "/build/_shared/chunk-UIV7ORJK.js", "/build/_shared/chunk-JR22VO6P.js", "/build/_shared/chunk-PZDJHGND.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-IESAP7QP.js", imports: ["/build/_shared/chunk-5NOJSYQA.js", "/build/_shared/chunk-HMTU5BCG.js", "/build/_shared/chunk-2QJY4JOV.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-N3XFZXUN.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/admin": { id: "routes/admin", parentId: "root", path: "admin", index: void 0, caseSensitive: void 0, module: "/build/routes/admin-WJYUYXJH.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/admin.lessons": { id: "routes/admin.lessons", parentId: "routes/admin", path: "lessons", index: void 0, caseSensitive: void 0, module: "/build/routes/admin.lessons-VKFGKAIV.js", imports: ["/build/_shared/chunk-4EEVXHV7.js", "/build/_shared/chunk-HFCO4RHI.js", "/build/_shared/chunk-HMTU5BCG.js", "/build/_shared/chunk-2QJY4JOV.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/admin.lessons.$topicId": { id: "routes/admin.lessons.$topicId", parentId: "routes/admin.lessons", path: ":topicId", index: void 0, caseSensitive: void 0, module: "/build/routes/admin.lessons.$topicId-4XH5JR5N.js", imports: ["/build/_shared/chunk-5D3HTP26.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/admin.lessons.$topicId.$lessonId": { id: "routes/admin.lessons.$topicId.$lessonId", parentId: "routes/admin.lessons.$topicId", path: ":lessonId", index: void 0, caseSensitive: void 0, module: "/build/routes/admin.lessons.$topicId.$lessonId-O43O5M5U.js", imports: ["/build/_shared/chunk-7NPR3IBF.js", "/build/_shared/chunk-HFCO4RHI.js", "/build/_shared/chunk-HMTU5BCG.js", "/build/_shared/chunk-2QJY4JOV.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: "index", index: void 0, caseSensitive: void 0, module: "/build/routes/index-JI33ZFJE.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/learn": { id: "routes/learn", parentId: "root", path: "learn", index: void 0, caseSensitive: void 0, module: "/build/routes/learn-V7NE6SAF.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/lesson-factory": { id: "routes/lesson-factory", parentId: "root", path: "lesson-factory", index: void 0, caseSensitive: void 0, module: "/build/routes/lesson-factory-APDBTMU3.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/lessons": { id: "routes/lessons", parentId: "root", path: "lessons", index: void 0, caseSensitive: void 0, module: "/build/routes/lessons-YXUXSDBA.js", imports: ["/build/_shared/chunk-4EEVXHV7.js", "/build/_shared/chunk-HFCO4RHI.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/lessons.$topicId": { id: "routes/lessons.$topicId", parentId: "routes/lessons", path: ":topicId", index: void 0, caseSensitive: void 0, module: "/build/routes/lessons.$topicId-OE3DHKVE.js", imports: ["/build/_shared/chunk-5D3HTP26.js", "/build/_shared/chunk-HMTU5BCG.js", "/build/_shared/chunk-2QJY4JOV.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/lessons.$topicId.$lessonId": { id: "routes/lessons.$topicId.$lessonId", parentId: "routes/lessons.$topicId", path: ":lessonId", index: void 0, caseSensitive: void 0, module: "/build/routes/lessons.$topicId.$lessonId-MCJNAC6X.js", imports: ["/build/_shared/chunk-7NPR3IBF.js", "/build/_shared/chunk-HFCO4RHI.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "234ca387", hmr: { runtime: "/build/_shared\\chunk-UIV7ORJK.js", timestamp: 1704719561586 }, url: "/build/manifest-234CA387.js" };
 
 // server-entry-module:@remix-run/dev/server-build
-var assetsBuildDirectory = "public\\build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !1, v2_headers: !1, v2_meta: !1, v2_normalizeFormMethod: !1, v2_routeConvention: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
+var mode = "development", assetsBuildDirectory = "public\\build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
   root: {
     id: "root",
     parentId: void 0,
@@ -5181,18 +4429,34 @@ var assetsBuildDirectory = "public\\build", future = { v2_dev: !1, unstable_post
     caseSensitive: void 0,
     module: root_exports
   },
+  "routes/admin.lessons.$topicId.$lessonId": {
+    id: "routes/admin.lessons.$topicId.$lessonId",
+    parentId: "routes/admin.lessons.$topicId",
+    path: ":lessonId",
+    index: void 0,
+    caseSensitive: void 0,
+    module: admin_lessons_topicId_lessonId_exports
+  },
   "routes/lessons.$topicId.$lessonId": {
     id: "routes/lessons.$topicId.$lessonId",
-    parentId: "root",
-    path: "lessons/:topicId/:lessonId",
+    parentId: "routes/lessons.$topicId",
+    path: ":lessonId",
     index: void 0,
     caseSensitive: void 0,
     module: lessons_topicId_lessonId_exports
   },
+  "routes/admin.lessons.$topicId": {
+    id: "routes/admin.lessons.$topicId",
+    parentId: "routes/admin.lessons",
+    path: ":topicId",
+    index: void 0,
+    caseSensitive: void 0,
+    module: admin_lessons_topicId_exports
+  },
   "routes/lessons.$topicId": {
     id: "routes/lessons.$topicId",
-    parentId: "root",
-    path: "lessons/:topicId",
+    parentId: "routes/lessons",
+    path: ":topicId",
     index: void 0,
     caseSensitive: void 0,
     module: lessons_topicId_exports
@@ -5203,7 +4467,15 @@ var assetsBuildDirectory = "public\\build", future = { v2_dev: !1, unstable_post
     path: "lesson-factory",
     index: void 0,
     caseSensitive: void 0,
-    module: lesson_factory_exports
+    module: route5
+  },
+  "routes/admin.lessons": {
+    id: "routes/admin.lessons",
+    parentId: "routes/admin",
+    path: "lessons",
+    index: void 0,
+    caseSensitive: void 0,
+    module: admin_lessons_exports
   },
   "routes/lessons": {
     id: "routes/lessons",
@@ -5213,11 +4485,27 @@ var assetsBuildDirectory = "public\\build", future = { v2_dev: !1, unstable_post
     caseSensitive: void 0,
     module: lessons_exports
   },
-  "routes/index": {
-    id: "routes/index",
+  "routes/_index": {
+    id: "routes/_index",
     parentId: "root",
     path: void 0,
     index: !0,
+    caseSensitive: void 0,
+    module: index_exports
+  },
+  "routes/admin": {
+    id: "routes/admin",
+    parentId: "root",
+    path: "admin",
+    index: void 0,
+    caseSensitive: void 0,
+    module: admin_exports
+  },
+  "routes/index": {
+    id: "routes/index",
+    parentId: "root",
+    path: "index",
+    index: void 0,
     caseSensitive: void 0,
     module: routes_exports
   },
@@ -5236,21 +4524,8 @@ var assetsBuildDirectory = "public\\build", future = { v2_dev: !1, unstable_post
   assetsBuildDirectory,
   entry,
   future,
+  mode,
   publicPath,
   routes
 });
-/*! Bundled license information:
-
-@remix-run/css-bundle/dist/index.js:
-  (**
-   * @remix-run/css-bundle v1.19.3
-   *
-   * Copyright (c) Remix Software Inc.
-   *
-   * This source code is licensed under the MIT license found in the
-   * LICENSE.md file in the root directory of this source tree.
-   *
-   * @license MIT
-   *)
-*/
 //# sourceMappingURL=index.js.map

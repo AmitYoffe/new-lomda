@@ -1,10 +1,10 @@
 import type { GridColDef } from '@mui/x-data-grid';
-import type { LoaderArgs } from '@remix-run/node';
+import type { LoaderFunctionArgs } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import FullFeaturedCrudGrid from '~/LessonComponents/DataGrid';
 import { getLessonsByTopicId } from '~/utils/lesson.server';
 
-export async function loader({ params }: LoaderArgs) {
+export async function loader({ params }: LoaderFunctionArgs) {
   const { topicId } = params
   const lessons = await getLessonsByTopicId(Number(topicId))
   const lessonsWithQuestionsCount = lessons.map((lesson) => { return { ...lesson, _count: lesson._count.Questions } });
@@ -13,7 +13,7 @@ export async function loader({ params }: LoaderArgs) {
 }
 
 export default function LessonsList() {
-  const { lessons } = useLoaderData();
+  const { lessons } = useLoaderData<typeof loader>();
 
   const columns: GridColDef[] = [
     { field: 'name', headerName:  'שם שיעור', width: 180, editable: true },
