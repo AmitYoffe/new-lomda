@@ -24,9 +24,9 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 )), __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: !0 }), mod);
 
-// css-bundle-update-plugin-ns:C:\Users\user\Downloads\new-lomda-master (1)\new-lomda-master\node_modules\@remix-run\css-bundle\dist\index.js
+// css-bundle-update-plugin-ns:C:\Users\user\Downloads\new-lomda-master (3)\new-lomda-master\node_modules\@remix-run\css-bundle\dist\index.js
 var require_dist = __commonJS({
-  "css-bundle-update-plugin-ns:C:\\Users\\user\\Downloads\\new-lomda-master (1)\\new-lomda-master\\node_modules\\@remix-run\\css-bundle\\dist\\index.js"(exports) {
+  "css-bundle-update-plugin-ns:C:\\Users\\user\\Downloads\\new-lomda-master (3)\\new-lomda-master\\node_modules\\@remix-run\\css-bundle\\dist\\index.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: !0 });
     var cssBundleHref2;
@@ -168,7 +168,7 @@ var theme = (0, import_styles.createTheme)({
   palette: {
     mode: "dark",
     // primary: {
-    //     main: '#'
+    //     main: '#fc8803#'
     // },
     background: {
       // default: "#efefef",
@@ -326,691 +326,25 @@ function App() {
   }, this);
 }
 
-// app/routes/lessons.$topicId.$lessonId.tsx
-var lessons_topicId_lessonId_exports = {};
-__export(lessons_topicId_lessonId_exports, {
+// app/routes/admin.lessons.$topicId.$lessonId.tsx
+var admin_lessons_topicId_lessonId_exports = {};
+__export(admin_lessons_topicId_lessonId_exports, {
   default: () => QuestionList,
   loader: () => loader
 });
-var import_react6 = require("@remix-run/react");
+var import_react5 = require("@remix-run/react");
 
 // app/LessonComponents/DataGrid.tsx
-var import_ArrowBackIosNew = __toESM(require("@mui/icons-material/ArrowBackIosNew")), import_Close = __toESM(require("@mui/icons-material/Close")), import_DeleteOutlined = __toESM(require("@mui/icons-material/DeleteOutlined")), import_Edit = __toESM(require("@mui/icons-material/Edit")), import_Save = __toESM(require("@mui/icons-material/Save")), import_Box = __toESM(require("@mui/material/Box")), import_x_data_grid = require("@mui/x-data-grid"), import_react5 = require("@remix-run/react"), React = __toESM(require("react"));
-
-// app/components/SideBar.tsx
-var import_react4 = require("react"), import_material2 = require("@mui/material");
-
-// public/images/orev-icon-portrait.png
-var orev_icon_portrait_default = "/build/_assets/orev-icon-portrait-GVLD24GP.png";
-
-// app/components/SideBar.tsx
-var import_jsx_dev_runtime3 = require("react/jsx-dev-runtime"), sideBarItems = [
-  {
-    name: "\u05DC\u05DE\u05D9\u05D3\u05D4",
-    href: "/learn",
-    icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-      "svg",
-      {
-        width: "46",
-        height: "46",
-        viewBox: "0 0 32 32",
-        fill: "none",
-        children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            "path",
-            {
-              d: "M24.5852 25.2658C24.2883 26.8243 22.9257 27.9519 21.3392 27.9519H10.6401C9.05354 27.9519 7.69094 26.8243 7.39408 25.2658L4.98096 12.5969L15.9001 4.52225L26.9988 12.5941L24.5852 25.2658Z",
-              fill: "#FFC800"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 25,
-              columnNumber: 9
-            },
-            this
-          ),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            "path",
-            {
-              opacity: "0.5",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M13.1558 23.1111C13.1558 22.522 13.6333 22.0444 14.2224 22.0444H18.4891C19.0782 22.0444 19.5558 22.522 19.5558 23.1111C19.5558 23.7002 19.0782 24.1778 18.4891 24.1778H14.2224C13.6333 24.1778 13.1558 23.7002 13.1558 23.1111Z",
-              fill: "#945151"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 29,
-              columnNumber: 9
-            },
-            this
-          ),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            "path",
-            {
-              d: "M19.4785 16.2998C19.4785 18.2208 17.9212 19.778 16.0002 19.778C14.0792 19.778 12.522 18.2208 12.522 16.2998C12.522 14.3788 14.0792 12.8215 16.0002 12.8215C17.9212 12.8215 19.4785 14.3788 19.4785 16.2998Z",
-              fill: "#945151"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 36,
-              columnNumber: 9
-            },
-            this
-          ),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            "path",
-            {
-              d: "M16.1685 2.84462C16.6431 2.84231 17.1233 2.98589 17.5361 3.28558L17.5368 3.2861L29.9455 12.2319C30.9781 12.9822 31.207 14.4275 30.4568 15.4601C29.7067 16.4924 28.262 16.7215 27.2294 15.9719L27.2286 15.9714L16.1602 7.99185L5.09208 15.9712L5.09121 15.9719C4.05865 16.7213 2.61395 16.4923 1.86391 15.4599C1.11367 14.4273 1.34258 12.982 2.3752 12.2318L2.37679 12.2306L14.7839 3.28596L14.7846 3.28544C15.2022 2.98229 15.6887 2.83889 16.1685 2.84462Z",
-              fill: "#FF4B4B"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 40,
-              columnNumber: 9
-            },
-            this
-          )
-        ]
-      },
-      void 0,
-      !0,
-      {
-        fileName: "app/components/SideBar.tsx",
-        lineNumber: 19,
-        columnNumber: 7
-      },
-      this
-    )
-  },
-  {
-    name: "\u05E4\u05E8\u05D5\u05E4\u05D9\u05DC",
-    href: "/profile",
-    icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-      "svg",
-      {
-        width: "46",
-        height: "46",
-        viewBox: "0 0 46 46",
-        fill: "none",
-        children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            "path",
-            {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M23.1826 5.00195C14.3461 5.00195 7.18262 12.1654 7.18262 21.002V21.9375C4.21918 23.4102 2.18262 26.4682 2.18262 30.002C2.18262 34.9725 6.21206 39.002 11.1826 39.002H35.1826C40.1532 39.002 44.1826 34.9725 44.1826 30.002C44.1826 26.4682 42.1461 23.4102 39.1826 21.9375V21.002C39.1826 12.1654 32.0192 5.00195 23.1826 5.00195Z",
-              fill: "#9069CD"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 57,
-              columnNumber: 9
-            },
-            this
-          ),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            "path",
-            {
-              d: "M11.1826 21.002C11.1826 14.3745 16.5552 9.00195 23.1826 9.00195C29.81 9.00195 35.1826 14.3745 35.1826 21.002V29.002C35.1826 35.6294 29.81 41.002 23.1826 41.002C16.5552 41.002 11.1826 35.6294 11.1826 29.002V21.002Z",
-              fill: "#F3AD6D"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 63,
-              columnNumber: 9
-            },
-            this
-          ),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            "path",
-            {
-              d: "M7.18262 24.502C7.18262 22.0167 9.19734 20.002 11.6826 20.002H34.6826C37.1679 20.002 39.1826 22.0167 39.1826 24.502C39.1826 26.9872 37.1679 29.002 34.6826 29.002H11.6826C9.19734 29.002 7.18262 26.9872 7.18262 24.502Z",
-              fill: "#F3AD6D"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 67,
-              columnNumber: 9
-            },
-            this
-          ),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            "path",
-            {
-              d: "M18.1826 20.502C18.1826 19.6735 18.8542 19.002 19.6826 19.002C20.511 19.002 21.1826 19.6735 21.1826 20.502V24.502C21.1826 25.3304 20.511 26.002 19.6826 26.002C18.8542 26.002 18.1826 25.3304 18.1826 24.502V20.502Z",
-              fill: "#BF8034"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 71,
-              columnNumber: 9
-            },
-            this
-          ),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            "path",
-            {
-              d: "M24.1826 20.502C24.1826 19.6735 24.8542 19.002 25.6826 19.002C26.511 19.002 27.1826 19.6735 27.1826 20.502V24.502C27.1826 25.3304 26.511 26.002 25.6826 26.002C24.8542 26.002 24.1826 25.3304 24.1826 24.502V20.502Z",
-              fill: "#BF8034"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 75,
-              columnNumber: 9
-            },
-            this
-          ),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            "path",
-            {
-              d: "M17.1826 29.0445C17.1826 28.4687 17.6494 28.002 18.2252 28.002H27.1401C27.7159 28.002 28.1826 28.4687 28.1826 29.0445V29.502C28.1826 32.5395 25.7202 35.002 22.6826 35.002C19.6451 35.002 17.1826 32.5395 17.1826 29.502V29.0445Z",
-              fill: "white"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 79,
-              columnNumber: 9
-            },
-            this
-          ),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-            "path",
-            {
-              d: "M7.18262 21.0062V21.002C7.18262 12.1654 14.3461 5.00195 23.1826 5.00195C26.0199 5.00195 28.6847 5.74049 30.9953 7.0358C29.7326 15.5 22.2386 22.002 13.1826 22.002C11.0788 22.002 9.05929 21.6511 7.18262 21.0062Z",
-              fill: "#9069CD"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 83,
-              columnNumber: 9
-            },
-            this
-          )
-        ]
-      },
-      void 0,
-      !0,
-      {
-        fileName: "app/components/SideBar.tsx",
-        lineNumber: 51,
-        columnNumber: 7
-      },
-      this
-    )
-  },
-  {
-    //TODO: if user role is admin ONLY!
-    name: "\u05DE\u05E4\u05E2\u05DC \u05D4\u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD",
-    href: "/lesson-factory",
-    icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-      "svg",
-      {
-        width: "44",
-        height: "44",
-        viewBox: "0 0 512 512",
-        fill: "none",
-        children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("path", { style: { fill: "#792A18" }, d: "M478.242,71.455h-67.517l33.758,360.088h33.758c18.644,0,33.758-15.115,33.758-33.758V105.213 C512,86.57,496.885,71.455,478.242,71.455z" }, void 0, !1, {
-            fileName: "app/components/SideBar.tsx",
-            lineNumber: 101,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("path", { style: { fill: "#95341D" }, d: "M210.989,70.33L256,464.176c18.645,0,33.758-15.114,33.758-33.758h154.725V70.33H210.989z" }, void 0, !1, {
-            fileName: "app/components/SideBar.tsx",
-            lineNumber: 102,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("path", { style: { fill: "#AB5D4A" }, d: "M33.758,70.33C15.115,70.33,0,85.444,0,104.088v292.571c0,18.644,15.115,33.758,33.758,33.758 h188.484c0,18.645,15.114,33.758,33.758,33.758V70.33H33.758z" }, void 0, !1, {
-            fileName: "app/components/SideBar.tsx",
-            lineNumber: 103,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("polygon", { style: { fill: "#A99E9B" }, points: "421.978,340.396 433.231,396.659 478.242,396.659 478.242,362.901 " }, void 0, !1, {
-            fileName: "app/components/SideBar.tsx",
-            lineNumber: 104,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("path", { style: { fill: "#C1B8B5" }, d: "M233.495,340.396L256,422.537v7.88c0-18.567,15.191-33.758,33.758-33.758h141.785v-56.264H233.495z" }, void 0, !1, {
-            fileName: "app/components/SideBar.tsx",
-            lineNumber: 105,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("path", { style: { fill: "#D8D1D0" }, d: "M33.758,362.901v33.758h188.484c18.567,0,33.758,15.191,33.758,33.758V329.143L33.758,362.901z" }, void 0, !1, {
-            fileName: "app/components/SideBar.tsx",
-            lineNumber: 106,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("polygon", { style: { fill: "#E26142" }, points: "391.066,475.429 417.775,464.176 444.484,475.429 444.484,340.396 391.066,340.396 " }, void 0, !1, {
-            fileName: "app/components/SideBar.tsx",
-            lineNumber: 107,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("polygon", { style: { fill: "#C1B8B5" }, points: "433.231,36.571 399.473,199.736 433.231,362.901 478.242,362.901 478.242,36.571 " }, void 0, !1, {
-            fileName: "app/components/SideBar.tsx",
-            lineNumber: 108,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("path", { style: { fill: "#D8D1D0" }, d: "M289.758,36.571C271.191,36.571,256,51.763,256,70.33l-33.758,163.165L256,388.782v7.877 c0-18.567,15.191-33.758,33.758-33.758h143.473V247.557l-22.506-71.734l22.506-71.735V36.571H289.758z" }, void 0, !1, {
-            fileName: "app/components/SideBar.tsx",
-            lineNumber: 109,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("path", { style: { fill: "#F0EBEA" }, d: "M222.242,36.571H33.758v326.33h188.484c18.567,0,33.758,15.191,33.758,33.758V70.33 C256,51.763,240.809,36.571,222.242,36.571z" }, void 0, !1, {
-            fileName: "app/components/SideBar.tsx",
-            lineNumber: 110,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("rect", { x: "301.011", y: "104.088", style: { fill: "#FFFFFF" }, width: "132.22", height: "143.473" }, void 0, !1, {
-            fileName: "app/components/SideBar.tsx",
-            lineNumber: 111,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("g", { children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("path", { style: { fill: "#7F7774" }, d: "M210.989,303.824H78.769c-4.662,0-8.44-3.778-8.44-8.44c0-4.662,3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44C219.429,300.047,215.651,303.824,210.989,303.824z" }, void 0, !1, {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 113,
-              columnNumber: 11
-            }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("path", { style: { fill: "#7F7774" }, d: "M210.989,256H78.769c-4.662,0-8.44-3.778-8.44-8.44s3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44S215.651,256,210.989,256z" }, void 0, !1, {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 114,
-              columnNumber: 11
-            }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("path", { style: { fill: "#7F7774" }, d: "M210.989,208.176H78.769c-4.662,0-8.44-3.778-8.44-8.44s3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44S215.651,208.176,210.989,208.176z" }, void 0, !1, {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 115,
-              columnNumber: 11
-            }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("path", { style: { fill: "#7F7774" }, d: "M210.989,160.352H78.769c-4.662,0-8.44-3.778-8.44-8.44s3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44S215.651,160.352,210.989,160.352z" }, void 0, !1, {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 116,
-              columnNumber: 11
-            }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("path", { style: { fill: "#7F7774" }, d: "M210.989,112.527H78.769c-4.662,0-8.44-3.778-8.44-8.44c0-4.662,3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44C219.429,108.75,215.651,112.527,210.989,112.527z" }, void 0, !1, {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 117,
-              columnNumber: 11
-            }, this)
-          ] }, void 0, !0, {
-            fileName: "app/components/SideBar.tsx",
-            lineNumber: 112,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("path", { style: { fill: "#554F4E" }, d: "M433.231,303.824h-132.22c-4.662,0-8.44-3.778-8.44-8.44c0-4.662,3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44C441.67,300.047,437.893,303.824,433.231,303.824z" }, void 0, !1, {
-            fileName: "app/components/SideBar.tsx",
-            lineNumber: 119,
-            columnNumber: 9
-          }, this)
-        ]
-      },
-      void 0,
-      !0,
-      {
-        fileName: "app/components/SideBar.tsx",
-        lineNumber: 95,
-        columnNumber: 7
-      },
-      this
-    )
-  }
-  // maybe add in the future a settings page about page and so on
-], LeftBarMoreMenuSvg = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("svg", { width: "46", height: "46", viewBox: "0 0 46 46", fill: "none", ...props, children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-    "circle",
-    {
-      cx: "23",
-      cy: "23",
-      r: "19",
-      fill: "#CE82FF",
-      stroke: "#CE82FF",
-      strokeWidth: "2"
-    },
-    void 0,
-    !1,
-    {
-      fileName: "app/components/SideBar.tsx",
-      lineNumber: 129,
-      columnNumber: 7
-    },
-    this
-  ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("circle", { cx: "15", cy: "23", r: "2", fill: "white" }, void 0, !1, {
-    fileName: "app/components/SideBar.tsx",
-    lineNumber: 137,
-    columnNumber: 7
-  }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("circle", { cx: "23", cy: "23", r: "2", fill: "white" }, void 0, !1, {
-    fileName: "app/components/SideBar.tsx",
-    lineNumber: 138,
-    columnNumber: 7
-  }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("circle", { cx: "31", cy: "23", r: "2", fill: "white" }, void 0, !1, {
-    fileName: "app/components/SideBar.tsx",
-    lineNumber: 139,
-    columnNumber: 7
-  }, this)
-] }, void 0, !0, {
-  fileName: "app/components/SideBar.tsx",
-  lineNumber: 128,
-  columnNumber: 5
-}, this), SideBar = ({ selectedTab }) => {
-  let [moreMenuShown, setMoreMenuShown] = (0, import_react4.useState)(!1), [isDarkModeChecked, setisDarkModeChecked] = (0, import_react4.useState)(!1), handleChange = () => {
-    setisDarkModeChecked((prevChecked) => !prevChecked);
-  };
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_jsx_dev_runtime3.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_material2.Box, { sx: {
-    right: 0,
-    top: 0,
-    width: "230px",
-    height: "100%",
-    backgroundColor: "#f0dfbf",
-    zIndex: 2
-  }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_material2.Box, { sx: {
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "center",
-      paddingTop: 1,
-      height: "80px",
-      borderBottom: "2px solid #e5e5e5"
-    }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_material2.Typography, { sx: {
-        fontSize: "1.7rem",
-        fontWeight: "900",
-        color: "orange",
-        wordWrap: "break-word",
-        width: "120px",
-        textAlign: "left",
-        paddingLeft: 4
-      }, children: "\u05DC\u05D5\u05DE\u05D3\u05EA \u05E2\u05D5\u05E8\u05D1" }, void 0, !1, {
-        fileName: "app/components/SideBar.tsx",
-        lineNumber: 167,
-        columnNumber: 11
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_material2.Link, { href: "/", sx: { paddingLeft: 2, margin: "auto" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("img", { src: orev_icon_portrait_default, alt: "orev logo", width: "78px", height: "78px" }, void 0, !1, {
-        fileName: "app/components/SideBar.tsx",
-        lineNumber: 173,
-        columnNumber: 13
-      }, this) }, void 0, !1, {
-        fileName: "app/components/SideBar.tsx",
-        lineNumber: 172,
-        columnNumber: 11
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/components/SideBar.tsx",
-      lineNumber: 163,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_material2.Box, { sx: { display: "flex", flexDirection: "column" }, children: [
-      sideBarItems.map((item) => /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_material2.Box, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-        import_material2.Link,
-        {
-          href: item.href,
-          sx: {
-            display: "flex",
-            flexDirection: "row",
-            paddingY: "0.25rem",
-            gap: "1rem",
-            alignItems: "center",
-            border: "2px solid #e5e5e5",
-            borderRadius: "0.75rem",
-            fontSize: "0.875rem",
-            textDecoration: "none",
-            color: "#9CA3AF",
-            "&:hover": { backgroundColor: "#F3F4e6" },
-            ...selectedTab === item.name ? {
-              borderColor: "#84d8ff",
-              background: "#ddf4ff"
-            } : {}
-          },
-          children: [
-            item.icon,
-            /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_material2.Typography, { children: item.name }, void 0, !1, {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 202,
-              columnNumber: 17
-            }, this)
-          ]
-        },
-        void 0,
-        !0,
-        {
-          fileName: "app/components/SideBar.tsx",
-          lineNumber: 179,
-          columnNumber: 15
-        },
-        this
-      ) }, item.href, !1, {
-        fileName: "app/components/SideBar.tsx",
-        lineNumber: 178,
-        columnNumber: 13
-      }, this)),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-        import_material2.Box,
-        {
-          sx: {
-            display: "flex",
-            paddingY: "0.25rem",
-            paddingX: "0.5rem",
-            gap: "0.75rem",
-            alignItems: "center",
-            borderRadius: "0.75rem",
-            color: "#9CA3AF",
-            cursor: "default",
-            "&:hover": { backgroundColor: "#F3F4e6" }
-          },
-          onMouseEnter: () => setMoreMenuShown(!0),
-          onMouseLeave: () => setMoreMenuShown(!1),
-          role: "button",
-          tabIndex: 0,
-          children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(LeftBarMoreMenuSvg, {}, void 0, !1, {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 219,
-              columnNumber: 13
-            }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_material2.Typography, { sx: { fontSize: "1rem" }, children: "\u05DC\u05E2\u05D5\u05D3" }, void 0, !1, {
-              fileName: "app/components/SideBar.tsx",
-              lineNumber: 220,
-              columnNumber: 13
-            }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-              import_material2.Paper,
-              {
-                sx: {
-                  position: "absolute",
-                  top: 250,
-                  left: 220,
-                  minWidth: "270px",
-                  borderRadius: "2xl",
-                  display: moreMenuShown ? "block" : "none",
-                  "&:hover": {
-                    display: "block"
-                  }
-                },
-                onMouseEnter: () => setMoreMenuShown(!0),
-                onMouseLeave: () => setMoreMenuShown(!1),
-                children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_material2.Box, { sx: {
-                  display: "flex",
-                  flexDirection: "column",
-                  borderColor: "#D1D5DB"
-                }, children: [
-                  /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-                    import_material2.Button,
-                    {
-                      sx: { paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { backgroundColor: "#2e1d02" } },
-                      children: "\u05E6\u05D5\u05E8 \u05E4\u05E8\u05D5\u05E4\u05D9\u05DC"
-                    },
-                    void 0,
-                    !1,
-                    {
-                      fileName: "app/components/SideBar.tsx",
-                      lineNumber: 239,
-                      columnNumber: 17
-                    },
-                    this
-                  ),
-                  /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-                    import_material2.Button,
-                    {
-                      sx: { paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { backgroundColor: "#2e1d02" } },
-                      children: "\u05D4\u05D2\u05D3\u05E8\u05D5\u05EA"
-                    },
-                    void 0,
-                    !1,
-                    {
-                      fileName: "app/components/SideBar.tsx",
-                      lineNumber: 245,
-                      columnNumber: 17
-                    },
-                    this
-                  ),
-                  /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-                    import_material2.Button,
-                    {
-                      sx: { paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { backgroundColor: "#2e1d02" } },
-                      children: "\u05D4\u05EA\u05D7\u05D1\u05E8\u05D5\u05EA"
-                    },
-                    void 0,
-                    !1,
-                    {
-                      fileName: "app/components/SideBar.tsx",
-                      lineNumber: 251,
-                      columnNumber: 17
-                    },
-                    this
-                  ),
-                  /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-                    import_material2.Button,
-                    {
-                      sx: { paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { backgroundColor: "#2e1d02" } },
-                      children: "\u05D4\u05EA\u05E0\u05EA\u05E7\u05D5\u05EA"
-                    },
-                    void 0,
-                    !1,
-                    {
-                      fileName: "app/components/SideBar.tsx",
-                      lineNumber: 257,
-                      columnNumber: 17
-                    },
-                    this
-                  ),
-                  /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
-                    import_material2.Box,
-                    {
-                      sx: {
-                        marginTop: "auto",
-                        paddingX: 4,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between"
-                      },
-                      children: [
-                        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_material2.Box, { sx: { display: "flex", alignItems: "center" }, children: [
-                          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_material2.Typography, { sx: { fontSize: "1rem", fontWeight: "normal" }, children: "\u05DE\u05E6\u05D1" }, void 0, !1, {
-                            fileName: "app/components/SideBar.tsx",
-                            lineNumber: 274,
-                            columnNumber: 21
-                          }, this),
-                          isDarkModeChecked ? /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_material2.Typography, { sx: { color: "#784c06", marginRight: 2, fontWeight: "medium" }, children: "\u05DC\u05D9\u05DC\u05D4" }, void 0, !1, {
-                            fileName: "app/components/SideBar.tsx",
-                            lineNumber: 276,
-                            columnNumber: 23
-                          }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_material2.Typography, { sx: { color: "#ffb238", marginRight: 2, fontWeight: "medium" }, children: "\u05D9\u05D5\u05DD" }, void 0, !1, {
-                            fileName: "app/components/SideBar.tsx",
-                            lineNumber: 278,
-                            columnNumber: 23
-                          }, this)
-                        ] }, void 0, !0, {
-                          fileName: "app/components/SideBar.tsx",
-                          lineNumber: 273,
-                          columnNumber: 19
-                        }, this),
-                        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_material2.Switch, { defaultChecked: isDarkModeChecked, color: "warning", onChange: handleChange }, void 0, !1, {
-                          fileName: "app/components/SideBar.tsx",
-                          lineNumber: 281,
-                          columnNumber: 19
-                        }, this)
-                      ]
-                    },
-                    void 0,
-                    !0,
-                    {
-                      fileName: "app/components/SideBar.tsx",
-                      lineNumber: 264,
-                      columnNumber: 17
-                    },
-                    this
-                  )
-                ] }, void 0, !0, {
-                  fileName: "app/components/SideBar.tsx",
-                  lineNumber: 236,
-                  columnNumber: 15
-                }, this)
-              },
-              void 0,
-              !1,
-              {
-                fileName: "app/components/SideBar.tsx",
-                lineNumber: 221,
-                columnNumber: 13
-              },
-              this
-            )
-          ]
-        },
-        void 0,
-        !0,
-        {
-          fileName: "app/components/SideBar.tsx",
-          lineNumber: 208,
-          columnNumber: 11
-        },
-        this
-      )
-    ] }, void 0, !0, {
-      fileName: "app/components/SideBar.tsx",
-      lineNumber: 176,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/components/SideBar.tsx",
-    lineNumber: 155,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/components/SideBar.tsx",
-    lineNumber: 154,
-    columnNumber: 5
-  }, this);
-};
-
-// app/LessonComponents/DataGrid.tsx
-var import_jsx_dev_runtime4 = require("react/jsx-dev-runtime");
-function FullFeaturedCrudGrid({ rows, setRows, editable, columnProps }) {
-  let [rowModesModel, setRowModesModel] = React.useState({}), handleRowEditStop = (params, event) => {
+var import_ArrowBackIosNew = __toESM(require("@mui/icons-material/ArrowBackIosNew")), import_Close = __toESM(require("@mui/icons-material/Close")), import_DeleteOutlined = __toESM(require("@mui/icons-material/DeleteOutlined")), import_Edit = __toESM(require("@mui/icons-material/Edit")), import_Save = __toESM(require("@mui/icons-material/Save")), import_Box = __toESM(require("@mui/material/Box")), import_x_data_grid = require("@mui/x-data-grid"), import_react4 = require("@remix-run/react"), React = __toESM(require("react")), import_jsx_dev_runtime3 = require("react/jsx-dev-runtime");
+function FullFeaturedCrudGrid({
+  rows,
+  setRows,
+  editable,
+  columnProps
+}) {
+  let [rowModesModel, setRowModesModel] = React.useState(
+    {}
+  ), handleRowEditStop = (params, event) => {
     params.reason === import_x_data_grid.GridRowEditStopReasons.rowFocusOut && (event.defaultMuiPrevented = !0);
   }, handleEditClick = (id) => () => {
     setRowModesModel({ ...rowModesModel, [id]: { mode: import_x_data_grid.GridRowModes.Edit } });
@@ -1039,13 +373,13 @@ function FullFeaturedCrudGrid({ rows, setRows, editable, columnProps }) {
       getActions: ({ id }) => {
         var _a;
         return ((_a = rowModesModel[id]) == null ? void 0 : _a.mode) === import_x_data_grid.GridRowModes.Edit ? [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
             import_x_data_grid.GridActionsCellItem,
             {
-              icon: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_Save.default, {}, void 0, !1, {
+              icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_Save.default, {}, void 0, !1, {
                 fileName: "app/LessonComponents/DataGrid.tsx",
-                lineNumber: 91,
-                columnNumber: 35
+                lineNumber: 100,
+                columnNumber: 21
               }, this),
               label: "Save",
               sx: {
@@ -1057,18 +391,18 @@ function FullFeaturedCrudGrid({ rows, setRows, editable, columnProps }) {
             !1,
             {
               fileName: "app/LessonComponents/DataGrid.tsx",
-              lineNumber: 89,
-              columnNumber: 25
+              lineNumber: 98,
+              columnNumber: 13
             },
             this
           ),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
             import_x_data_grid.GridActionsCellItem,
             {
-              icon: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_Close.default, {}, void 0, !1, {
+              icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_Close.default, {}, void 0, !1, {
                 fileName: "app/LessonComponents/DataGrid.tsx",
-                lineNumber: 100,
-                columnNumber: 35
+                lineNumber: 109,
+                columnNumber: 21
               }, this),
               label: "Cancel",
               className: "textPrimary",
@@ -1079,19 +413,19 @@ function FullFeaturedCrudGrid({ rows, setRows, editable, columnProps }) {
             !1,
             {
               fileName: "app/LessonComponents/DataGrid.tsx",
-              lineNumber: 98,
-              columnNumber: 25
+              lineNumber: 107,
+              columnNumber: 13
             },
             this
           )
         ] : editable ? [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
             import_x_data_grid.GridActionsCellItem,
             {
-              icon: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_Edit.default, {}, void 0, !1, {
+              icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_Edit.default, {}, void 0, !1, {
                 fileName: "app/LessonComponents/DataGrid.tsx",
-                lineNumber: 112,
-                columnNumber: 31
+                lineNumber: 122,
+                columnNumber: 23
               }, this),
               label: "Edit",
               className: "textPrimary",
@@ -1102,18 +436,18 @@ function FullFeaturedCrudGrid({ rows, setRows, editable, columnProps }) {
             !1,
             {
               fileName: "app/LessonComponents/DataGrid.tsx",
-              lineNumber: 110,
-              columnNumber: 21
+              lineNumber: 120,
+              columnNumber: 15
             },
             this
           ),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
             import_x_data_grid.GridActionsCellItem,
             {
-              icon: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_DeleteOutlined.default, {}, void 0, !1, {
+              icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_DeleteOutlined.default, {}, void 0, !1, {
                 fileName: "app/LessonComponents/DataGrid.tsx",
-                lineNumber: 120,
-                columnNumber: 31
+                lineNumber: 130,
+                columnNumber: 23
               }, this),
               label: "Delete",
               onClick: handleDeleteClick(id),
@@ -1123,32 +457,34 @@ function FullFeaturedCrudGrid({ rows, setRows, editable, columnProps }) {
             !1,
             {
               fileName: "app/LessonComponents/DataGrid.tsx",
-              lineNumber: 118,
-              columnNumber: 21
+              lineNumber: 128,
+              columnNumber: 15
             },
             this
           )
-        ] : [/* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
-          import_x_data_grid.GridActionsCellItem,
-          {
-            icon: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_DeleteOutlined.default, {}, void 0, !1, {
+        ] : [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
+            import_x_data_grid.GridActionsCellItem,
+            {
+              icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_DeleteOutlined.default, {}, void 0, !1, {
+                fileName: "app/LessonComponents/DataGrid.tsx",
+                lineNumber: 139,
+                columnNumber: 23
+              }, this),
+              label: "Delete",
+              onClick: handleDeleteClick(id),
+              color: "inherit"
+            },
+            "Delete",
+            !1,
+            {
               fileName: "app/LessonComponents/DataGrid.tsx",
-              lineNumber: 127,
-              columnNumber: 27
-            }, this),
-            label: "Delete",
-            onClick: handleDeleteClick(id),
-            color: "inherit"
-          },
-          "Delete",
-          !1,
-          {
-            fileName: "app/LessonComponents/DataGrid.tsx",
-            lineNumber: 125,
-            columnNumber: 22
-          },
-          this
-        )];
+              lineNumber: 137,
+              columnNumber: 15
+            },
+            this
+          )
+        ];
       }
     },
     {
@@ -1158,18 +494,30 @@ function FullFeaturedCrudGrid({ rows, setRows, editable, columnProps }) {
       width: 100,
       cellClassName: "actions",
       getActions: ({ id }) => [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
           import_x_data_grid.GridActionsCellItem,
           {
-            icon: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_Box.default, { component: import_react5.Link, to: id.toString(), sx: { color: "inherit", textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_ArrowBackIosNew.default, {}, void 0, !1, {
-              fileName: "app/LessonComponents/DataGrid.tsx",
-              lineNumber: 147,
-              columnNumber: 33
-            }, this) }, void 0, !1, {
-              fileName: "app/LessonComponents/DataGrid.tsx",
-              lineNumber: 146,
-              columnNumber: 29
-            }, this),
+            icon: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
+              import_Box.default,
+              {
+                component: import_react4.Link,
+                to: `${id.toString()}`,
+                sx: { color: "inherit", textDecoration: "none" },
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_ArrowBackIosNew.default, {}, void 0, !1, {
+                  fileName: "app/LessonComponents/DataGrid.tsx",
+                  lineNumber: 163,
+                  columnNumber: 17
+                }, this)
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/LessonComponents/DataGrid.tsx",
+                lineNumber: 158,
+                columnNumber: 15
+              },
+              this
+            ),
             label: "Edit",
             className: "textPrimary",
             color: "inherit"
@@ -1178,81 +526,34 @@ function FullFeaturedCrudGrid({ rows, setRows, editable, columnProps }) {
           !1,
           {
             fileName: "app/LessonComponents/DataGrid.tsx",
-            lineNumber: 143,
-            columnNumber: 21
+            lineNumber: 155,
+            columnNumber: 11
           },
           this
         )
       ]
     }
   ];
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
-    import_Box.default,
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
+    import_x_data_grid.DataGrid,
     {
-      sx: {
-        display: "flex",
-        width: "full",
-        justifyContent: "center",
-        alignItems: "center",
-        paddingX: 4,
-        paddingY: 16
-      },
-      children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_Box.default, { sx: {
-          position: "fixed",
-          top: 0,
-          left: 0,
-          height: "100%"
-        }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(SideBar, { selectedTab: "\u05DE\u05E4\u05E2\u05DC \u05D4\u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD" }, void 0, !1, {
-          fileName: "app/LessonComponents/DataGrid.tsx",
-          lineNumber: 173,
-          columnNumber: 17
-        }, this) }, void 0, !1, {
-          fileName: "app/LessonComponents/DataGrid.tsx",
-          lineNumber: 170,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_Box.default, { sx: {
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "1920px"
-        }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
-          import_x_data_grid.DataGrid,
-          {
-            rows,
-            columns: columns3,
-            editMode: "row",
-            rowModesModel,
-            onRowModesModelChange: handleRowModesModelChange,
-            onRowEditStop: handleRowEditStop,
-            processRowUpdate,
-            slotProps: {
-              toolbar: { setRows, setRowModesModel }
-            }
-          },
-          void 0,
-          !1,
-          {
-            fileName: "app/LessonComponents/DataGrid.tsx",
-            lineNumber: 178,
-            columnNumber: 17
-          },
-          this
-        ) }, void 0, !1, {
-          fileName: "app/LessonComponents/DataGrid.tsx",
-          lineNumber: 175,
-          columnNumber: 13
-        }, this)
-      ]
+      rows,
+      columns: columns3,
+      editMode: "row",
+      rowModesModel,
+      onRowModesModelChange: handleRowModesModelChange,
+      onRowEditStop: handleRowEditStop,
+      processRowUpdate,
+      slotProps: {
+        toolbar: { setRows, setRowModesModel }
+      }
     },
     void 0,
-    !0,
+    !1,
     {
       fileName: "app/LessonComponents/DataGrid.tsx",
-      lineNumber: 160,
-      columnNumber: 9
+      lineNumber: 176,
+      columnNumber: 5
     },
     this
   );
@@ -1274,13 +575,46 @@ async function getQuestionsByLessonId(lessonId) {
   });
 }
 
-// app/routes/lessons.$topicId.$lessonId.tsx
-var import_jsx_dev_runtime5 = require("react/jsx-dev-runtime");
+// app/routes/admin.lessons.$topicId.$lessonId.tsx
+var import_jsx_dev_runtime4 = require("react/jsx-dev-runtime");
 async function loader({ params }) {
   let { lessonId } = params;
   return { questions: await getQuestionsByLessonId(Number(lessonId)) };
 }
 function QuestionList() {
+  let { questions } = (0, import_react5.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_jsx_dev_runtime4.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(FullFeaturedCrudGrid, { editable: !0, rows: questions, setRows: (oldRows) => {
+  }, columnProps: [
+    { field: "text", headerName: "\u05E9\u05DD \u05E9\u05D0\u05DC\u05D4", width: 180, editable: !0 },
+    { field: "updatedAt", headerName: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4", width: 180, editable: !1 }
+  ] }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.$topicId.$lessonId.tsx",
+    lineNumber: 25,
+    columnNumber: 9
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.$topicId.$lessonId.tsx",
+    lineNumber: 24,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.$topicId.$lessonId.tsx",
+    lineNumber: 23,
+    columnNumber: 5
+  }, this);
+}
+
+// app/routes/lessons.$topicId.$lessonId.tsx
+var lessons_topicId_lessonId_exports = {};
+__export(lessons_topicId_lessonId_exports, {
+  default: () => QuestionList2,
+  loader: () => loader2
+});
+var import_react6 = require("@remix-run/react");
+var import_jsx_dev_runtime5 = require("react/jsx-dev-runtime");
+async function loader2({ params }) {
+  let { lessonId } = params;
+  return { questions: await getQuestionsByLessonId(Number(lessonId)) };
+}
+function QuestionList2() {
   let { questions } = (0, import_react6.useLoaderData)();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_jsx_dev_runtime5.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(FullFeaturedCrudGrid, { editable: !0, rows: questions, setRows: (oldRows) => {
   }, columnProps: [
@@ -1301,11 +635,11 @@ function QuestionList() {
   }, this);
 }
 
-// app/routes/lessons.$topicId.tsx
-var lessons_topicId_exports = {};
-__export(lessons_topicId_exports, {
+// app/routes/admin.lessons.$topicId.tsx
+var admin_lessons_topicId_exports = {};
+__export(admin_lessons_topicId_exports, {
   default: () => LessonsList,
-  loader: () => loader2
+  loader: () => loader3
 });
 var import_react7 = require("@remix-run/react");
 
@@ -1325,15 +659,49 @@ async function getLessons() {
   return await prisma.lesson.findMany();
 }
 
-// app/routes/lessons.$topicId.tsx
+// app/routes/admin.lessons.$topicId.tsx
 var import_jsx_dev_runtime6 = require("react/jsx-dev-runtime");
-async function loader2({ params }) {
+async function loader3({ params }) {
   let { topicId } = params;
   return { lessons: (await getLessonsByTopicId(Number(topicId))).map((lesson) => ({ ...lesson, _count: lesson._count.Questions })) };
 }
 function LessonsList() {
   let { lessons } = (0, import_react7.useLoaderData)();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_jsx_dev_runtime6.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(FullFeaturedCrudGrid, { editable: !0, rows: lessons, setRows: (oldRows) => {
+  }, columnProps: [
+    { field: "name", headerName: "\u05E9\u05DD \u05E9\u05D9\u05E2\u05D5\u05E8", width: 180, editable: !0 },
+    { field: "updatedAt", headerName: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4", width: 180, editable: !1 },
+    { field: "_count", headerName: "\u05DE\u05E1\u05E4\u05E8 \u05E9\u05D0\u05DC\u05D5\u05EA", width: 180, editable: !1 }
+  ] }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.$topicId.tsx",
+    lineNumber: 27,
+    columnNumber: 9
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.$topicId.tsx",
+    lineNumber: 26,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.$topicId.tsx",
+    lineNumber: 25,
+    columnNumber: 5
+  }, this);
+}
+
+// app/routes/lessons.$topicId.tsx
+var lessons_topicId_exports = {};
+__export(lessons_topicId_exports, {
+  default: () => LessonsList2,
+  loader: () => loader4
+});
+var import_react8 = require("@remix-run/react");
+var import_jsx_dev_runtime7 = require("react/jsx-dev-runtime");
+async function loader4({ params }) {
+  let { topicId } = params;
+  return { lessons: (await getLessonsByTopicId(Number(topicId))).map((lesson) => ({ ...lesson, _count: lesson._count.Questions })) };
+}
+function LessonsList2() {
+  let { lessons } = (0, import_react8.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_jsx_dev_runtime7.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(FullFeaturedCrudGrid, { editable: !0, rows: lessons, setRows: (oldRows) => {
   }, columnProps: [
     { field: "name", headerName: "\u05E9\u05DD \u05E9\u05D9\u05E2\u05D5\u05E8", width: 180, editable: !0 },
     { field: "updatedAt", headerName: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4", width: 180, editable: !1 },
@@ -1357,33 +725,33 @@ function LessonsList() {
 var lesson_factory_exports = {};
 __export(lesson_factory_exports, {
   default: () => BuildLesson,
-  loader: () => loader3
+  loader: () => loader5
 });
-var import_material7 = require("@mui/material"), import_Breadcrumbs = __toESM(require("@mui/material/Breadcrumbs")), import_react10 = require("@remix-run/react"), import_react11 = require("react");
+var import_material7 = require("@mui/material"), import_Breadcrumbs = __toESM(require("@mui/material/Breadcrumbs")), import_react12 = require("@remix-run/react"), import_react13 = require("react");
 
 // app/LessonComponents/HierarchyCreation/NewLesson.tsx
-var import_material3 = require("@mui/material"), import_react8 = require("react"), import_jsx_dev_runtime7 = require("react/jsx-dev-runtime");
+var import_material2 = require("@mui/material"), import_react9 = require("react"), import_jsx_dev_runtime8 = require("react/jsx-dev-runtime");
 function NewTopic({ onButtonClick }) {
-  let [isInputEmpty, setIsInputEmpty] = (0, import_react8.useState)(!0);
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_material3.Paper, { sx: {
+  let [isInputEmpty, setIsInputEmpty] = (0, import_react9.useState)(!0);
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material2.Paper, { sx: {
     display: "flex",
     flexDirection: "column",
     padding: 2
   }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_material3.Box, { sx: {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material2.Box, { sx: {
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-around",
       gap: 1,
       alignItems: "baseline"
     }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_material3.Typography, { variant: "h6", children: "\u05DC\u05D9\u05E6\u05D9\u05E8\u05EA \u05E9\u05D9\u05E2\u05D5\u05E8 \u05D7\u05D3\u05E9:" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material2.Typography, { variant: "h6", children: "\u05DC\u05D9\u05E6\u05D9\u05E8\u05EA \u05E9\u05D9\u05E2\u05D5\u05E8 \u05D7\u05D3\u05E9:" }, void 0, !1, {
         fileName: "app/LessonComponents/HierarchyCreation/NewLesson.tsx",
         lineNumber: 33,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(
-        import_material3.TextField,
+      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
+        import_material2.TextField,
         {
           id: "outlined-basic",
           label: "\u05E9\u05DD \u05D4\u05E9\u05D9\u05E2\u05D5\u05E8",
@@ -1407,13 +775,13 @@ function NewTopic({ onButtonClick }) {
       lineNumber: 26,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_material3.Typography, { sx: {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material2.Typography, { sx: {
       display: "flex",
       flexDirection: "row",
       alignItems: "baseline",
       justifyContent: "center"
     }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_material3.Box, { sx: { marginLeft: "3px" }, children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material2.Box, { sx: { marginLeft: "3px" }, children: [
         "\u05D0\u05E0\u05D0 \u05D5\u05D5\u05D3\u05D0\u05D5 \u05DB\u05D9 \u05E9\u05D9\u05E2\u05D5\u05E8 \u05D6\u05D4 \u05D0\u05D9\u05E0\u05D5 \u05DB\u05D1\u05E8 \u05E7\u05D9\u05D9\u05DD",
         " "
       ] }, void 0, !0, {
@@ -1421,8 +789,8 @@ function NewTopic({ onButtonClick }) {
         lineNumber: 50,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(
-        import_material3.Link,
+      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
+        import_material2.Link,
         {
           component: "button",
           onClick: () => onButtonClick("LessonList"),
@@ -1442,11 +810,11 @@ function NewTopic({ onButtonClick }) {
       lineNumber: 44,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_material3.Box, { sx: {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material2.Box, { sx: {
       paddingTop: 2,
       display: "flex",
       justifyContent: "center"
-    }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_material3.Button, { variant: "outlined", onClick: () => {
+    }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material2.Button, { variant: "outlined", onClick: () => {
       onButtonClick("LessonList");
     }, disabled: isInputEmpty, fullWidth: !0, children: "\u05E6\u05D5\u05E8 \u05E9\u05D9\u05E2\u05D5\u05E8" }, void 0, !1, {
       fileName: "app/LessonComponents/HierarchyCreation/NewLesson.tsx",
@@ -1465,28 +833,28 @@ function NewTopic({ onButtonClick }) {
 }
 
 // app/LessonComponents/HierarchyCreation/NewTopic.tsx
-var import_material4 = require("@mui/material"), import_react9 = require("react"), import_jsx_dev_runtime8 = require("react/jsx-dev-runtime");
+var import_material3 = require("@mui/material"), import_react10 = require("react"), import_jsx_dev_runtime9 = require("react/jsx-dev-runtime");
 function NewTopic2({ onButtonClick }) {
-  let [isInputEmpty, setIsInputEmpty] = (0, import_react9.useState)(!0);
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material4.Paper, { sx: {
+  let [isInputEmpty, setIsInputEmpty] = (0, import_react10.useState)(!0);
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material3.Paper, { sx: {
     display: "flex",
     flexDirection: "column",
     padding: 2
   }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material4.Box, { sx: {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material3.Box, { sx: {
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-around",
       gap: 1,
       alignItems: "baseline"
     }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material4.Typography, { variant: "h6", children: "\u05DC\u05D9\u05E6\u05D9\u05E8\u05EA \u05E0\u05D5\u05E9\u05D0 \u05D7\u05D3\u05E9:" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material3.Typography, { variant: "h6", children: "\u05DC\u05D9\u05E6\u05D9\u05E8\u05EA \u05E0\u05D5\u05E9\u05D0 \u05D7\u05D3\u05E9:" }, void 0, !1, {
         fileName: "app/LessonComponents/HierarchyCreation/NewTopic.tsx",
         lineNumber: 33,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
-        import_material4.TextField,
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(
+        import_material3.TextField,
         {
           id: "outlined-basic",
           label: "\u05E9\u05DD \u05D4\u05E0\u05D5\u05E9\u05D0",
@@ -1510,13 +878,13 @@ function NewTopic2({ onButtonClick }) {
       lineNumber: 26,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material4.Typography, { sx: {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material3.Typography, { sx: {
       display: "flex",
       flexDirection: "row",
       alignItems: "baseline",
       justifyContent: "center"
     }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material4.Box, { sx: { marginLeft: "3px" }, children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material3.Box, { sx: { marginLeft: "3px" }, children: [
         "\u05D0\u05E0\u05D0 \u05D5\u05D5\u05D3\u05D0\u05D5 \u05DB\u05D9 \u05E0\u05D5\u05E9\u05D0 \u05D6\u05D4 \u05D0\u05D9\u05E0\u05D5 \u05DB\u05D1\u05E8 \u05E7\u05D9\u05D9\u05DD",
         " "
       ] }, void 0, !0, {
@@ -1524,8 +892,8 @@ function NewTopic2({ onButtonClick }) {
         lineNumber: 50,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
-        import_material4.Link,
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(
+        import_material3.Link,
         {
           component: "button",
           onClick: () => onButtonClick("TopicList"),
@@ -1545,11 +913,11 @@ function NewTopic2({ onButtonClick }) {
       lineNumber: 44,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material4.Box, { sx: {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material3.Box, { sx: {
       paddingTop: 2,
       display: "flex",
       justifyContent: "center"
-    }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_material4.Button, { variant: "outlined", onClick: () => {
+    }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material3.Button, { variant: "outlined", onClick: () => {
       onButtonClick("TopicList");
     }, disabled: isInputEmpty, fullWidth: !0, children: "\u05E6\u05D5\u05E8 \u05E0\u05D5\u05E9\u05D0" }, void 0, !1, {
       fileName: "app/LessonComponents/HierarchyCreation/NewTopic.tsx",
@@ -1568,7 +936,7 @@ function NewTopic2({ onButtonClick }) {
 }
 
 // app/LessonComponents/Lists/LessonList.tsx
-var import_CreateNewFolderOutlined = __toESM(require("@mui/icons-material/CreateNewFolderOutlined")), import_material5 = require("@mui/material"), import_Paper = __toESM(require("@mui/material/Paper")), import_Search = __toESM(require("@mui/icons-material/Search")), import_Table = __toESM(require("@mui/material/Table")), import_TableBody = __toESM(require("@mui/material/TableBody")), import_TableCell = __toESM(require("@mui/material/TableCell")), import_TableContainer = __toESM(require("@mui/material/TableContainer")), import_TableHead = __toESM(require("@mui/material/TableHead")), import_TablePagination = __toESM(require("@mui/material/TablePagination")), import_TableRow = __toESM(require("@mui/material/TableRow")), React2 = __toESM(require("react")), import_jsx_dev_runtime9 = require("react/jsx-dev-runtime"), columns = [
+var import_CreateNewFolderOutlined = __toESM(require("@mui/icons-material/CreateNewFolderOutlined")), import_material4 = require("@mui/material"), import_Paper = __toESM(require("@mui/material/Paper")), import_Search = __toESM(require("@mui/icons-material/Search")), import_Table = __toESM(require("@mui/material/Table")), import_TableBody = __toESM(require("@mui/material/TableBody")), import_TableCell = __toESM(require("@mui/material/TableCell")), import_TableContainer = __toESM(require("@mui/material/TableContainer")), import_TableHead = __toESM(require("@mui/material/TableHead")), import_TablePagination = __toESM(require("@mui/material/TablePagination")), import_TableRow = __toESM(require("@mui/material/TableRow")), React2 = __toESM(require("react")), import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), columns = [
   {
     id: "name",
     label: "\u05E9\u05DD \u05E9\u05D9\u05E2\u05D5\u05E8",
@@ -1611,10 +979,10 @@ function LessonList({ onButtonClick, dataRow, dataRowChildren, selectedTopic }) 
       questionAmount: questionsInLesson.length
     };
   }).filter((row) => row.name.toLowerCase().includes(searchInput.toLowerCase()));
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.Box, { sx: { display: "flex", flexDirection: "column", gap: 1, height: "100%" }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.Box, { sx: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 1 }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_Paper.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(
-        import_material5.TextField,
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material4.Box, { sx: { display: "flex", flexDirection: "column", gap: 1, height: "100%" }, children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material4.Box, { sx: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 1 }, children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_Paper.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+        import_material4.TextField,
         {
           sx: {
             padding: "0.1em",
@@ -1632,7 +1000,7 @@ function LessonList({ onButtonClick, dataRow, dataRowChildren, selectedTopic }) 
           onChange: handleSearchInputChange,
           placeholder: "\u05D7\u05E4\u05E9",
           InputProps: {
-            startAdornment: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.InputAdornment, { position: "start", children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_Search.default, {}, void 0, !1, {
+            startAdornment: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material4.InputAdornment, { position: "start", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_Search.default, {}, void 0, !1, {
               fileName: "app/LessonComponents/Lists/LessonList.tsx",
               lineNumber: 121,
               columnNumber: 19
@@ -1656,8 +1024,8 @@ function LessonList({ onButtonClick, dataRow, dataRowChildren, selectedTopic }) 
         lineNumber: 101,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_Paper.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.Button, { variant: "outlined", color: "warning", onClick: handleButtonClick, children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_CreateNewFolderOutlined.default, {}, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_Paper.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material4.Button, { variant: "outlined", color: "warning", onClick: handleButtonClick, children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_CreateNewFolderOutlined.default, {}, void 0, !1, {
           fileName: "app/LessonComponents/Lists/LessonList.tsx",
           lineNumber: 129,
           columnNumber: 13
@@ -1677,8 +1045,8 @@ function LessonList({ onButtonClick, dataRow, dataRowChildren, selectedTopic }) 
       lineNumber: 100,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_Paper.default, { elevation: 8, sx: { width: "100%", overflow: "hidden" }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_Paper.default, { elevation: 8, sx: { width: "100%", overflow: "hidden" }, children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
         import_TableContainer.default,
         {
           sx: {
@@ -1695,8 +1063,8 @@ function LessonList({ onButtonClick, dataRow, dataRowChildren, selectedTopic }) 
             },
             overflowX: "hidden"
           },
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_Table.default, { stickyHeader: !0, "aria-label": "sticky table", children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_TableHead.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_TableRow.default, { children: columns.map((column) => /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_Table.default, { stickyHeader: !0, "aria-label": "sticky table", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_TableHead.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_TableRow.default, { children: columns.map((column) => /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
               import_TableCell.default,
               {
                 align: column.align,
@@ -1720,12 +1088,12 @@ function LessonList({ onButtonClick, dataRow, dataRowChildren, selectedTopic }) 
               lineNumber: 150,
               columnNumber: 13
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_TableBody.default, { children: filteredRows.length === 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_TableRow.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_TableCell.default, { colSpan: columns.length, children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.Box, { sx: {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_TableBody.default, { children: filteredRows.length === 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_TableRow.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_TableCell.default, { colSpan: columns.length, children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material4.Box, { sx: {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               textAlign: "center"
-            }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.Typography, { variant: "h6", children: "\u05DC\u05D0 \u05E0\u05DE\u05E6\u05D0\u05D5 \u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD \u05DE\u05EA\u05D0\u05D9\u05DE\u05D9\u05DD \u05DC\u05E2\u05E8\u05DA \u05D4\u05D7\u05D9\u05E4\u05D5\u05E9" }, void 0, !1, {
+            }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material4.Typography, { variant: "h6", children: "\u05DC\u05D0 \u05E0\u05DE\u05E6\u05D0\u05D5 \u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD \u05DE\u05EA\u05D0\u05D9\u05DE\u05D9\u05DD \u05DC\u05E2\u05E8\u05DA \u05D4\u05D7\u05D9\u05E4\u05D5\u05E9" }, void 0, !1, {
               fileName: "app/LessonComponents/Lists/LessonList.tsx",
               lineNumber: 173,
               columnNumber: 23
@@ -1741,9 +1109,9 @@ function LessonList({ onButtonClick, dataRow, dataRowChildren, selectedTopic }) 
               fileName: "app/LessonComponents/Lists/LessonList.tsx",
               lineNumber: 165,
               columnNumber: 17
-            }, this) : filteredRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_material5.Grow, { timeout: (index + 1) * 100, in: !0, style: { transformOrigin: "0 0 0" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_TableRow.default, { hover: !0, role: "checkbox", tabIndex: -1, onClick: handleLessonRowClick, children: columns.map((column) => {
+            }, this) : filteredRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material4.Grow, { timeout: (index + 1) * 100, in: !0, style: { transformOrigin: "0 0 0" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_TableRow.default, { hover: !0, role: "checkbox", tabIndex: -1, onClick: handleLessonRowClick, children: columns.map((column) => {
               let value = row[column.id];
-              return /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_TableCell.default, { align: column.align, children: column.format && typeof value == "number" ? column.format(value) : String(value) }, column.id, !1, {
+              return /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_TableCell.default, { align: column.align, children: column.format && typeof value == "number" ? column.format(value) : String(value) }, column.id, !1, {
                 fileName: "app/LessonComponents/Lists/LessonList.tsx",
                 lineNumber: 188,
                 columnNumber: 29
@@ -1776,7 +1144,7 @@ function LessonList({ onButtonClick, dataRow, dataRowChildren, selectedTopic }) 
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
         import_TablePagination.default,
         {
           rowsPerPageOptions: [10, 25, 100],
@@ -1809,7 +1177,7 @@ function LessonList({ onButtonClick, dataRow, dataRowChildren, selectedTopic }) 
 }
 
 // app/LessonComponents/Lists/TopicList.tsx
-var import_CreateNewFolderOutlined2 = __toESM(require("@mui/icons-material/CreateNewFolderOutlined")), import_Search2 = __toESM(require("@mui/icons-material/Search")), import_material6 = require("@mui/material"), import_Paper2 = __toESM(require("@mui/material/Paper")), import_Table2 = __toESM(require("@mui/material/Table")), import_TableCell2 = __toESM(require("@mui/material/TableCell")), import_TableContainer2 = __toESM(require("@mui/material/TableContainer")), import_TableHead2 = __toESM(require("@mui/material/TableHead")), import_TablePagination2 = __toESM(require("@mui/material/TablePagination")), import_TableRow2 = __toESM(require("@mui/material/TableRow")), React3 = __toESM(require("react")), import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), columns2 = [
+var import_CreateNewFolderOutlined2 = __toESM(require("@mui/icons-material/CreateNewFolderOutlined")), import_Search2 = __toESM(require("@mui/icons-material/Search")), import_material5 = require("@mui/material"), import_Paper2 = __toESM(require("@mui/material/Paper")), import_Table2 = __toESM(require("@mui/material/Table")), import_TableCell2 = __toESM(require("@mui/material/TableCell")), import_TableContainer2 = __toESM(require("@mui/material/TableContainer")), import_TableHead2 = __toESM(require("@mui/material/TableHead")), import_TablePagination2 = __toESM(require("@mui/material/TablePagination")), import_TableRow2 = __toESM(require("@mui/material/TableRow")), React3 = __toESM(require("react")), import_jsx_dev_runtime11 = require("react/jsx-dev-runtime"), columns2 = [
   {
     id: "name",
     label: "\u05E9\u05DD \u05E0\u05D5\u05E9\u05D0",
@@ -1852,10 +1220,10 @@ function TopicList({ onButtonClick, dataRow, dataRowChildren }) {
   }).filter(
     (row) => row.name.toLowerCase().includes(searchInput.toLowerCase())
   );
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.Box, { sx: { display: "flex", flexDirection: "column", gap: 1, hegith: "100%" }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.Box, { sx: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 1 }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_Paper2.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
-        import_material6.TextField,
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material5.Box, { sx: { display: "flex", flexDirection: "column", gap: 1, hegith: "100%" }, children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material5.Box, { sx: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 1 }, children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_Paper2.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
+        import_material5.TextField,
         {
           sx: {
             padding: "0.1em",
@@ -1873,7 +1241,7 @@ function TopicList({ onButtonClick, dataRow, dataRowChildren }) {
           onChange: handleSearchInputChange,
           placeholder: "\u05D7\u05E4\u05E9",
           InputProps: {
-            startAdornment: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.InputAdornment, { position: "start", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_Search2.default, {}, void 0, !1, {
+            startAdornment: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material5.InputAdornment, { position: "start", children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_Search2.default, {}, void 0, !1, {
               fileName: "app/LessonComponents/Lists/TopicList.tsx",
               lineNumber: 114,
               columnNumber: 19
@@ -1897,8 +1265,8 @@ function TopicList({ onButtonClick, dataRow, dataRowChildren }) {
         lineNumber: 94,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_Paper2.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.Button, { variant: "outlined", color: "warning", onClick: handleButtonClick, children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_CreateNewFolderOutlined2.default, {}, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_Paper2.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material5.Button, { variant: "outlined", color: "warning", onClick: handleButtonClick, children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_CreateNewFolderOutlined2.default, {}, void 0, !1, {
           fileName: "app/LessonComponents/Lists/TopicList.tsx",
           lineNumber: 122,
           columnNumber: 13
@@ -1918,8 +1286,8 @@ function TopicList({ onButtonClick, dataRow, dataRowChildren }) {
       lineNumber: 93,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_Paper2.default, { elevation: 8, sx: { width: "100%", overflow: "hidden" }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_Paper2.default, { elevation: 8, sx: { width: "100%", overflow: "hidden" }, children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
         import_TableContainer2.default,
         {
           sx: {
@@ -1936,8 +1304,8 @@ function TopicList({ onButtonClick, dataRow, dataRowChildren }) {
             },
             overflowX: "hidden"
           },
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_Table2.default, { stickyHeader: !0, "aria-label": "sticky table", children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_TableHead2.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_TableRow2.default, { children: columns2.map((column) => /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_Table2.default, { stickyHeader: !0, "aria-label": "sticky table", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_TableHead2.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_TableRow2.default, { children: columns2.map((column) => /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
               import_TableCell2.default,
               {
                 align: column.align,
@@ -1961,12 +1329,12 @@ function TopicList({ onButtonClick, dataRow, dataRowChildren }) {
               lineNumber: 143,
               columnNumber: 13
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.TableBody, { children: filteredRows.length === 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_TableRow2.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_TableCell2.default, { colSpan: columns2.length, children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.Box, { sx: {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material5.TableBody, { children: filteredRows.length === 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_TableRow2.default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_TableCell2.default, { colSpan: columns2.length, children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material5.Box, { sx: {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               textAlign: "center"
-            }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.Typography, { variant: "h6", children: "\u05DC\u05D0 \u05E0\u05DE\u05E6\u05D0\u05D5 \u05E0\u05D5\u05E9\u05D0\u05D9\u05DD \u05DE\u05EA\u05D0\u05D9\u05DE\u05D9\u05DD \u05DC\u05E2\u05E8\u05DA \u05D4\u05D7\u05D9\u05E4\u05D5\u05E9" }, void 0, !1, {
+            }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material5.Typography, { variant: "h6", children: "\u05DC\u05D0 \u05E0\u05DE\u05E6\u05D0\u05D5 \u05E0\u05D5\u05E9\u05D0\u05D9\u05DD \u05DE\u05EA\u05D0\u05D9\u05DE\u05D9\u05DD \u05DC\u05E2\u05E8\u05DA \u05D4\u05D7\u05D9\u05E4\u05D5\u05E9" }, void 0, !1, {
               fileName: "app/LessonComponents/Lists/TopicList.tsx",
               lineNumber: 166,
               columnNumber: 23
@@ -1982,9 +1350,9 @@ function TopicList({ onButtonClick, dataRow, dataRowChildren }) {
               fileName: "app/LessonComponents/Lists/TopicList.tsx",
               lineNumber: 158,
               columnNumber: 17
-            }, this) : filteredRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_material6.Grow, { timeout: (index + 1) * 100, in: !0, style: { transformOrigin: "0 0 0" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_TableRow2.default, { hover: !0, role: "checkbox", tabIndex: -1, onClick: () => handleTopicRowClick(row), children: columns2.map((column) => {
+            }, this) : filteredRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material5.Grow, { timeout: (index + 1) * 100, in: !0, style: { transformOrigin: "0 0 0" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_TableRow2.default, { hover: !0, role: "checkbox", tabIndex: -1, onClick: () => handleTopicRowClick(row), children: columns2.map((column) => {
               let value = row[column.id];
-              return /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_TableCell2.default, { align: column.align, children: column.format && typeof value == "number" ? column.format(value) : String(value) }, column.id, !1, {
+              return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_TableCell2.default, { align: column.align, children: column.format && typeof value == "number" ? column.format(value) : String(value) }, column.id, !1, {
                 fileName: "app/LessonComponents/Lists/TopicList.tsx",
                 lineNumber: 182,
                 columnNumber: 29
@@ -2017,7 +1385,7 @@ function TopicList({ onButtonClick, dataRow, dataRowChildren }) {
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
         import_TablePagination2.default,
         {
           rowsPerPageOptions: [10, 25, 100],
@@ -2049,6 +1417,921 @@ function TopicList({ onButtonClick, dataRow, dataRowChildren }) {
   }, this);
 }
 
+// app/components/SideBar.tsx
+var import_react11 = require("react"), import_material6 = require("@mui/material");
+
+// app/images/orev-icon-portrait.png
+var orev_icon_portrait_default = "/build/_assets/orev-icon-portrait-GVLD24GP.png";
+
+// app/components/SideBar.tsx
+var import_jsx_dev_runtime12 = require("react/jsx-dev-runtime"), sideBarItems = [
+  {
+    name: "\u05DC\u05DE\u05D9\u05D3\u05D4",
+    href: "/learn",
+    icon: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("svg", { width: "46", height: "46", viewBox: "0 0 32 32", fill: "none", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          d: "M24.5852 25.2658C24.2883 26.8243 22.9257 27.9519 21.3392 27.9519H10.6401C9.05354 27.9519 7.69094 26.8243 7.39408 25.2658L4.98096 12.5969L15.9001 4.52225L26.9988 12.5941L24.5852 25.2658Z",
+          fill: "#FFC800"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 20,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          opacity: "0.5",
+          fillRule: "evenodd",
+          clipRule: "evenodd",
+          d: "M13.1558 23.1111C13.1558 22.522 13.6333 22.0444 14.2224 22.0444H18.4891C19.0782 22.0444 19.5558 22.522 19.5558 23.1111C19.5558 23.7002 19.0782 24.1778 18.4891 24.1778H14.2224C13.6333 24.1778 13.1558 23.7002 13.1558 23.1111Z",
+          fill: "#945151"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 24,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          d: "M19.4785 16.2998C19.4785 18.2208 17.9212 19.778 16.0002 19.778C14.0792 19.778 12.522 18.2208 12.522 16.2998C12.522 14.3788 14.0792 12.8215 16.0002 12.8215C17.9212 12.8215 19.4785 14.3788 19.4785 16.2998Z",
+          fill: "#945151"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 31,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          d: "M16.1685 2.84462C16.6431 2.84231 17.1233 2.98589 17.5361 3.28558L17.5368 3.2861L29.9455 12.2319C30.9781 12.9822 31.207 14.4275 30.4568 15.4601C29.7067 16.4924 28.262 16.7215 27.2294 15.9719L27.2286 15.9714L16.1602 7.99185L5.09208 15.9712L5.09121 15.9719C4.05865 16.7213 2.61395 16.4923 1.86391 15.4599C1.11367 14.4273 1.34258 12.982 2.3752 12.2318L2.37679 12.2306L14.7839 3.28596L14.7846 3.28544C15.2022 2.98229 15.6887 2.83889 16.1685 2.84462Z",
+          fill: "#FF4B4B"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 35,
+          columnNumber: 9
+        },
+        this
+      )
+    ] }, void 0, !0, {
+      fileName: "app/components/SideBar.tsx",
+      lineNumber: 19,
+      columnNumber: 7
+    }, this)
+  },
+  {
+    name: "\u05E4\u05E8\u05D5\u05E4\u05D9\u05DC",
+    href: "/profile",
+    icon: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("svg", { width: "46", height: "46", viewBox: "0 0 46 46", fill: "none", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          fillRule: "evenodd",
+          clipRule: "evenodd",
+          d: "M23.1826 5.00195C14.3461 5.00195 7.18262 12.1654 7.18262 21.002V21.9375C4.21918 23.4102 2.18262 26.4682 2.18262 30.002C2.18262 34.9725 6.21206 39.002 11.1826 39.002H35.1826C40.1532 39.002 44.1826 34.9725 44.1826 30.002C44.1826 26.4682 42.1461 23.4102 39.1826 21.9375V21.002C39.1826 12.1654 32.0192 5.00195 23.1826 5.00195Z",
+          fill: "#9069CD"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 47,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          d: "M11.1826 21.002C11.1826 14.3745 16.5552 9.00195 23.1826 9.00195C29.81 9.00195 35.1826 14.3745 35.1826 21.002V29.002C35.1826 35.6294 29.81 41.002 23.1826 41.002C16.5552 41.002 11.1826 35.6294 11.1826 29.002V21.002Z",
+          fill: "#F3AD6D"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 53,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          d: "M7.18262 24.502C7.18262 22.0167 9.19734 20.002 11.6826 20.002H34.6826C37.1679 20.002 39.1826 22.0167 39.1826 24.502C39.1826 26.9872 37.1679 29.002 34.6826 29.002H11.6826C9.19734 29.002 7.18262 26.9872 7.18262 24.502Z",
+          fill: "#F3AD6D"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 57,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          d: "M18.1826 20.502C18.1826 19.6735 18.8542 19.002 19.6826 19.002C20.511 19.002 21.1826 19.6735 21.1826 20.502V24.502C21.1826 25.3304 20.511 26.002 19.6826 26.002C18.8542 26.002 18.1826 25.3304 18.1826 24.502V20.502Z",
+          fill: "#BF8034"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 61,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          d: "M24.1826 20.502C24.1826 19.6735 24.8542 19.002 25.6826 19.002C26.511 19.002 27.1826 19.6735 27.1826 20.502V24.502C27.1826 25.3304 26.511 26.002 25.6826 26.002C24.8542 26.002 24.1826 25.3304 24.1826 24.502V20.502Z",
+          fill: "#BF8034"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 65,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          d: "M17.1826 29.0445C17.1826 28.4687 17.6494 28.002 18.2252 28.002H27.1401C27.7159 28.002 28.1826 28.4687 28.1826 29.0445V29.502C28.1826 32.5395 25.7202 35.002 22.6826 35.002C19.6451 35.002 17.1826 32.5395 17.1826 29.502V29.0445Z",
+          fill: "white"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 69,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          d: "M7.18262 21.0062V21.002C7.18262 12.1654 14.3461 5.00195 23.1826 5.00195C26.0199 5.00195 28.6847 5.74049 30.9953 7.0358C29.7326 15.5 22.2386 22.002 13.1826 22.002C11.0788 22.002 9.05929 21.6511 7.18262 21.0062Z",
+          fill: "#9069CD"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 73,
+          columnNumber: 9
+        },
+        this
+      )
+    ] }, void 0, !0, {
+      fileName: "app/components/SideBar.tsx",
+      lineNumber: 46,
+      columnNumber: 7
+    }, this)
+  },
+  {
+    //TODO: if user role is admin ONLY!
+    name: "\u05DE\u05E4\u05E2\u05DC \u05D4\u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD",
+    href: "/lesson-factory",
+    icon: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("svg", { width: "44", height: "44", viewBox: "0 0 512 512", fill: "none", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          style: { fill: "#792A18" },
+          d: "M478.242,71.455h-67.517l33.758,360.088h33.758c18.644,0,33.758-15.115,33.758-33.758V105.213 C512,86.57,496.885,71.455,478.242,71.455z"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 86,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          style: { fill: "#95341D" },
+          d: "M210.989,70.33L256,464.176c18.645,0,33.758-15.114,33.758-33.758h154.725V70.33H210.989z"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 90,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          style: { fill: "#AB5D4A" },
+          d: "M33.758,70.33C15.115,70.33,0,85.444,0,104.088v292.571c0,18.644,15.115,33.758,33.758,33.758 h188.484c0,18.645,15.114,33.758,33.758,33.758V70.33H33.758z"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 94,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "polygon",
+        {
+          style: { fill: "#A99E9B" },
+          points: "421.978,340.396 433.231,396.659 478.242,396.659 478.242,362.901 "
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 98,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          style: { fill: "#C1B8B5" },
+          d: "M233.495,340.396L256,422.537v7.88c0-18.567,15.191-33.758,33.758-33.758h141.785v-56.264H233.495z"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 102,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          style: { fill: "#D8D1D0" },
+          d: "M33.758,362.901v33.758h188.484c18.567,0,33.758,15.191,33.758,33.758V329.143L33.758,362.901z"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 106,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "polygon",
+        {
+          style: { fill: "#E26142" },
+          points: "391.066,475.429 417.775,464.176 444.484,475.429 444.484,340.396 391.066,340.396 "
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 110,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "polygon",
+        {
+          style: { fill: "#C1B8B5" },
+          points: "433.231,36.571 399.473,199.736 433.231,362.901 478.242,362.901 478.242,36.571 "
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 114,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          style: { fill: "#D8D1D0" },
+          d: "M289.758,36.571C271.191,36.571,256,51.763,256,70.33l-33.758,163.165L256,388.782v7.877 c0-18.567,15.191-33.758,33.758-33.758h143.473V247.557l-22.506-71.734l22.506-71.735V36.571H289.758z"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 118,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          style: { fill: "#F0EBEA" },
+          d: "M222.242,36.571H33.758v326.33h188.484c18.567,0,33.758,15.191,33.758,33.758V70.33 C256,51.763,240.809,36.571,222.242,36.571z"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 122,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "rect",
+        {
+          x: "301.011",
+          y: "104.088",
+          style: { fill: "#FFFFFF" },
+          width: "132.22",
+          height: "143.473"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 126,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("g", { children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+          "path",
+          {
+            style: { fill: "#7F7774" },
+            d: "M210.989,303.824H78.769c-4.662,0-8.44-3.778-8.44-8.44c0-4.662,3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44C219.429,300.047,215.651,303.824,210.989,303.824z"
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/components/SideBar.tsx",
+            lineNumber: 134,
+            columnNumber: 11
+          },
+          this
+        ),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+          "path",
+          {
+            style: { fill: "#7F7774" },
+            d: "M210.989,256H78.769c-4.662,0-8.44-3.778-8.44-8.44s3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44S215.651,256,210.989,256z"
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/components/SideBar.tsx",
+            lineNumber: 138,
+            columnNumber: 11
+          },
+          this
+        ),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+          "path",
+          {
+            style: { fill: "#7F7774" },
+            d: "M210.989,208.176H78.769c-4.662,0-8.44-3.778-8.44-8.44s3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44S215.651,208.176,210.989,208.176z"
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/components/SideBar.tsx",
+            lineNumber: 142,
+            columnNumber: 11
+          },
+          this
+        ),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+          "path",
+          {
+            style: { fill: "#7F7774" },
+            d: "M210.989,160.352H78.769c-4.662,0-8.44-3.778-8.44-8.44s3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44S215.651,160.352,210.989,160.352z"
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/components/SideBar.tsx",
+            lineNumber: 146,
+            columnNumber: 11
+          },
+          this
+        ),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+          "path",
+          {
+            style: { fill: "#7F7774" },
+            d: "M210.989,112.527H78.769c-4.662,0-8.44-3.778-8.44-8.44c0-4.662,3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44C219.429,108.75,215.651,112.527,210.989,112.527z"
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/components/SideBar.tsx",
+            lineNumber: 150,
+            columnNumber: 11
+          },
+          this
+        )
+      ] }, void 0, !0, {
+        fileName: "app/components/SideBar.tsx",
+        lineNumber: 133,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+        "path",
+        {
+          style: { fill: "#554F4E" },
+          d: "M433.231,303.824h-132.22c-4.662,0-8.44-3.778-8.44-8.44c0-4.662,3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44C441.67,300.047,437.893,303.824,433.231,303.824z"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 155,
+          columnNumber: 9
+        },
+        this
+      )
+    ] }, void 0, !0, {
+      fileName: "app/components/SideBar.tsx",
+      lineNumber: 85,
+      columnNumber: 7
+    }, this)
+  }
+  // maybe add in the future a settings page about page and so on
+], LeftBarMoreMenuSvg = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("svg", { width: "46", height: "46", viewBox: "0 0 46 46", fill: "none", ...props, children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+    "circle",
+    {
+      cx: "23",
+      cy: "23",
+      r: "19",
+      fill: "#CE82FF",
+      stroke: "#CE82FF",
+      strokeWidth: "2"
+    },
+    void 0,
+    !1,
+    {
+      fileName: "app/components/SideBar.tsx",
+      lineNumber: 168,
+      columnNumber: 7
+    },
+    this
+  ),
+  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("circle", { cx: "15", cy: "23", r: "2", fill: "white" }, void 0, !1, {
+    fileName: "app/components/SideBar.tsx",
+    lineNumber: 176,
+    columnNumber: 7
+  }, this),
+  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("circle", { cx: "23", cy: "23", r: "2", fill: "white" }, void 0, !1, {
+    fileName: "app/components/SideBar.tsx",
+    lineNumber: 177,
+    columnNumber: 7
+  }, this),
+  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("circle", { cx: "31", cy: "23", r: "2", fill: "white" }, void 0, !1, {
+    fileName: "app/components/SideBar.tsx",
+    lineNumber: 178,
+    columnNumber: 7
+  }, this)
+] }, void 0, !0, {
+  fileName: "app/components/SideBar.tsx",
+  lineNumber: 167,
+  columnNumber: 5
+}, this), SideBar = ({ selectedTab }) => {
+  let [moreMenuShown, setMoreMenuShown] = (0, import_react11.useState)(!1), [isDarkModeChecked, setisDarkModeChecked] = (0, import_react11.useState)(!1), handleChange = () => {
+    setisDarkModeChecked((prevChecked) => !prevChecked);
+  };
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_jsx_dev_runtime12.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+    import_material6.Box,
+    {
+      sx: {
+        right: 0,
+        top: 0,
+        width: "230px",
+        height: "100%",
+        backgroundColor: "#f0dfbf",
+        zIndex: 2
+      },
+      children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+          import_material6.Box,
+          {
+            sx: {
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+              paddingTop: 1,
+              height: "80px",
+              borderBottom: "2px solid #e5e5e5"
+            },
+            children: [
+              /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+                import_material6.Typography,
+                {
+                  sx: {
+                    fontSize: "1.7rem",
+                    fontWeight: "900",
+                    color: "orange",
+                    wordWrap: "break-word",
+                    width: "120px",
+                    textAlign: "left",
+                    paddingLeft: 4
+                  },
+                  children: "\u05DC\u05D5\u05DE\u05D3\u05EA \u05E2\u05D5\u05E8\u05D1"
+                },
+                void 0,
+                !1,
+                {
+                  fileName: "app/components/SideBar.tsx",
+                  lineNumber: 214,
+                  columnNumber: 11
+                },
+                this
+              ),
+              /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material6.Link, { href: "/", sx: { paddingLeft: 2, margin: "auto" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+                "img",
+                {
+                  src: orev_icon_portrait_default,
+                  alt: "orev logo",
+                  width: "78px",
+                  height: "78px"
+                },
+                void 0,
+                !1,
+                {
+                  fileName: "app/components/SideBar.tsx",
+                  lineNumber: 228,
+                  columnNumber: 13
+                },
+                this
+              ) }, void 0, !1, {
+                fileName: "app/components/SideBar.tsx",
+                lineNumber: 227,
+                columnNumber: 11
+              }, this)
+            ]
+          },
+          void 0,
+          !0,
+          {
+            fileName: "app/components/SideBar.tsx",
+            lineNumber: 203,
+            columnNumber: 9
+          },
+          this
+        ),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material6.Box, { sx: { display: "flex", flexDirection: "column" }, children: [
+          sideBarItems.map((item) => /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material6.Box, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+            import_material6.Link,
+            {
+              href: item.href,
+              sx: {
+                display: "flex",
+                flexDirection: "row",
+                paddingY: "0.25rem",
+                gap: "1rem",
+                alignItems: "center",
+                border: "2px solid #e5e5e5",
+                borderRadius: "0.75rem",
+                fontSize: "0.875rem",
+                textDecoration: "none",
+                color: "#9CA3AF",
+                "&:hover": { backgroundColor: "#F3F4e6" },
+                ...selectedTab === item.name ? {
+                  borderColor: "#84d8ff",
+                  background: "#ddf4ff"
+                } : {}
+              },
+              children: [
+                item.icon,
+                /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material6.Typography, { children: item.name }, void 0, !1, {
+                  fileName: "app/components/SideBar.tsx",
+                  lineNumber: 262,
+                  columnNumber: 17
+                }, this)
+              ]
+            },
+            void 0,
+            !0,
+            {
+              fileName: "app/components/SideBar.tsx",
+              lineNumber: 239,
+              columnNumber: 15
+            },
+            this
+          ) }, item.href, !1, {
+            fileName: "app/components/SideBar.tsx",
+            lineNumber: 238,
+            columnNumber: 13
+          }, this)),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+            import_material6.Box,
+            {
+              sx: {
+                display: "flex",
+                paddingY: "0.25rem",
+                paddingX: "0.5rem",
+                gap: "0.75rem",
+                alignItems: "center",
+                borderRadius: "0.75rem",
+                color: "#9CA3AF",
+                cursor: "default",
+                "&:hover": { backgroundColor: "#F3F4e6" }
+              },
+              onMouseEnter: () => setMoreMenuShown(!0),
+              onMouseLeave: () => setMoreMenuShown(!1),
+              role: "button",
+              tabIndex: 0,
+              children: [
+                /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(LeftBarMoreMenuSvg, {}, void 0, !1, {
+                  fileName: "app/components/SideBar.tsx",
+                  lineNumber: 284,
+                  columnNumber: 13
+                }, this),
+                /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material6.Typography, { sx: { fontSize: "1rem" }, children: "\u05DC\u05E2\u05D5\u05D3" }, void 0, !1, {
+                  fileName: "app/components/SideBar.tsx",
+                  lineNumber: 285,
+                  columnNumber: 13
+                }, this),
+                /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+                  import_material6.Paper,
+                  {
+                    sx: {
+                      position: "absolute",
+                      top: 250,
+                      left: 220,
+                      minWidth: "270px",
+                      borderRadius: "2xl",
+                      display: moreMenuShown ? "block" : "none",
+                      "&:hover": {
+                        display: "block"
+                      }
+                    },
+                    onMouseEnter: () => setMoreMenuShown(!0),
+                    onMouseLeave: () => setMoreMenuShown(!1),
+                    children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+                      import_material6.Box,
+                      {
+                        sx: {
+                          display: "flex",
+                          flexDirection: "column",
+                          borderColor: "#D1D5DB"
+                        },
+                        children: [
+                          /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+                            import_material6.Button,
+                            {
+                              sx: {
+                                paddingTop: "0.5rem",
+                                paddingBottom: "0.5rem",
+                                textAlign: "right",
+                                "&:hover": { backgroundColor: "#2e1d02" }
+                              },
+                              children: "\u05E6\u05D5\u05E8 \u05E4\u05E8\u05D5\u05E4\u05D9\u05DC"
+                            },
+                            void 0,
+                            !1,
+                            {
+                              fileName: "app/components/SideBar.tsx",
+                              lineNumber: 308,
+                              columnNumber: 17
+                            },
+                            this
+                          ),
+                          /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+                            import_material6.Button,
+                            {
+                              sx: {
+                                paddingTop: "0.5rem",
+                                paddingBottom: "0.5rem",
+                                textAlign: "right",
+                                "&:hover": { backgroundColor: "#2e1d02" }
+                              },
+                              children: "\u05D4\u05D2\u05D3\u05E8\u05D5\u05EA"
+                            },
+                            void 0,
+                            !1,
+                            {
+                              fileName: "app/components/SideBar.tsx",
+                              lineNumber: 319,
+                              columnNumber: 17
+                            },
+                            this
+                          ),
+                          /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+                            import_material6.Button,
+                            {
+                              sx: {
+                                paddingTop: "0.5rem",
+                                paddingBottom: "0.5rem",
+                                textAlign: "right",
+                                "&:hover": { backgroundColor: "#2e1d02" }
+                              },
+                              children: "\u05D4\u05EA\u05D7\u05D1\u05E8\u05D5\u05EA"
+                            },
+                            void 0,
+                            !1,
+                            {
+                              fileName: "app/components/SideBar.tsx",
+                              lineNumber: 330,
+                              columnNumber: 17
+                            },
+                            this
+                          ),
+                          /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+                            import_material6.Button,
+                            {
+                              sx: {
+                                paddingTop: "0.5rem",
+                                paddingBottom: "0.5rem",
+                                textAlign: "right",
+                                "&:hover": { backgroundColor: "#2e1d02" }
+                              },
+                              children: "\u05D4\u05EA\u05E0\u05EA\u05E7\u05D5\u05EA"
+                            },
+                            void 0,
+                            !1,
+                            {
+                              fileName: "app/components/SideBar.tsx",
+                              lineNumber: 341,
+                              columnNumber: 17
+                            },
+                            this
+                          ),
+                          /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+                            import_material6.Box,
+                            {
+                              sx: {
+                                marginTop: "auto",
+                                paddingX: 4,
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "space-between"
+                              },
+                              children: [
+                                /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material6.Box, { sx: { display: "flex", alignItems: "center" }, children: [
+                                  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_material6.Typography, { sx: { fontSize: "1rem", fontWeight: "normal" }, children: "\u05DE\u05E6\u05D1" }, void 0, !1, {
+                                    fileName: "app/components/SideBar.tsx",
+                                    lineNumber: 363,
+                                    columnNumber: 21
+                                  }, this),
+                                  isDarkModeChecked ? /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+                                    import_material6.Typography,
+                                    {
+                                      sx: {
+                                        color: "#784c06",
+                                        marginRight: 2,
+                                        fontWeight: "medium"
+                                      },
+                                      children: "\u05DC\u05D9\u05DC\u05D4"
+                                    },
+                                    void 0,
+                                    !1,
+                                    {
+                                      fileName: "app/components/SideBar.tsx",
+                                      lineNumber: 367,
+                                      columnNumber: 23
+                                    },
+                                    this
+                                  ) : /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+                                    import_material6.Typography,
+                                    {
+                                      sx: {
+                                        color: "#ffb238",
+                                        marginRight: 2,
+                                        fontWeight: "medium"
+                                      },
+                                      children: "\u05D9\u05D5\u05DD"
+                                    },
+                                    void 0,
+                                    !1,
+                                    {
+                                      fileName: "app/components/SideBar.tsx",
+                                      lineNumber: 377,
+                                      columnNumber: 23
+                                    },
+                                    this
+                                  )
+                                ] }, void 0, !0, {
+                                  fileName: "app/components/SideBar.tsx",
+                                  lineNumber: 362,
+                                  columnNumber: 19
+                                }, this),
+                                /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
+                                  import_material6.Switch,
+                                  {
+                                    defaultChecked: isDarkModeChecked,
+                                    color: "warning",
+                                    onChange: handleChange
+                                  },
+                                  void 0,
+                                  !1,
+                                  {
+                                    fileName: "app/components/SideBar.tsx",
+                                    lineNumber: 388,
+                                    columnNumber: 19
+                                  },
+                                  this
+                                )
+                              ]
+                            },
+                            void 0,
+                            !0,
+                            {
+                              fileName: "app/components/SideBar.tsx",
+                              lineNumber: 353,
+                              columnNumber: 17
+                            },
+                            this
+                          )
+                        ]
+                      },
+                      void 0,
+                      !0,
+                      {
+                        fileName: "app/components/SideBar.tsx",
+                        lineNumber: 301,
+                        columnNumber: 15
+                      },
+                      this
+                    )
+                  },
+                  void 0,
+                  !1,
+                  {
+                    fileName: "app/components/SideBar.tsx",
+                    lineNumber: 286,
+                    columnNumber: 13
+                  },
+                  this
+                )
+              ]
+            },
+            void 0,
+            !0,
+            {
+              fileName: "app/components/SideBar.tsx",
+              lineNumber: 266,
+              columnNumber: 11
+            },
+            this
+          )
+        ] }, void 0, !0, {
+          fileName: "app/components/SideBar.tsx",
+          lineNumber: 236,
+          columnNumber: 9
+        }, this)
+      ]
+    },
+    void 0,
+    !0,
+    {
+      fileName: "app/components/SideBar.tsx",
+      lineNumber: 193,
+      columnNumber: 7
+    },
+    this
+  ) }, void 0, !1, {
+    fileName: "app/components/SideBar.tsx",
+    lineNumber: 192,
+    columnNumber: 5
+  }, this);
+};
+
 // app/utils/topic.server.ts
 async function getTopics() {
   return await prisma.topic.findMany({
@@ -2063,8 +2346,8 @@ async function getTopics() {
 }
 
 // app/routes/lesson-factory.tsx
-var import_jsx_dev_runtime11 = require("react/jsx-dev-runtime");
-async function loader3({ request }) {
+var import_jsx_dev_runtime13 = require("react/jsx-dev-runtime");
+async function loader5({ request }) {
   let topics = await getTopics(), lessons = await getLessons(), questions = await getQuestions();
   return { topics, lessons, questions };
 }
@@ -2122,7 +2405,7 @@ var BreadCrumbsComponent = ({
   }, handleBreadcrumbClick = (breadcrumb) => {
     onBreadcrumbClick(breadcrumb.componentName);
   };
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_Breadcrumbs.default, { separator: "\u203A", "aria-label": "breadcrumb", sx: { color: "white", cursor: "pointer" }, children: getVisibleBreadcrumbs().map((breadcrumb, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_Breadcrumbs.default, { separator: "\u203A", "aria-label": "breadcrumb", sx: { color: "white", cursor: "pointer" }, children: getVisibleBreadcrumbs().map((breadcrumb, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
     import_material7.Link,
     {
       underline: "hover",
@@ -2145,10 +2428,10 @@ var BreadCrumbsComponent = ({
   }, this);
 };
 function BuildLesson() {
-  let { topics, lessons, questions } = (0, import_react10.useLoaderData)(), [selectedComponent, setSelectedComponent] = (0, import_react11.useState)("TopicList"), [selectedTopic, setSelectedTopic] = (0, import_react11.useState)(void 0), handleComponentChange = (componentName, selectedTopic2) => {
+  let { topics, lessons, questions } = (0, import_react12.useLoaderData)(), [selectedComponent, setSelectedComponent] = (0, import_react13.useState)("TopicList"), [selectedTopic, setSelectedTopic] = (0, import_react13.useState)(void 0), handleComponentChange = (componentName, selectedTopic2) => {
     console.log("Selected Topic:", selectedTopic2), setSelectedTopic(selectedTopic2), setSelectedComponent(componentName);
   };
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
     import_material7.Box,
     {
       sx: {
@@ -2161,12 +2444,12 @@ function BuildLesson() {
         paddingY: 16
       },
       children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material7.Box, { sx: {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material7.Box, { sx: {
           position: "fixed",
           top: 0,
           left: 0,
           height: "100%"
-        }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(SideBar, { selectedTab: "\u05DE\u05E4\u05E2\u05DC \u05D4\u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD" }, void 0, !1, {
+        }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(SideBar, { selectedTab: "\u05DE\u05E4\u05E2\u05DC \u05D4\u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD" }, void 0, !1, {
           fileName: "app/routes/lesson-factory.tsx",
           lineNumber: 181,
           columnNumber: 11
@@ -2175,18 +2458,18 @@ function BuildLesson() {
           lineNumber: 178,
           columnNumber: 9
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material7.Box, { sx: {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material7.Box, { sx: {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
           height: "1920px"
         }, children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material7.Box, { sx: {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material7.Box, { sx: {
             position: "fixed",
             top: 3,
             left: 238
-          }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
+          }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
             BreadCrumbsComponent,
             {
               onBreadcrumbClick: (componentName) => {
@@ -2207,8 +2490,8 @@ function BuildLesson() {
             lineNumber: 186,
             columnNumber: 11
           }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_material7.Box, { sx: { width: "100%", overflow: "hidden", alignItems: "center", height: "100%" }, children: [
-            selectedComponent === "TopicList" && /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
+          /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material7.Box, { sx: { width: "100%", overflow: "hidden", alignItems: "center", height: "100%" }, children: [
+            selectedComponent === "TopicList" && /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
               TopicList,
               {
                 onButtonClick: handleComponentChange,
@@ -2224,12 +2507,12 @@ function BuildLesson() {
               },
               this
             ),
-            selectedComponent === "NewTopic" && /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(NewTopic2, { onButtonClick: handleComponentChange }, void 0, !1, {
+            selectedComponent === "NewTopic" && /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(NewTopic2, { onButtonClick: handleComponentChange }, void 0, !1, {
               fileName: "app/routes/lesson-factory.tsx",
               lineNumber: 205,
               columnNumber: 15
             }, this),
-            selectedComponent === "LessonList" && /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
+            selectedComponent === "LessonList" && /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
               LessonList,
               {
                 onButtonClick: handleComponentChange,
@@ -2246,7 +2529,7 @@ function BuildLesson() {
               },
               this
             ),
-            selectedComponent === "NewLesson" && /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(NewTopic, { onButtonClick: handleComponentChange }, void 0, !1, {
+            selectedComponent === "NewLesson" && /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(NewTopic, { onButtonClick: handleComponentChange }, void 0, !1, {
               fileName: "app/routes/lesson-factory.tsx",
               lineNumber: 216,
               columnNumber: 15
@@ -2274,45 +2557,165 @@ function BuildLesson() {
   );
 }
 
-// app/routes/lessons.tsx
-var lessons_exports = {};
-__export(lessons_exports, {
+// app/routes/admin.lessons.tsx
+var admin_lessons_exports = {};
+__export(admin_lessons_exports, {
   default: () => TopicList2,
-  loader: () => loader4
+  loader: () => loader6
 });
-var import_react12 = require("@remix-run/react");
-var import_jsx_dev_runtime12 = require("react/jsx-dev-runtime");
-async function loader4() {
+var import_react14 = require("@remix-run/react");
+var import_jsx_dev_runtime14 = require("react/jsx-dev-runtime");
+async function loader6() {
   return { topics: (await getTopics()).map((topic) => ({ ...topic, _count: topic._count.Lessons })) };
 }
 function TopicList2() {
-  let { topics } = (0, import_react12.useLoaderData)();
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_jsx_dev_runtime12.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(FullFeaturedCrudGrid, { editable: !0, rows: topics, setRows: (oldRows) => {
-  }, columnProps: [
-    { field: "name", headerName: "\u05E9\u05DD \u05E0\u05D5\u05E9\u05D0", width: 180, editable: !0 },
-    { field: "updatedAt", headerName: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4", width: 180, editable: !1 },
-    { field: "_count", headerName: "\u05DE\u05E1\u05E4\u05E8 \u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD", width: 180, editable: !1 }
-  ] }, void 0, !1, {
+  let { topics } = (0, import_react14.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(import_jsx_dev_runtime14.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    FullFeaturedCrudGrid,
+    {
+      editable: !0,
+      rows: topics,
+      setRows: (oldRows) => {
+      },
+      columnProps: [
+        { field: "name", headerName: "\u05E9\u05DD \u05E0\u05D5\u05E9\u05D0", width: 180, editable: !0 },
+        {
+          field: "updatedAt",
+          headerName: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4",
+          width: 180,
+          editable: !1
+        },
+        {
+          field: "_count",
+          headerName: "\u05DE\u05E1\u05E4\u05E8 \u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD",
+          width: 180,
+          editable: !1
+        }
+      ]
+    },
+    void 0,
+    !1,
+    {
+      fileName: "app/routes/admin.lessons.tsx",
+      lineNumber: 37,
+      columnNumber: 9
+    },
+    this
+  ) }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.tsx",
+    lineNumber: 36,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/admin.lessons.tsx",
+    lineNumber: 35,
+    columnNumber: 5
+  }, this);
+}
+
+// app/routes/lessons.tsx
+var lessons_exports = {};
+__export(lessons_exports, {
+  default: () => TopicList3,
+  loader: () => loader7
+});
+var import_react15 = require("@remix-run/react");
+var import_jsx_dev_runtime15 = require("react/jsx-dev-runtime");
+async function loader7() {
+  return { topics: (await getTopics()).map((topic) => ({ ...topic, _count: topic._count.Lessons })) };
+}
+function TopicList3() {
+  let { topics } = (0, import_react15.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_jsx_dev_runtime15.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+    FullFeaturedCrudGrid,
+    {
+      editable: !0,
+      rows: topics,
+      setRows: (oldRows) => {
+      },
+      columnProps: [
+        { field: "name", headerName: "\u05E9\u05DD \u05E0\u05D5\u05E9\u05D0", width: 180, editable: !0 },
+        {
+          field: "updatedAt",
+          headerName: "\u05E0\u05E2\u05E8\u05DA \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4",
+          width: 180,
+          editable: !1
+        },
+        {
+          field: "_count",
+          headerName: "\u05DE\u05E1\u05E4\u05E8 \u05E9\u05D9\u05E2\u05D5\u05E8\u05D9\u05DD",
+          width: 180,
+          editable: !1
+        }
+      ]
+    },
+    void 0,
+    !1,
+    {
+      fileName: "app/routes/lessons.tsx",
+      lineNumber: 37,
+      columnNumber: 9
+    },
+    this
+  ) }, void 0, !1, {
     fileName: "app/routes/lessons.tsx",
-    lineNumber: 25,
-    columnNumber: 17
+    lineNumber: 36,
+    columnNumber: 7
   }, this) }, void 0, !1, {
     fileName: "app/routes/lessons.tsx",
-    lineNumber: 24,
-    columnNumber: 13
+    lineNumber: 35,
+    columnNumber: 5
+  }, this);
+}
+
+// app/routes/_index.tsx
+var index_exports = {};
+__export(index_exports, {
+  default: () => Index
+});
+var import_material8 = require("@mui/material"), import_jsx_dev_runtime16 = require("react/jsx-dev-runtime");
+function Index() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_jsx_dev_runtime16.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_material8.Typography, { children: "waka wakak" }, void 0, !1, {
+    fileName: "app/routes/_index.tsx",
+    lineNumber: 6,
+    columnNumber: 7
   }, this) }, void 0, !1, {
-    fileName: "app/routes/lessons.tsx",
-    lineNumber: 23,
-    columnNumber: 9
+    fileName: "app/routes/_index.tsx",
+    lineNumber: 5,
+    columnNumber: 5
+  }, this);
+}
+
+// app/routes/admin.tsx
+var admin_exports = {};
+__export(admin_exports, {
+  default: () => admin
+});
+var import_react16 = require("@remix-run/react"), import_jsx_dev_runtime17 = require("react/jsx-dev-runtime");
+function admin() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(import_jsx_dev_runtime17.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { children: [
+    "admin",
+    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(import_react16.Outlet, {}, void 0, !1, {
+      fileName: "app/routes/admin.tsx",
+      lineNumber: 8,
+      columnNumber: 9
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/admin.tsx",
+    lineNumber: 6,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/routes/admin.tsx",
+    lineNumber: 5,
+    columnNumber: 5
   }, this);
 }
 
 // app/routes/index.tsx
 var routes_exports = {};
 __export(routes_exports, {
-  default: () => Index
+  default: () => Index2
 });
-var import_material8 = require("@mui/material"), import_react_tsparticles = __toESM(require("react-tsparticles"));
+var import_material9 = require("@mui/material"), import_react_tsparticles = __toESM(require("react-tsparticles"));
 
 // app/components/UserGreetings.tsx
 function UserGreetings({ firstname, lastname }) {
@@ -2322,12 +2725,12 @@ function UserGreetings({ firstname, lastname }) {
 var UserGreetings_default = UserGreetings;
 
 // app/routes/index.tsx
-var import_jsx_dev_runtime13 = require("react/jsx-dev-runtime");
-function Index() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_jsx_dev_runtime13.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Box, { sx: {
+var import_jsx_dev_runtime18 = require("react/jsx-dev-runtime");
+function Index2() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_jsx_dev_runtime18.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_material9.Box, { sx: {
     gap: 1
   }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Box, { sx: { position: "absolute", top: "18px", left: "18px", color: "white" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(UserGreetings_default, { firstname: "\u05D7\u05D9\u05D9\u05DE\u05D5\u05DF", lastname: "\u05D7\u05D9\u05D9\u05DE\u05E7\u05D4" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_material9.Box, { sx: { position: "absolute", top: "18px", left: "18px", color: "white" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(UserGreetings_default, { firstname: "\u05D7\u05D9\u05D9\u05DE\u05D5\u05DF", lastname: "\u05D7\u05D9\u05D9\u05DE\u05E7\u05D4" }, void 0, !1, {
       fileName: "app/routes/index.tsx",
       lineNumber: 14,
       columnNumber: 11
@@ -2336,33 +2739,33 @@ function Index() {
       lineNumber: 13,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_react_tsparticles.default, { id: "tsparticles" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_react_tsparticles.default, { id: "tsparticles" }, void 0, !1, {
       fileName: "app/routes/index.tsx",
       lineNumber: 16,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Box, { sx: { display: "flex", justify: "center", color: "white" }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_material9.Box, { sx: { display: "flex", justify: "center", color: "white" }, children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_material9.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
         fileName: "app/routes/index.tsx",
         lineNumber: 18,
         columnNumber: 11
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_material9.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
         fileName: "app/routes/index.tsx",
         lineNumber: 19,
         columnNumber: 11
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Button, { children: " ahhhhh " }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_material9.Button, { children: " ahhhhh " }, void 0, !1, {
         fileName: "app/routes/index.tsx",
         lineNumber: 20,
         columnNumber: 11
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_material9.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
         fileName: "app/routes/index.tsx",
         lineNumber: 21,
         columnNumber: 11
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_material8.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_material9.Typography, { sx: { color: "white" }, children: " I DID IT!!!!!!!!!!!!!!!!" }, void 0, !1, {
         fileName: "app/routes/index.tsx",
         lineNumber: 22,
         columnNumber: 11
@@ -2388,12 +2791,12 @@ var learn_exports = {};
 __export(learn_exports, {
   default: () => Learn
 });
-var import_react13 = require("react");
+var import_react17 = require("react");
 
 // app/components/Svgs.tsx
-var import_jsx_dev_runtime14 = require("react/jsx-dev-runtime");
-var CheckmarkSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { clipPath: "url(#clip0_7030_116512)", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+var import_jsx_dev_runtime19 = require("react/jsx-dev-runtime");
+var CheckmarkSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { clipPath: "url(#clip0_7030_116512)", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       fillRule: "evenodd",
@@ -2414,7 +2817,7 @@ var CheckmarkSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("s
     lineNumber: 248,
     columnNumber: 7
   }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("clipPath", { id: "clip0_7030_116512", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("clipPath", { id: "clip0_7030_116512", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "rect",
     {
       width: "24.2966",
@@ -2444,8 +2847,8 @@ var CheckmarkSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("s
   lineNumber: 247,
   columnNumber: 5
 }, this);
-var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { clipPath: "url(#clip0_7030_116432)", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { clipPath: "url(#clip0_7030_116432)", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M18.7521 4.41157C19.6598 2.52948 22.3402 2.52948 23.2479 4.41157L25.8539 9.81517C26.225 10.5847 26.9639 11.1109 27.8125 11.2099L33.7906 11.9076C35.9269 12.1569 36.7684 14.8114 35.1658 16.2459L30.8845 20.0785C30.224 20.6697 29.9267 21.567 30.1035 22.4357L31.2468 28.053C31.6684 30.124 29.4857 31.7487 27.6228 30.7506L22.1786 27.8339C21.4424 27.4395 20.5576 27.4395 19.8214 27.8339L14.3772 30.7506C12.5143 31.7487 10.3316 30.124 10.7532 28.053L11.8965 22.4357C12.0733 21.567 11.776 20.6697 11.1155 20.0785L6.83415 16.2459C5.23162 14.8114 6.07307 12.1569 8.20939 11.9076L14.1875 11.2099C15.0361 11.1109 15.775 10.5847 16.1461 9.81517L18.7521 4.41157Z",
@@ -2464,7 +2867,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     lineNumber: 288,
     columnNumber: 7
   }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("clipPath", { id: "clip0_7030_116432", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("clipPath", { id: "clip0_7030_116432", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "rect",
     {
       width: "30",
@@ -2493,8 +2896,8 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   fileName: "app/components/Svgs.tsx",
   lineNumber: 287,
   columnNumber: 5
-}, this), LockedBookSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+}, this), LockedBookSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M42 8.49236C42 6.4901 40.3329 4.86694 38.2765 4.86694H29.9359C24.4521 4.86694 20.0066 9.19536 20.0066 14.5347V31.8401C20.0066 32.5075 20.5686 33.0638 21.2481 32.9753C25.129 32.4696 23.7034 29.5177 30.4323 29.5177C32.3039 29.5177 36.1106 29.5177 38.2776 29.5177C40.3341 29.5177 42 27.8945 42 25.8923V8.49236Z",
@@ -2509,7 +2912,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M0 8.49237C0 6.4901 1.66706 4.86694 3.72348 4.86694H12.0641C17.5479 4.86694 21.9934 9.19536 21.9934 14.5347V31.8401C21.9934 32.5075 21.4313 33.0594 20.749 32.9948C15.97 32.5427 18.3992 29.3905 11.5676 29.3905C9.69604 29.3905 5.88932 29.3905 3.72233 29.3905C1.66591 29.3905 0 27.7673 0 25.765V8.49237Z",
@@ -2524,7 +2927,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M36.8864 3.90058C36.8864 2.29877 35.5527 1.00024 33.9076 1.00024H27.95C23.563 1.00024 20.0066 4.46298 20.0066 8.73448V26.1365C20.0066 26.6704 20.4591 27.1221 20.9949 27.0082C23.3482 26.5078 23.1355 24.2029 28.4465 24.2029C29.9718 24.2029 32.1481 24.2029 33.9087 24.2029C35.5538 24.2029 36.8864 22.9044 36.8864 21.3026V3.90058Z",
@@ -2539,7 +2942,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M5.11316 3.90058C5.11316 2.29877 6.44681 1.00024 8.09194 1.00024H14.0495C18.4366 1.00024 21.9929 4.46298 21.9929 8.73448V26.1365C21.9929 26.6704 21.5445 27.1184 21.0036 27.0307C18.236 26.5817 18.9484 24.2029 13.5531 24.2029C12.0277 24.2029 9.85141 24.2029 8.09083 24.2029C6.44569 24.2029 5.11316 22.9044 5.11316 21.3026V3.90058Z",
@@ -2554,7 +2957,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       opacity: "0.4",
@@ -2576,8 +2979,8 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   fileName: "app/components/Svgs.tsx",
   lineNumber: 310,
   columnNumber: 5
-}, this), ActiveBookSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+}, this), ActiveBookSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       fillRule: "evenodd",
@@ -2595,7 +2998,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       fillRule: "evenodd",
@@ -2612,7 +3015,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       opacity: "0.4",
@@ -2634,8 +3037,8 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   fileName: "app/components/Svgs.tsx",
   lineNumber: 340,
   columnNumber: 5
-}, this), GoldenBookSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+}, this), GoldenBookSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M42 8.49241C42 6.49014 40.3329 4.86699 38.2765 4.86699H29.9359C24.4521 4.86699 20.0066 9.19541 20.0066 14.5348V31.8401C20.0066 32.5075 20.5687 33.0638 21.2481 32.9753C25.1291 32.4696 23.7034 29.5177 30.4324 29.5177C32.304 29.5177 36.1107 29.5177 38.2777 29.5177C40.3341 29.5177 42 27.8946 42 25.8923V8.49241Z",
@@ -2650,7 +3053,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M0 8.49241C0 6.49015 1.66706 4.86699 3.72348 4.86699H12.0641C17.5479 4.86699 21.9934 9.19541 21.9934 14.5348V31.8401C21.9934 32.5075 21.4313 33.0594 20.749 32.9949C15.97 32.5427 18.3992 29.3905 11.5676 29.3905C9.69604 29.3905 5.88932 29.3905 3.72233 29.3905C1.66591 29.3905 0 27.7674 0 25.7651V8.49241Z",
@@ -2665,7 +3068,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M36.8864 3.90056C36.8864 2.29875 35.5528 1.00023 33.9076 1.00023H27.95C23.563 1.00023 20.0066 4.46296 20.0066 8.73446V26.1365C20.0066 26.6704 20.4592 27.1221 20.9949 27.0082C23.3482 26.5078 23.1356 24.2029 28.4465 24.2029C29.9719 24.2029 32.1482 24.2029 33.9087 24.2029C35.5539 24.2029 36.8864 22.9044 36.8864 21.3026V3.90056Z",
@@ -2680,7 +3083,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M5.11316 3.90056C5.11316 2.29875 6.44681 1.00023 8.09194 1.00023H14.0495C18.4366 1.00023 21.9929 4.46296 21.9929 8.73446V26.1365C21.9929 26.6704 21.5445 27.1184 21.0036 27.0307C18.236 26.5817 18.9484 24.2029 13.5531 24.2029C12.0277 24.2029 9.85141 24.2029 8.09083 24.2029C6.44569 24.2029 5.11316 22.9044 5.11316 21.3026V3.90056Z",
@@ -2695,7 +3098,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       opacity: "0.4",
@@ -2717,9 +3120,9 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   fileName: "app/components/Svgs.tsx",
   lineNumber: 367,
   columnNumber: 5
-}, this), LockedDumbbellSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { clipPath: "url(#clip0_334_225170)", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+}, this), LockedDumbbellSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { clipPath: "url(#clip0_334_225170)", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "line",
       {
         x1: "16",
@@ -2738,7 +3141,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         x: "17.7635",
@@ -2758,7 +3161,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         x: "2.87354",
@@ -2778,7 +3181,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         x: "25.9183",
@@ -2798,7 +3201,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         x: "-1.23499",
@@ -2818,7 +3221,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         opacity: "0.2",
@@ -2839,7 +3242,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         opacity: "0.2",
@@ -2860,7 +3263,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         opacity: "0.2",
@@ -2881,7 +3284,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         opacity: "0.2",
@@ -2907,7 +3310,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     lineNumber: 398,
     columnNumber: 7
   }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("clipPath", { id: "clip0_334_225170", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("rect", { width: "42", height: "34", fill: "white" }, void 0, !1, {
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("clipPath", { id: "clip0_334_225170", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("rect", { width: "42", height: "34", fill: "white" }, void 0, !1, {
     fileName: "app/components/Svgs.tsx",
     lineNumber: 486,
     columnNumber: 11
@@ -2924,9 +3327,9 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   fileName: "app/components/Svgs.tsx",
   lineNumber: 397,
   columnNumber: 5
-}, this), ActiveDumbbellSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { clipPath: "url(#clip0_334_225192)", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+}, this), ActiveDumbbellSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { clipPath: "url(#clip0_334_225192)", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "path",
       {
         fillRule: "evenodd",
@@ -2943,7 +3346,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "path",
       {
         fillRule: "evenodd",
@@ -2961,7 +3364,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "path",
       {
         fillRule: "evenodd",
@@ -2979,7 +3382,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         opacity: "0.2",
@@ -3000,7 +3403,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         opacity: "0.2",
@@ -3021,7 +3424,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         opacity: "0.2",
@@ -3042,7 +3445,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         opacity: "0.2",
@@ -3068,7 +3471,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     lineNumber: 496,
     columnNumber: 7
   }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("clipPath", { id: "clip0_334_225192", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("rect", { width: "42", height: "34", fill: "white" }, void 0, !1, {
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("clipPath", { id: "clip0_334_225192", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("rect", { width: "42", height: "34", fill: "white" }, void 0, !1, {
     fileName: "app/components/Svgs.tsx",
     lineNumber: 560,
     columnNumber: 11
@@ -3085,9 +3488,9 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   fileName: "app/components/Svgs.tsx",
   lineNumber: 495,
   columnNumber: 5
-}, this), GoldenDumbbellSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { clipPath: "url(#clip0_334_225119)", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+}, this), GoldenDumbbellSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { clipPath: "url(#clip0_334_225119)", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "line",
       {
         x1: "16",
@@ -3106,7 +3509,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         x: "17.7635",
@@ -3126,7 +3529,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         x: "2.87354",
@@ -3146,7 +3549,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         x: "25.9184",
@@ -3166,7 +3569,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         x: "-1.23499",
@@ -3186,7 +3589,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         opacity: "0.2",
@@ -3207,7 +3610,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         opacity: "0.2",
@@ -3228,7 +3631,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         opacity: "0.2",
@@ -3249,7 +3652,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "rect",
       {
         opacity: "0.2",
@@ -3275,7 +3678,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     lineNumber: 570,
     columnNumber: 7
   }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("clipPath", { id: "clip0_334_225119", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("rect", { width: "42", height: "34", fill: "white" }, void 0, !1, {
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("clipPath", { id: "clip0_334_225119", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("rect", { width: "42", height: "34", fill: "white" }, void 0, !1, {
     fileName: "app/components/Svgs.tsx",
     lineNumber: 658,
     columnNumber: 11
@@ -3292,8 +3695,8 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   fileName: "app/components/Svgs.tsx",
   lineNumber: 569,
   columnNumber: 5
-}, this), GuidebookSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+}, this), GuidebookSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M0.019043 4.83285C0.019043 4.10489 0.609167 3.51477 1.33712 3.51477H3.09456C3.82251 3.51477 4.41264 4.10489 4.41264 4.83285C4.41264 5.5608 3.82251 6.15093 3.09456 6.15093H1.33712C0.609167 6.15093 0.019043 5.5608 0.019043 4.83285Z",
@@ -3308,7 +3711,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M0.019043 11.8628C0.019043 11.1348 0.609167 10.5447 1.33712 10.5447H3.09456C3.82251 10.5447 4.41264 11.1348 4.41264 11.8628C4.41264 12.5907 3.82251 13.1808 3.09456 13.1808H1.33712C0.609167 13.1808 0.019043 12.5907 0.019043 11.8628Z",
@@ -3323,7 +3726,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M0.019043 18.8923C0.019043 18.1643 0.609167 17.5742 1.33712 17.5742H3.09456C3.82251 17.5742 4.41264 18.1643 4.41264 18.8923C4.41264 19.6202 3.82251 20.2104 3.09456 20.2104H1.33712C0.609167 20.2104 0.019043 19.6202 0.019043 18.8923Z",
@@ -3338,7 +3741,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       fillRule: "evenodd",
@@ -3359,7 +3762,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   fileName: "app/components/Svgs.tsx",
   lineNumber: 667,
   columnNumber: 5
-}, this), PracticeExerciseSvg = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "23", height: "19", viewBox: "0 0 23 19", ...props, children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { fill: "#1CB0F6", fillRule: "nonzero", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("path", { d: "M4.157 17.781a1.5 1.5 0 0 0 2.598-1.5l-3.5-6.062a1.5 1.5 0 0 0-2.598 1.5l3.5 6.062zm4.463-.268a1.5 1.5 0 0 0 2.599-1.5l-5.5-9.526a1.5 1.5 0 0 0-2.598 1.5l5.5 9.526zM18.843 1.219a1.5 1.5 0 0 0-2.598 1.5l3.5 6.062a1.5 1.5 0 0 0 2.598-1.5l-3.5-6.062zm-4.463.268a1.5 1.5 0 0 0-2.599 1.5l5.5 9.526a1.5 1.5 0 0 0 2.598-1.5l-5.5-9.526zm.035 8.062l-1.5-2.598-4.33 2.5 1.5 2.598z" }, void 0, !1, {
+}, this), PracticeExerciseSvg = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "23", height: "19", viewBox: "0 0 23 19", ...props, children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { stroke: "none", strokeWidth: "1", fill: "none", fillRule: "evenodd", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { fill: "#1CB0F6", fillRule: "nonzero", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("path", { d: "M4.157 17.781a1.5 1.5 0 0 0 2.598-1.5l-3.5-6.062a1.5 1.5 0 0 0-2.598 1.5l3.5 6.062zm4.463-.268a1.5 1.5 0 0 0 2.599-1.5l-5.5-9.526a1.5 1.5 0 0 0-2.598 1.5l5.5 9.526zM18.843 1.219a1.5 1.5 0 0 0-2.598 1.5l3.5 6.062a1.5 1.5 0 0 0 2.598-1.5l-3.5-6.062zm-4.463.268a1.5 1.5 0 0 0-2.599 1.5l5.5 9.526a1.5 1.5 0 0 0 2.598-1.5l-5.5-9.526zm.035 8.062l-1.5-2.598-4.33 2.5 1.5 2.598z" }, void 0, !1, {
   fileName: "app/components/Svgs.tsx",
   lineNumber: 701,
   columnNumber: 23
@@ -3399,7 +3802,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   fileName: "app/components/Svgs.tsx",
   lineNumber: 692,
   columnNumber: 5
-}, this), UpArrowSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "18", height: "20", viewBox: "0 0 18 20", fill: "none", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+}, this), UpArrowSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "18", height: "20", viewBox: "0 0 18 20", fill: "none", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
   "path",
   {
     fillRule: "evenodd",
@@ -3419,9 +3822,9 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   fileName: "app/components/Svgs.tsx",
   lineNumber: 716,
   columnNumber: 5
-}, this), FastForwardSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { clipPath: "url(#clip0_7030_116434)", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+}, this), FastForwardSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { clipPath: "url(#clip0_7030_116434)", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "path",
       {
         fillRule: "evenodd",
@@ -3438,7 +3841,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       "path",
       {
         fillRule: "evenodd",
@@ -3460,7 +3863,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     lineNumber: 730,
     columnNumber: 7
   }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("clipPath", { id: "clip0_7030_116434", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("clipPath", { id: "clip0_7030_116434", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "rect",
     {
       width: "31",
@@ -3489,7 +3892,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   fileName: "app/components/Svgs.tsx",
   lineNumber: 729,
   columnNumber: 5
-}, this), LockedTrophySvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+}, this), LockedTrophySvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
   "path",
   {
     fillRule: "evenodd",
@@ -3509,7 +3912,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   fileName: "app/components/Svgs.tsx",
   lineNumber: 760,
   columnNumber: 5
-}, this), ActiveTrophySvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+}, this), ActiveTrophySvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
   "path",
   {
     fillRule: "evenodd",
@@ -3529,8 +3932,8 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   fileName: "app/components/Svgs.tsx",
   lineNumber: 773,
   columnNumber: 5
-}, this), GoldenTrophySvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "105", height: "89", viewBox: "0 0 105 89", fill: "none", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+}, this), GoldenTrophySvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "105", height: "89", viewBox: "0 0 105 89", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "ellipse",
     {
       cx: "52.5564",
@@ -3548,7 +3951,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "ellipse",
     {
       cx: "52.5564",
@@ -3566,7 +3969,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M35.2837 71.8353C37.0692 74.9453 41.8904 78.7941 46.7356 80.0312",
@@ -3583,7 +3986,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M40.97 69.3791C41.9876 71.1516 44.7353 73.3452 47.4968 74.0502",
@@ -3600,7 +4003,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M68.2007 64.1053C68.2007 70.8805 61.5298 76.8096 52.7121 76.8096C43.8943 76.8096 37.2235 70.8805 37.2235 64.1053C37.2235 57.3301 43.8943 51.401 52.7121 51.401C61.5298 51.401 68.2007 57.3301 68.2007 64.1053Z",
@@ -3616,7 +4019,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M17.3816 11.4355C17.3816 3.1568 26.1494 -2.27311 33.7815 0.934306C40.8985 3.92521 48.517 6.66357 52.5545 6.66357C56.5921 6.66357 64.2106 3.92521 71.3275 0.934308C78.9597 -2.27311 87.7275 3.1568 87.7275 11.4355V34.3697C87.7275 53.7952 71.98 69.5427 52.5545 69.5427C33.1291 69.5427 17.3816 53.7952 17.3816 34.3697V11.4355Z",
@@ -3631,7 +4034,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       fillRule: "evenodd",
@@ -3648,12 +4051,12 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("circle", { cx: "29.6788", cy: "11.2542", r: "6.94978", fill: "#FFF500" }, void 0, !1, {
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("circle", { cx: "29.6788", cy: "11.2542", r: "6.94978", fill: "#FFF500" }, void 0, !1, {
     fileName: "app/components/Svgs.tsx",
     lineNumber: 828,
     columnNumber: 7
   }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       d: "M58.7405 13.872C64.2067 12.9001 67.262 11.6908 71.377 9.41648",
@@ -3670,7 +4073,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       fillRule: "evenodd",
@@ -3687,7 +4090,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       fillRule: "evenodd",
@@ -3704,7 +4107,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       fillRule: "evenodd",
@@ -3721,7 +4124,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
     },
     this
   ),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
     "path",
     {
       fillRule: "evenodd",
@@ -3743,7 +4146,7 @@ var StarSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   lineNumber: 786,
   columnNumber: 5
 }, this);
-var LockSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+var LockSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("svg", { width: "42", height: "34", viewBox: "0 0 42 34", fill: "none", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
   "path",
   {
     fillRule: "evenodd",
@@ -3764,7 +4167,7 @@ var LockSvg = () => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("svg", 
   lineNumber: 1319,
   columnNumber: 5
 }, this);
-var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
   "svg",
   {
     style: { transitionDuration: "400ms" },
@@ -3772,7 +4175,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
     className: "absolute",
     ...props,
     children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("clipPath", { id: "clip-session/ProgressRing1", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("path", { d: "M3.061616997868383e-15,-50L2.5717582782094417e-15,-42Z" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("clipPath", { id: "clip-session/ProgressRing1", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("path", { d: "M3.061616997868383e-15,-50L2.5717582782094417e-15,-42Z" }, void 0, !1, {
         fileName: "app/components/Svgs.tsx",
         lineNumber: 2242,
         columnNumber: 11
@@ -3785,8 +4188,8 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
         lineNumber: 2240,
         columnNumber: 7
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { transform: "translate(50, 50)", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { transform: "translate(50, 50)", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
           "path",
           {
             d: "M3.061616997868383e-15,-50A50,50,0,1,1,-3.061616997868383e-15,50A50,50,0,1,1,3.061616997868383e-15,-50M-7.715274834628325e-15,-42A42,42,0,1,0,7.715274834628325e-15,42A42,42,0,1,0,-7.715274834628325e-15,-42Z",
@@ -3801,7 +4204,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
           },
           this
         ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
           "circle",
           {
             clipPath: "url(#clip-session/ProgressRing1)",
@@ -3819,7 +4222,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
           },
           this
         ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
           "path",
           {
             d: "M3.061616997868383e-15,-50L2.5717582782094417e-15,-42Z",
@@ -3849,7 +4252,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
     columnNumber: 5
   },
   this
-), LessonCompletionSvg1 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+), LessonCompletionSvg1 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
   "svg",
   {
     style: { transitionDuration: "400ms" },
@@ -3857,7 +4260,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
     className: "absolute",
     ...props,
     children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("clipPath", { id: "clip-session/ProgressRing614", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("path", { d: "M3.552713678800501e-15,-45.8257569495584A4,4,0,0,1,4.347826086956525,-49.81060537995478A50,50,0,0,1,49.979156518488836,1.4435767040219651A4,4,0,0,1,45.51809422092188,5.301235563081284L45.51809422092188,5.301235563081285A4,4,0,0,1,41.98249147553062,1.2126044313784499A42,42,0,0,0,3.6521739130434776,-41.840908519162014A4,4,0,0,1,3.552713678800501e-15,-45.8257569495584Z" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("clipPath", { id: "clip-session/ProgressRing614", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("path", { d: "M3.552713678800501e-15,-45.8257569495584A4,4,0,0,1,4.347826086956525,-49.81060537995478A50,50,0,0,1,49.979156518488836,1.4435767040219651A4,4,0,0,1,45.51809422092188,5.301235563081284L45.51809422092188,5.301235563081285A4,4,0,0,1,41.98249147553062,1.2126044313784499A42,42,0,0,0,3.6521739130434776,-41.840908519162014A4,4,0,0,1,3.552713678800501e-15,-45.8257569495584Z" }, void 0, !1, {
         fileName: "app/components/Svgs.tsx",
         lineNumber: 2276,
         columnNumber: 11
@@ -3870,8 +4273,8 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
         lineNumber: 2274,
         columnNumber: 7
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { transform: "translate(50, 50)", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { transform: "translate(50, 50)", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
           "path",
           {
             d: "M3.061616997868383e-15,-50A50,50,0,1,1,-3.061616997868383e-15,50A50,50,0,1,1,3.061616997868383e-15,-50M-7.715274834628325e-15,-42A42,42,0,1,0,7.715274834628325e-15,42A42,42,0,1,0,-7.715274834628325e-15,-42Z",
@@ -3886,7 +4289,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
           },
           this
         ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
           "circle",
           {
             clipPath: "url(#clip-session/ProgressRing614)",
@@ -3904,7 +4307,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
           },
           this
         ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
           "path",
           {
             d: "M3.552713678800501e-15,-45.8257569495584A4,4,0,0,1,4.347826086956525,-49.81060537995478A50,50,0,0,1,49.81060537995478,-4.347826086956522A4,4,0,0,1,45.8257569495584,0L45.8257569495584,0A4,4,0,0,1,41.840908519162014,-3.652173913043479A42,42,0,0,0,3.6521739130434776,-41.840908519162014A4,4,0,0,1,3.552713678800501e-15,-45.8257569495584Z",
@@ -3934,7 +4337,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
     columnNumber: 5
   },
   this
-), LessonCompletionSvg2 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+), LessonCompletionSvg2 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
   "svg",
   {
     viewBox: "0 0 100 100",
@@ -3942,7 +4345,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
     className: "absolute",
     ...props,
     children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("clipPath", { id: "clip-session/ProgressRing1043", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("path", { d: "M3.552713678800501e-15,-45.8257569495584A4,4,0,0,1,4.347826086956525,-49.81060537995478A50,50,0,0,1,-1.4435767040219774,49.979156518488836A4,4,0,0,1,-5.30123556308129,45.51809422092188L-5.301235563081291,45.51809422092188A4,4,0,0,1,-1.2126044313784563,41.98249147553062A42,42,0,0,0,3.6521739130434776,-41.840908519162014A4,4,0,0,1,3.552713678800501e-15,-45.8257569495584Z" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("clipPath", { id: "clip-session/ProgressRing1043", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("path", { d: "M3.552713678800501e-15,-45.8257569495584A4,4,0,0,1,4.347826086956525,-49.81060537995478A50,50,0,0,1,-1.4435767040219774,49.979156518488836A4,4,0,0,1,-5.30123556308129,45.51809422092188L-5.301235563081291,45.51809422092188A4,4,0,0,1,-1.2126044313784563,41.98249147553062A42,42,0,0,0,3.6521739130434776,-41.840908519162014A4,4,0,0,1,3.552713678800501e-15,-45.8257569495584Z" }, void 0, !1, {
         fileName: "app/components/Svgs.tsx",
         lineNumber: 2310,
         columnNumber: 11
@@ -3955,8 +4358,8 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
         lineNumber: 2308,
         columnNumber: 7
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { transform: "translate(50, 50)", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { transform: "translate(50, 50)", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
           "path",
           {
             d: "M3.061616997868383e-15,-50A50,50,0,1,1,-3.061616997868383e-15,50A50,50,0,1,1,3.061616997868383e-15,-50M-7.715274834628325e-15,-42A42,42,0,1,0,7.715274834628325e-15,42A42,42,0,1,0,-7.715274834628325e-15,-42Z",
@@ -3971,7 +4374,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
           },
           this
         ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
           "circle",
           {
             clipPath: "url(#clip-session/ProgressRing1043)",
@@ -3989,7 +4392,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
           },
           this
         ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
           "path",
           {
             d: "M3.552713678800501e-15,-45.8257569495584A4,4,0,0,1,4.347826086956525,-49.81060537995478A50,50,0,0,1,4.347826086956521,49.81060537995478A4,4,0,0,1,3.552713678800501e-15,45.8257569495584L3.552713678800501e-15,45.8257569495584A4,4,0,0,1,3.6521739130434816,41.840908519162014A42,42,0,0,0,3.6521739130434776,-41.840908519162014A4,4,0,0,1,3.552713678800501e-15,-45.8257569495584Z",
@@ -4019,7 +4422,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
     columnNumber: 5
   },
   this
-), LessonCompletionSvg3 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+), LessonCompletionSvg3 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
   "svg",
   {
     viewBox: "0 0 100 100",
@@ -4027,7 +4430,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
     className: "absolute",
     ...props,
     children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("clipPath", { id: "clip-session/ProgressRing1577", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("path", { d: "M3.552713678800501e-15,-45.8257569495584A4,4,0,0,1,4.347826086956525,-49.81060537995478A50,50,0,1,1,-49.979156518488836,-1.4435767040219978A4,4,0,0,1,-45.518094220921874,-5.301235563081309L-45.518094220921874,-5.301235563081308A4,4,0,0,1,-41.982491475530615,-1.212604431378473A42,42,0,1,0,3.6521739130434776,-41.840908519162014A4,4,0,0,1,3.552713678800501e-15,-45.8257569495584Z" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("defs", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("clipPath", { id: "clip-session/ProgressRing1577", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("path", { d: "M3.552713678800501e-15,-45.8257569495584A4,4,0,0,1,4.347826086956525,-49.81060537995478A50,50,0,1,1,-49.979156518488836,-1.4435767040219978A4,4,0,0,1,-45.518094220921874,-5.301235563081309L-45.518094220921874,-5.301235563081308A4,4,0,0,1,-41.982491475530615,-1.212604431378473A42,42,0,1,0,3.6521739130434776,-41.840908519162014A4,4,0,0,1,3.552713678800501e-15,-45.8257569495584Z" }, void 0, !1, {
         fileName: "app/components/Svgs.tsx",
         lineNumber: 2344,
         columnNumber: 11
@@ -4040,8 +4443,8 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
         lineNumber: 2342,
         columnNumber: 7
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("g", { transform: "translate(50, 50)", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("g", { transform: "translate(50, 50)", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
           "path",
           {
             d: "M3.061616997868383e-15,-50A50,50,0,1,1,-3.061616997868383e-15,50A50,50,0,1,1,3.061616997868383e-15,-50M-7.715274834628325e-15,-42A42,42,0,1,0,7.715274834628325e-15,42A42,42,0,1,0,-7.715274834628325e-15,-42Z",
@@ -4056,7 +4459,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
           },
           this
         ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
           "circle",
           {
             clipPath: "url(#clip-session/ProgressRing1577)",
@@ -4074,7 +4477,7 @@ var LessonCompletionSvg0 = (props) => /* @__PURE__ */ (0, import_jsx_dev_runtime
           },
           this
         ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
           "path",
           {
             d: "M3.552713678800501e-15,-45.8257569495584A4,4,0,0,1,4.347826086956525,-49.81060537995478A50,50,0,1,1,-49.81060537995478,4.347826086956535A4,4,0,0,1,-45.8257569495584,5.329070518200751e-15L-45.8257569495584,5.329070518200751e-15A4,4,0,0,1,-41.840908519162014,3.652173913043483A42,42,0,1,0,3.6521739130434776,-41.840908519162014A4,4,0,0,1,3.552713678800501e-15,-45.8257569495584Z",
@@ -4172,7 +4575,7 @@ var units = [
 ];
 
 // app/routes/learn.tsx
-var import_material9 = require("@mui/material"), import_jsx_dev_runtime15 = require("react/jsx-dev-runtime"), tileStatus = (tile, lessonsCompleted) => {
+var import_material10 = require("@mui/material"), import_jsx_dev_runtime20 = require("react/jsx-dev-runtime"), tileStatus = (tile, lessonsCompleted) => {
   let tilesCompleted = Math.floor(lessonsCompleted / 4), tileIndex = units.flatMap((unit) => unit.tiles).findIndex((t) => t === tile);
   return tileIndex < tilesCompleted ? "COMPLETE" : tileIndex > tilesCompleted ? "LOCKED" : "ACTIVE";
 }, TileIcon = ({
@@ -4181,71 +4584,71 @@ var import_material9 = require("@mui/material"), import_jsx_dev_runtime15 = requ
 }) => {
   switch (tileType) {
     case "star":
-      return status === "COMPLETE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(CheckmarkSvg, {}, void 0, !1, {
+      return status === "COMPLETE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(CheckmarkSvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 65,
         columnNumber: 9
-      }, this) : status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(StarSvg, {}, void 0, !1, {
+      }, this) : status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(StarSvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 67,
         columnNumber: 9
-      }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(LockSvg, {}, void 0, !1, {
+      }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(LockSvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 69,
         columnNumber: 9
       }, this);
     case "book":
-      return status === "COMPLETE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(GoldenBookSvg, {}, void 0, !1, {
+      return status === "COMPLETE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(GoldenBookSvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 73,
         columnNumber: 9
-      }, this) : status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(ActiveBookSvg, {}, void 0, !1, {
+      }, this) : status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(ActiveBookSvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 75,
         columnNumber: 9
-      }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(LockedBookSvg, {}, void 0, !1, {
+      }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(LockedBookSvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 77,
         columnNumber: 9
       }, this);
     case "dumbbell":
-      return status === "COMPLETE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(GoldenDumbbellSvg, {}, void 0, !1, {
+      return status === "COMPLETE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(GoldenDumbbellSvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 81,
         columnNumber: 9
-      }, this) : status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(ActiveDumbbellSvg, {}, void 0, !1, {
+      }, this) : status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(ActiveDumbbellSvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 83,
         columnNumber: 9
-      }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(LockedDumbbellSvg, {}, void 0, !1, {
+      }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(LockedDumbbellSvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 85,
         columnNumber: 9
       }, this);
     case "fast-forward":
-      return status === "COMPLETE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(CheckmarkSvg, {}, void 0, !1, {
+      return status === "COMPLETE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(CheckmarkSvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 89,
         columnNumber: 9
-      }, this) : status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(StarSvg, {}, void 0, !1, {
+      }, this) : status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(StarSvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 91,
         columnNumber: 9
-      }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(FastForwardSvg, {}, void 0, !1, {
+      }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(FastForwardSvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 93,
         columnNumber: 9
       }, this);
     case "trophy":
-      return status === "COMPLETE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(GoldenTrophySvg, {}, void 0, !1, {
+      return status === "COMPLETE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(GoldenTrophySvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 97,
         columnNumber: 9
-      }, this) : status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(ActiveTrophySvg, {}, void 0, !1, {
+      }, this) : status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(ActiveTrophySvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 99,
         columnNumber: 9
-      }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(LockedTrophySvg, {}, void 0, !1, {
+      }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(LockedTrophySvg, {}, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 101,
         columnNumber: 9
@@ -4273,8 +4676,8 @@ var TileTooltip = ({
   status,
   closeTooltip
 }) => {
-  let tileTooltipRef = (0, import_react13.useRef)(null);
-  (0, import_react13.useEffect)(() => {
+  let tileTooltipRef = (0, import_react17.useRef)(null);
+  (0, import_react17.useEffect)(() => {
     let containsTileTooltip = (event) => {
       var _a;
       selectedTile !== index || (_a = tileTooltipRef.current) != null && _a.contains(
@@ -4284,7 +4687,7 @@ var TileTooltip = ({
     return window.addEventListener("click", containsTileTooltip, !0), () => window.removeEventListener("click", containsTileTooltip, !0);
   }, [selectedTile, tileTooltipRef, closeTooltip, index]);
   let unit = units.find((unit2) => unit2.unitNumber === unitNumber), activeBackgroundColor = (unit == null ? void 0 : unit.backgroundColor) ?? "bg-green-500", activeTextColor = (unit == null ? void 0 : unit.textColor) ?? "text-green-500";
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
     "div",
     {
       className: [
@@ -4292,7 +4695,7 @@ var TileTooltip = ({
         index === selectedTile ? "" : "invisible"
       ].join(" "),
       ref: tileTooltipRef,
-      children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
         "div",
         {
           className: [
@@ -4302,7 +4705,7 @@ var TileTooltip = ({
           ].join(" "),
           style: { left: "calc(50% - 150px)" },
           children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+            /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
               "div",
               {
                 className: [
@@ -4322,7 +4725,7 @@ var TileTooltip = ({
               },
               this
             ),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+            /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
               "div",
               {
                 className: [
@@ -4340,8 +4743,8 @@ var TileTooltip = ({
               },
               this
             ),
-            status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
-              import_material9.Link,
+            status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
+              import_material10.Link,
               {
                 href: "/lesson",
                 className: [
@@ -4358,7 +4761,7 @@ var TileTooltip = ({
                 columnNumber: 11
               },
               this
-            ) : status === "LOCKED" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+            ) : status === "LOCKED" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
               "button",
               {
                 className: "w-full rounded-xl bg-gray-200 p-3 uppercase text-gray-400",
@@ -4373,8 +4776,8 @@ var TileTooltip = ({
                 columnNumber: 11
               },
               this
-            ) : /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
-              import_material9.Link,
+            ) : /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
+              import_material10.Link,
               {
                 href: "/lesson",
                 className: "flex w-full items-center justify-center rounded-xl border-b-4 border-yellow-200 bg-white p-3 uppercase text-yellow-400",
@@ -4411,14 +4814,14 @@ var TileTooltip = ({
     this
   );
 }, UnitSection = ({ unit }) => {
-  let [isHovered, setHovered] = (0, import_react13.useState)(!1), [selectedTile, setSelectedTile] = (0, import_react13.useState)(null);
-  (0, import_react13.useEffect)(() => {
+  let [isHovered, setHovered] = (0, import_react17.useState)(!1), [selectedTile, setSelectedTile] = (0, import_react17.useState)(null);
+  (0, import_react17.useEffect)(() => {
     let unselectTile = () => setSelectedTile(null);
     return window.addEventListener("scroll", unselectTile), () => window.removeEventListener("scroll", unselectTile);
   }, []);
-  let closeTooltip = (0, import_react13.useCallback)(() => setSelectedTile(null), []), lessonsCompleted = 2;
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_jsx_dev_runtime15.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+  let closeTooltip = (0, import_react17.useCallback)(() => setSelectedTile(null), []), lessonsCompleted = 2;
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_jsx_dev_runtime20.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
       UnitHeader,
       {
         unitNumber: unit.unitNumber,
@@ -4435,7 +4838,7 @@ var TileTooltip = ({
       },
       this
     ),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_Box2.default, { sx: {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_Box2.default, { sx: {
       display: "flex",
       position: "relative",
       flexDirection: "column",
@@ -4444,7 +4847,7 @@ var TileTooltip = ({
       maxWidth: "42rem"
     }, children: unit.tiles.map((tile, i) => {
       let status = tileStatus(tile, lessonsCompleted);
-      return /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_react13.Fragment, { children: [
+      return /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_react17.Fragment, { children: [
         (() => {
           switch (tile.type) {
             case "star":
@@ -4452,13 +4855,13 @@ var TileTooltip = ({
             case "dumbbell":
             case "trophy":
             case "fast-forward":
-              return tile.type === "trophy" && status === "COMPLETE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_Box2.default, { className: "relative", children: [
-                /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(TileIcon, { tileType: tile.type, status }, void 0, !1, {
+              return tile.type === "trophy" && status === "COMPLETE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_Box2.default, { className: "relative", children: [
+                /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(TileIcon, { tileType: tile.type, status }, void 0, !1, {
                   fileName: "app/routes/learn.tsx",
                   lineNumber: 352,
                   columnNumber: 27
                 }, this),
-                /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_material9.Typography, { sx: {
+                /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_material10.Typography, { sx: {
                   display: "flex",
                   position: "absolute",
                   right: 0,
@@ -4477,11 +4880,11 @@ var TileTooltip = ({
                 fileName: "app/routes/learn.tsx",
                 lineNumber: 351,
                 columnNumber: 25
-              }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
-                import_material9.Button,
+              }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
+                import_material10.Button,
                 {
                   children: [
-                    tile.type === "fast-forward" && status === "LOCKED" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+                    tile.type === "fast-forward" && status === "LOCKED" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
                       HoverLabel,
                       {
                         text: "\u05D3\u05DC\u05D2 \u05DC\u05DB\u05D0\u05DF?",
@@ -4495,12 +4898,12 @@ var TileTooltip = ({
                         columnNumber: 27
                       },
                       this
-                    ) : selectedTile !== i && status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(HoverLabel, { text: "\u05D4\u05EA\u05D7\u05DC!", textColor: unit.textColor }, void 0, !1, {
+                    ) : selectedTile !== i && status === "ACTIVE" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(HoverLabel, { text: "\u05D4\u05EA\u05D7\u05DC!", textColor: unit.textColor }, void 0, !1, {
                       fileName: "app/routes/learn.tsx",
                       lineNumber: 386,
                       columnNumber: 27
                     }, this) : null,
-                    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
                       LessonCompletionSvg,
                       {
                         lessonsCompleted,
@@ -4515,7 +4918,7 @@ var TileTooltip = ({
                       },
                       this
                     ),
-                    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
                       import_Box2.default,
                       {
                         sx: {
@@ -4531,13 +4934,13 @@ var TileTooltip = ({
                           }
                         },
                         children: [
-                          /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(TileIcon, { tileType: tile.type, status }, void 0, !1, {
+                          /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(TileIcon, { tileType: tile.type, status }, void 0, !1, {
                             fileName: "app/routes/learn.tsx",
                             lineNumber: 418,
                             columnNumber: 27
                           }, this),
-                          /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
-                            import_material9.Typography,
+                          /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
+                            import_material10.Typography,
                             {
                               className: "tooltip",
                               sx: {
@@ -4584,7 +4987,7 @@ var TileTooltip = ({
               );
           }
         })(),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
           TileTooltip,
           {
             selectedTile,
@@ -4632,17 +5035,17 @@ var TileTooltip = ({
   }, this);
 };
 function Learn() {
-  let [scrollY, setScrollY] = (0, import_react13.useState)(0);
-  return (0, import_react13.useEffect)(() => {
+  let [scrollY, setScrollY] = (0, import_react17.useState)(0);
+  return (0, import_react17.useEffect)(() => {
     let updateScrollY = () => setScrollY(globalThis.scrollY ?? scrollY);
     return updateScrollY(), document.addEventListener("scroll", updateScrollY), () => document.removeEventListener("scroll", updateScrollY);
-  }, [scrollY]), /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_Box2.default, { sx: { overflowX: "hidden" }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_Box2.default, { sx: {
+  }, [scrollY]), /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_Box2.default, { sx: { overflowX: "hidden" }, children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_Box2.default, { sx: {
       position: "fixed",
       top: 0,
       left: 0,
       height: "100%"
-    }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(SideBar, { selectedTab: "\u05DC\u05DE\u05D9\u05D3\u05D4" }, void 0, !1, {
+    }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(SideBar, { selectedTab: "\u05DC\u05DE\u05D9\u05D3\u05D4" }, void 0, !1, {
       fileName: "app/routes/learn.tsx",
       lineNumber: 505,
       columnNumber: 9
@@ -4651,19 +5054,19 @@ function Learn() {
       lineNumber: 502,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_Box2.default, { sx: {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_Box2.default, { sx: {
       display: "flex",
       flexDirection: "row",
       justifyContent: "center",
       marginRight: "6rem",
       backgroundColor: "#d0a34c"
-    }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_Box2.default, { sx: { display: "flex", flexDirection: "column", flexGrow: "1", maxWidth: "48rem" }, children: [
-      units.map((unit) => /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(UnitSection, { unit }, unit.unitNumber, !1, {
+    }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_Box2.default, { sx: { display: "flex", flexDirection: "column", flexGrow: "1", maxWidth: "48rem" }, children: [
+      units.map((unit) => /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(UnitSection, { unit }, unit.unitNumber, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 512,
         columnNumber: 13
       }, this)),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_Box2.default, { sx: {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_Box2.default, { sx: {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "flex-end",
@@ -4672,8 +5075,8 @@ function Learn() {
         left: 0,
         bottom: "7rem"
       }, children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
-          import_material9.Link,
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
+          import_material10.Link,
           {
             href: "/lesson?practice",
             sx: {
@@ -4691,12 +5094,12 @@ function Learn() {
               backgroundColor: "#ffffff"
             },
             children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_material9.Typography, { children: "\u05D7\u05D6\u05E8\u05D5\u05EA \u05EA\u05D9\u05E8\u05D2\u05D5\u05DC" }, void 0, !1, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_material10.Typography, { children: "\u05D7\u05D6\u05E8\u05D5\u05EA \u05EA\u05D9\u05E8\u05D2\u05D5\u05DC" }, void 0, !1, {
                 fileName: "app/routes/learn.tsx",
                 lineNumber: 526,
                 columnNumber: 15
               }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(PracticeExerciseSvg, { style: { width: "2rem", height: "2rem" } }, void 0, !1, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(PracticeExerciseSvg, { style: { width: "2rem", height: "2rem" } }, void 0, !1, {
                 fileName: "app/routes/learn.tsx",
                 lineNumber: 527,
                 columnNumber: 15
@@ -4712,8 +5115,8 @@ function Learn() {
           },
           this
         ),
-        scrollY > 100 && /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
-          import_material9.Button,
+        scrollY > 100 && /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
+          import_material10.Button,
           {
             sx: {
               display: "flex",
@@ -4732,12 +5135,12 @@ function Learn() {
             },
             onClick: () => scrollTo(0, 0),
             children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_material9.Typography, { children: "\u05D7\u05D6\u05E8\u05D4 \u05DC\u05D4\u05EA\u05D7\u05DC\u05D4" }, void 0, !1, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_material10.Typography, { children: "\u05D7\u05D6\u05E8\u05D4 \u05DC\u05D4\u05EA\u05D7\u05DC\u05D4" }, void 0, !1, {
                 fileName: "app/routes/learn.tsx",
                 lineNumber: 548,
                 columnNumber: 17
               }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(UpArrowSvg, {}, void 0, !1, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(UpArrowSvg, {}, void 0, !1, {
                 fileName: "app/routes/learn.tsx",
                 lineNumber: 549,
                 columnNumber: 17
@@ -4782,25 +5185,25 @@ var LessonCompletionSvg = ({
     return null;
   switch (lessonsCompleted % 4) {
     case 0:
-      return /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(LessonCompletionSvg0, { style }, void 0, !1, {
+      return /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(LessonCompletionSvg0, { style }, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 577,
         columnNumber: 14
       }, this);
     case 1:
-      return /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(LessonCompletionSvg1, { style }, void 0, !1, {
+      return /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(LessonCompletionSvg1, { style }, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 579,
         columnNumber: 14
       }, this);
     case 2:
-      return /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(LessonCompletionSvg2, { style }, void 0, !1, {
+      return /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(LessonCompletionSvg2, { style }, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 581,
         columnNumber: 14
       }, this);
     case 3:
-      return /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(LessonCompletionSvg3, { style }, void 0, !1, {
+      return /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(LessonCompletionSvg3, { style }, void 0, !1, {
         fileName: "app/routes/learn.tsx",
         lineNumber: 583,
         columnNumber: 14
@@ -4813,11 +5216,11 @@ var LessonCompletionSvg = ({
   textColor
 }) => {
   var _a;
-  let hoverElement = (0, import_react13.useRef)(null), [width, setWidth] = (0, import_react13.useState)(72);
-  return (0, import_react13.useEffect)(() => {
+  let hoverElement = (0, import_react17.useRef)(null), [width, setWidth] = (0, import_react17.useState)(72);
+  return (0, import_react17.useEffect)(() => {
     var _a2;
     setWidth(((_a2 = hoverElement.current) == null ? void 0 : _a2.clientWidth) ?? width);
-  }, [(_a = hoverElement.current) == null ? void 0 : _a.clientWidth, width]), /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+  }, [(_a = hoverElement.current) == null ? void 0 : _a.clientWidth, width]), /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
     "div",
     {
       className: `absolute z-10 w-max animate-bounce rounded-lg border-2 border-gray-200 bg-white px-3 py-2 font-bold uppercase ${textColor}`,
@@ -4828,7 +5231,7 @@ var LessonCompletionSvg = ({
       ref: hoverElement,
       children: [
         text,
-        /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
           "div",
           {
             className: "absolute h-3 w-3 rotate-45 border-b-2 border-r-2 border-gray-200 bg-white",
@@ -4859,15 +5262,15 @@ var LessonCompletionSvg = ({
   description,
   backgroundColor,
   borderColor
-}) => /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
+}) => /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
   "article",
   {
     className: ["max-w-2xl text-white sm:rounded-xl", backgroundColor].join(
       " "
     ),
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("header", { className: "flex items-center justify-between gap-4 p-4", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: "flex flex-col gap-1", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("h2", { className: "text-2xl font-bold", children: [
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("header", { className: "flex items-center justify-between gap-4 p-4", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "flex flex-col gap-1", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("h2", { className: "text-2xl font-bold", children: [
           "\u05D7\u05DC\u05E7 ",
           unitNumber
         ] }, void 0, !0, {
@@ -4875,7 +5278,7 @@ var LessonCompletionSvg = ({
           lineNumber: 641,
           columnNumber: 11
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("p", { className: "text-lg", children: description }, void 0, !1, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("p", { className: "text-lg", children: description }, void 0, !1, {
           fileName: "app/routes/learn.tsx",
           lineNumber: 642,
           columnNumber: 11
@@ -4885,20 +5288,20 @@ var LessonCompletionSvg = ({
         lineNumber: 640,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
-        import_material9.Link,
+      /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
+        import_material10.Link,
         {
           className: [
             "flex items-center gap-3 rounded-2xl border-2 border-b-4 p-3 transition hover:text-gray-100",
             borderColor
           ].join(" "),
           children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(GuidebookSvg, {}, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(GuidebookSvg, {}, void 0, !1, {
               fileName: "app/routes/learn.tsx",
               lineNumber: 651,
               columnNumber: 11
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("span", { className: "sr-only font-bold uppercase lg:not-sr-only", children: "Guidebook" }, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("span", { className: "sr-only font-bold uppercase lg:not-sr-only", children: "Guidebook" }, void 0, !1, {
               fileName: "app/routes/learn.tsx",
               lineNumber: 652,
               columnNumber: 11
@@ -4931,10 +5334,10 @@ var LessonCompletionSvg = ({
 );
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-XXMNNQ72.js", imports: ["/build/_shared/chunk-OZ6QX5MG.js", "/build/_shared/chunk-TFAVYZDK.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-UPLW43KY.js", imports: ["/build/_shared/chunk-QTKJ253X.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-CL2AQ6TQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/learn": { id: "routes/learn", parentId: "root", path: "learn", index: void 0, caseSensitive: void 0, module: "/build/routes/learn-ZRJVTS5Z.js", imports: ["/build/_shared/chunk-6UBMAJQY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/lesson-factory": { id: "routes/lesson-factory", parentId: "root", path: "lesson-factory", index: void 0, caseSensitive: void 0, module: "/build/routes/lesson-factory-BXAB3K56.js", imports: ["/build/_shared/chunk-RM3PVU74.js", "/build/_shared/chunk-OXIWLU4Q.js", "/build/_shared/chunk-Q57CA2YT.js", "/build/_shared/chunk-BHZX3OXX.js", "/build/_shared/chunk-6UBMAJQY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/lessons": { id: "routes/lessons", parentId: "root", path: "lessons", index: void 0, caseSensitive: void 0, module: "/build/routes/lessons-2GBPPAT6.js", imports: ["/build/_shared/chunk-SYBVGEC3.js", "/build/_shared/chunk-Q57CA2YT.js", "/build/_shared/chunk-BHZX3OXX.js", "/build/_shared/chunk-6UBMAJQY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/lessons.$topicId": { id: "routes/lessons.$topicId", parentId: "root", path: "lessons/:topicId", index: void 0, caseSensitive: void 0, module: "/build/routes/lessons.$topicId-WYJISKQI.js", imports: ["/build/_shared/chunk-OXIWLU4Q.js", "/build/_shared/chunk-SYBVGEC3.js", "/build/_shared/chunk-BHZX3OXX.js", "/build/_shared/chunk-6UBMAJQY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/lessons.$topicId.$lessonId": { id: "routes/lessons.$topicId.$lessonId", parentId: "root", path: "lessons/:topicId/:lessonId", index: void 0, caseSensitive: void 0, module: "/build/routes/lessons.$topicId.$lessonId-GOUNUJTF.js", imports: ["/build/_shared/chunk-RM3PVU74.js", "/build/_shared/chunk-SYBVGEC3.js", "/build/_shared/chunk-BHZX3OXX.js", "/build/_shared/chunk-6UBMAJQY.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "5bfab877", hmr: void 0, url: "/build/manifest-5BFAB877.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-KBNNPA4E.js", imports: ["/build/_shared/chunk-BUR2TKZP.js", "/build/_shared/chunk-LQ53JVGW.js", "/build/_shared/chunk-FCC3XGIV.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-XPWPLWGX.js", imports: ["/build/_shared/chunk-QMIFV74B.js", "/build/_shared/chunk-2MY6D6CV.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-DHN7RHYW.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/admin": { id: "routes/admin", parentId: "root", path: "admin", index: void 0, caseSensitive: void 0, module: "/build/routes/admin-5FMBOCUC.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/admin.lessons": { id: "routes/admin.lessons", parentId: "routes/admin", path: "lessons", index: void 0, caseSensitive: void 0, module: "/build/routes/admin.lessons-ZJQBCIHZ.js", imports: ["/build/_shared/chunk-T66LTLHH.js", "/build/_shared/chunk-FPMBLZQX.js", "/build/_shared/chunk-3FSPVYEB.js", "/build/_shared/chunk-2MY6D6CV.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/admin.lessons.$topicId": { id: "routes/admin.lessons.$topicId", parentId: "routes/admin.lessons", path: ":topicId", index: void 0, caseSensitive: void 0, module: "/build/routes/admin.lessons.$topicId-SVU2CRLS.js", imports: ["/build/_shared/chunk-66YPKUOU.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/admin.lessons.$topicId.$lessonId": { id: "routes/admin.lessons.$topicId.$lessonId", parentId: "routes/admin.lessons.$topicId", path: ":lessonId", index: void 0, caseSensitive: void 0, module: "/build/routes/admin.lessons.$topicId.$lessonId-KFAXPNGU.js", imports: ["/build/_shared/chunk-TGVPNNTD.js", "/build/_shared/chunk-T66LTLHH.js", "/build/_shared/chunk-3FSPVYEB.js", "/build/_shared/chunk-2MY6D6CV.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: "index", index: void 0, caseSensitive: void 0, module: "/build/routes/index-6Q6MPO6H.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/learn": { id: "routes/learn", parentId: "root", path: "learn", index: void 0, caseSensitive: void 0, module: "/build/routes/learn-PEHOFLBE.js", imports: ["/build/_shared/chunk-I6L4UFPE.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/lesson-factory": { id: "routes/lesson-factory", parentId: "root", path: "lesson-factory", index: void 0, caseSensitive: void 0, module: "/build/routes/lesson-factory-LUZZO6PT.js", imports: ["/build/_shared/chunk-I6L4UFPE.js", "/build/_shared/chunk-TGVPNNTD.js", "/build/_shared/chunk-66YPKUOU.js", "/build/_shared/chunk-FPMBLZQX.js", "/build/_shared/chunk-3FSPVYEB.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/lessons": { id: "routes/lessons", parentId: "root", path: "lessons", index: void 0, caseSensitive: void 0, module: "/build/routes/lessons-HS2HBZBI.js", imports: ["/build/_shared/chunk-T66LTLHH.js", "/build/_shared/chunk-FPMBLZQX.js", "/build/_shared/chunk-3FSPVYEB.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/lessons.$topicId": { id: "routes/lessons.$topicId", parentId: "routes/lessons", path: ":topicId", index: void 0, caseSensitive: void 0, module: "/build/routes/lessons.$topicId-2Y77EZUY.js", imports: ["/build/_shared/chunk-66YPKUOU.js", "/build/_shared/chunk-2MY6D6CV.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/lessons.$topicId.$lessonId": { id: "routes/lessons.$topicId.$lessonId", parentId: "routes/lessons.$topicId", path: ":lessonId", index: void 0, caseSensitive: void 0, module: "/build/routes/lessons.$topicId.$lessonId-UV2XSKBD.js", imports: ["/build/_shared/chunk-TGVPNNTD.js", "/build/_shared/chunk-T66LTLHH.js", "/build/_shared/chunk-3FSPVYEB.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "24257658", hmr: void 0, url: "/build/manifest-24257658.js" };
 
 // server-entry-module:@remix-run/dev/server-build
-var assetsBuildDirectory = "public\\build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !1, v2_headers: !1, v2_meta: !1, v2_normalizeFormMethod: !1, v2_routeConvention: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
+var assetsBuildDirectory = "public\\build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !0, v2_headers: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
   root: {
     id: "root",
     parentId: void 0,
@@ -4943,18 +5346,34 @@ var assetsBuildDirectory = "public\\build", future = { v2_dev: !1, unstable_post
     caseSensitive: void 0,
     module: root_exports
   },
+  "routes/admin.lessons.$topicId.$lessonId": {
+    id: "routes/admin.lessons.$topicId.$lessonId",
+    parentId: "routes/admin.lessons.$topicId",
+    path: ":lessonId",
+    index: void 0,
+    caseSensitive: void 0,
+    module: admin_lessons_topicId_lessonId_exports
+  },
   "routes/lessons.$topicId.$lessonId": {
     id: "routes/lessons.$topicId.$lessonId",
-    parentId: "root",
-    path: "lessons/:topicId/:lessonId",
+    parentId: "routes/lessons.$topicId",
+    path: ":lessonId",
     index: void 0,
     caseSensitive: void 0,
     module: lessons_topicId_lessonId_exports
   },
+  "routes/admin.lessons.$topicId": {
+    id: "routes/admin.lessons.$topicId",
+    parentId: "routes/admin.lessons",
+    path: ":topicId",
+    index: void 0,
+    caseSensitive: void 0,
+    module: admin_lessons_topicId_exports
+  },
   "routes/lessons.$topicId": {
     id: "routes/lessons.$topicId",
-    parentId: "root",
-    path: "lessons/:topicId",
+    parentId: "routes/lessons",
+    path: ":topicId",
     index: void 0,
     caseSensitive: void 0,
     module: lessons_topicId_exports
@@ -4967,6 +5386,14 @@ var assetsBuildDirectory = "public\\build", future = { v2_dev: !1, unstable_post
     caseSensitive: void 0,
     module: lesson_factory_exports
   },
+  "routes/admin.lessons": {
+    id: "routes/admin.lessons",
+    parentId: "routes/admin",
+    path: "lessons",
+    index: void 0,
+    caseSensitive: void 0,
+    module: admin_lessons_exports
+  },
   "routes/lessons": {
     id: "routes/lessons",
     parentId: "root",
@@ -4975,11 +5402,27 @@ var assetsBuildDirectory = "public\\build", future = { v2_dev: !1, unstable_post
     caseSensitive: void 0,
     module: lessons_exports
   },
-  "routes/index": {
-    id: "routes/index",
+  "routes/_index": {
+    id: "routes/_index",
     parentId: "root",
     path: void 0,
     index: !0,
+    caseSensitive: void 0,
+    module: index_exports
+  },
+  "routes/admin": {
+    id: "routes/admin",
+    parentId: "root",
+    path: "admin",
+    index: void 0,
+    caseSensitive: void 0,
+    module: admin_exports
+  },
+  "routes/index": {
+    id: "routes/index",
+    parentId: "root",
+    path: "index",
+    index: void 0,
     caseSensitive: void 0,
     module: routes_exports
   },

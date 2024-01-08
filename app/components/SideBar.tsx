@@ -1,8 +1,7 @@
 import type { ComponentProps } from "react";
 import { useState } from "react";
 import { Box, Button, Link, Paper, Switch, Typography } from "@mui/material";
-import orevIconSrc from '/public/images/orev-icon-portrait.png'
-
+import orevIconSrc from "~/images/orev-icon-portrait.png";
 
 type SideBarItems = {
   name: Tab;
@@ -17,12 +16,7 @@ const sideBarItems: SideBarItems[] = [
     name: "למידה",
     href: "/learn",
     icon: (
-      <svg
-        width="46"
-        height="46"
-        viewBox="0 0 32 32"
-        fill="none"
-      >
+      <svg width="46" height="46" viewBox="0 0 32 32" fill="none">
         <path
           d="M24.5852 25.2658C24.2883 26.8243 22.9257 27.9519 21.3392 27.9519H10.6401C9.05354 27.9519 7.69094 26.8243 7.39408 25.2658L4.98096 12.5969L15.9001 4.52225L26.9988 12.5941L24.5852 25.2658Z"
           fill="#FFC800"
@@ -49,12 +43,7 @@ const sideBarItems: SideBarItems[] = [
     name: "פרופיל",
     href: "/profile",
     icon: (
-      <svg
-        width="46"
-        height="46"
-        viewBox="0 0 46 46"
-        fill="none"
-      >
+      <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -93,38 +82,87 @@ const sideBarItems: SideBarItems[] = [
     name: "מפעל השיעורים",
     href: "/lesson-factory",
     icon: (
-      <svg
-        width="44"
-        height="44"
-        viewBox="0 0 512 512"
-        fill="none"
-      >
-        <path style={{ fill: '#792A18' }} d="M478.242,71.455h-67.517l33.758,360.088h33.758c18.644,0,33.758-15.115,33.758-33.758V105.213 C512,86.57,496.885,71.455,478.242,71.455z" />
-        <path style={{ fill: '#95341D' }} d="M210.989,70.33L256,464.176c18.645,0,33.758-15.114,33.758-33.758h154.725V70.33H210.989z" />
-        <path style={{ fill: '#AB5D4A' }} d="M33.758,70.33C15.115,70.33,0,85.444,0,104.088v292.571c0,18.644,15.115,33.758,33.758,33.758 h188.484c0,18.645,15.114,33.758,33.758,33.758V70.33H33.758z" />
-        <polygon style={{ fill: '#A99E9B' }} points="421.978,340.396 433.231,396.659 478.242,396.659 478.242,362.901 " />
-        <path style={{ fill: '#C1B8B5' }} d="M233.495,340.396L256,422.537v7.88c0-18.567,15.191-33.758,33.758-33.758h141.785v-56.264H233.495z" />
-        <path style={{ fill: '#D8D1D0' }} d="M33.758,362.901v33.758h188.484c18.567,0,33.758,15.191,33.758,33.758V329.143L33.758,362.901z" />
-        <polygon style={{ fill: '#E26142' }} points="391.066,475.429 417.775,464.176 444.484,475.429 444.484,340.396 391.066,340.396 " />
-        <polygon style={{ fill: '#C1B8B5' }} points="433.231,36.571 399.473,199.736 433.231,362.901 478.242,362.901 478.242,36.571 " />
-        <path style={{ fill: '#D8D1D0' }} d="M289.758,36.571C271.191,36.571,256,51.763,256,70.33l-33.758,163.165L256,388.782v7.877 c0-18.567,15.191-33.758,33.758-33.758h143.473V247.557l-22.506-71.734l22.506-71.735V36.571H289.758z" />
-        <path style={{ fill: '#F0EBEA' }} d="M222.242,36.571H33.758v326.33h188.484c18.567,0,33.758,15.191,33.758,33.758V70.33 C256,51.763,240.809,36.571,222.242,36.571z" />
-        <rect x="301.011" y="104.088" style={{ fill: '#FFFFFF' }} width="132.22" height="143.473" />
+      <svg width="44" height="44" viewBox="0 0 512 512" fill="none">
+        <path
+          style={{ fill: "#792A18" }}
+          d="M478.242,71.455h-67.517l33.758,360.088h33.758c18.644,0,33.758-15.115,33.758-33.758V105.213 C512,86.57,496.885,71.455,478.242,71.455z"
+        />
+        <path
+          style={{ fill: "#95341D" }}
+          d="M210.989,70.33L256,464.176c18.645,0,33.758-15.114,33.758-33.758h154.725V70.33H210.989z"
+        />
+        <path
+          style={{ fill: "#AB5D4A" }}
+          d="M33.758,70.33C15.115,70.33,0,85.444,0,104.088v292.571c0,18.644,15.115,33.758,33.758,33.758 h188.484c0,18.645,15.114,33.758,33.758,33.758V70.33H33.758z"
+        />
+        <polygon
+          style={{ fill: "#A99E9B" }}
+          points="421.978,340.396 433.231,396.659 478.242,396.659 478.242,362.901 "
+        />
+        <path
+          style={{ fill: "#C1B8B5" }}
+          d="M233.495,340.396L256,422.537v7.88c0-18.567,15.191-33.758,33.758-33.758h141.785v-56.264H233.495z"
+        />
+        <path
+          style={{ fill: "#D8D1D0" }}
+          d="M33.758,362.901v33.758h188.484c18.567,0,33.758,15.191,33.758,33.758V329.143L33.758,362.901z"
+        />
+        <polygon
+          style={{ fill: "#E26142" }}
+          points="391.066,475.429 417.775,464.176 444.484,475.429 444.484,340.396 391.066,340.396 "
+        />
+        <polygon
+          style={{ fill: "#C1B8B5" }}
+          points="433.231,36.571 399.473,199.736 433.231,362.901 478.242,362.901 478.242,36.571 "
+        />
+        <path
+          style={{ fill: "#D8D1D0" }}
+          d="M289.758,36.571C271.191,36.571,256,51.763,256,70.33l-33.758,163.165L256,388.782v7.877 c0-18.567,15.191-33.758,33.758-33.758h143.473V247.557l-22.506-71.734l22.506-71.735V36.571H289.758z"
+        />
+        <path
+          style={{ fill: "#F0EBEA" }}
+          d="M222.242,36.571H33.758v326.33h188.484c18.567,0,33.758,15.191,33.758,33.758V70.33 C256,51.763,240.809,36.571,222.242,36.571z"
+        />
+        <rect
+          x="301.011"
+          y="104.088"
+          style={{ fill: "#FFFFFF" }}
+          width="132.22"
+          height="143.473"
+        />
         <g>
-          <path style={{ fill: '#7F7774' }} d="M210.989,303.824H78.769c-4.662,0-8.44-3.778-8.44-8.44c0-4.662,3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44C219.429,300.047,215.651,303.824,210.989,303.824z" />
-          <path style={{ fill: '#7F7774' }} d="M210.989,256H78.769c-4.662,0-8.44-3.778-8.44-8.44s3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44S215.651,256,210.989,256z" />
-          <path style={{ fill: '#7F7774' }} d="M210.989,208.176H78.769c-4.662,0-8.44-3.778-8.44-8.44s3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44S215.651,208.176,210.989,208.176z" />
-          <path style={{ fill: '#7F7774' }} d="M210.989,160.352H78.769c-4.662,0-8.44-3.778-8.44-8.44s3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44S215.651,160.352,210.989,160.352z" />
-          <path style={{ fill: '#7F7774' }} d="M210.989,112.527H78.769c-4.662,0-8.44-3.778-8.44-8.44c0-4.662,3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44C219.429,108.75,215.651,112.527,210.989,112.527z" />
+          <path
+            style={{ fill: "#7F7774" }}
+            d="M210.989,303.824H78.769c-4.662,0-8.44-3.778-8.44-8.44c0-4.662,3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44C219.429,300.047,215.651,303.824,210.989,303.824z"
+          />
+          <path
+            style={{ fill: "#7F7774" }}
+            d="M210.989,256H78.769c-4.662,0-8.44-3.778-8.44-8.44s3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44S215.651,256,210.989,256z"
+          />
+          <path
+            style={{ fill: "#7F7774" }}
+            d="M210.989,208.176H78.769c-4.662,0-8.44-3.778-8.44-8.44s3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44S215.651,208.176,210.989,208.176z"
+          />
+          <path
+            style={{ fill: "#7F7774" }}
+            d="M210.989,160.352H78.769c-4.662,0-8.44-3.778-8.44-8.44s3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44S215.651,160.352,210.989,160.352z"
+          />
+          <path
+            style={{ fill: "#7F7774" }}
+            d="M210.989,112.527H78.769c-4.662,0-8.44-3.778-8.44-8.44c0-4.662,3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44C219.429,108.75,215.651,112.527,210.989,112.527z"
+          />
         </g>
-        <path style={{ fill: '#554F4E' }} d="M433.231,303.824h-132.22c-4.662,0-8.44-3.778-8.44-8.44c0-4.662,3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44C441.67,300.047,437.893,303.824,433.231,303.824z" />
-      </svg >
+        <path
+          style={{ fill: "#554F4E" }}
+          d="M433.231,303.824h-132.22c-4.662,0-8.44-3.778-8.44-8.44c0-4.662,3.778-8.44,8.44-8.44h132.22 c4.662,0,8.44,3.778,8.44,8.44C441.67,300.047,437.893,303.824,433.231,303.824z"
+        />
+      </svg>
     ),
   },
   // maybe add in the future a settings page about page and so on
 ];
 
-const LeftBarMoreMenuSvg = (props: ComponentProps<'svg'>) => {
+const LeftBarMoreMenuSvg = (props: ComponentProps<"svg">) => {
   return (
     <svg width="46" height="46" viewBox="0 0 46 46" fill="none" {...props}>
       <circle
@@ -143,7 +181,6 @@ const LeftBarMoreMenuSvg = (props: ComponentProps<'svg'>) => {
 };
 
 export const SideBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
-
   const [moreMenuShown, setMoreMenuShown] = useState(false);
   const [isDarkModeChecked, setisDarkModeChecked] = useState(false);
 
@@ -153,63 +190,90 @@ export const SideBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
 
   return (
     <>
-      <Box sx={{
-        right: 0,
-        top: 0,
-        width: '230px',
-        height: '100%',
-        backgroundColor: '#f0dfbf',
-        zIndex: 2,
-      }}>
-        <Box sx={{
-          display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingTop: 1,
-          height: '80px', borderBottom: '2px solid #e5e5e5'
-        }}>
-          <Typography sx={{
-            fontSize: '1.7rem', fontWeight: '900', color: 'orange', wordWrap: 'break-word', width: '120px', textAlign: 'left', paddingLeft: 4,
-          }}>
+      <Box
+        sx={{
+          right: 0,
+          top: 0,
+          width: "230px",
+          height: "100%",
+          backgroundColor: "#f0dfbf",
+          zIndex: 2,
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+            paddingTop: 1,
+            height: "80px",
+            borderBottom: "2px solid #e5e5e5",
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: "1.7rem",
+              fontWeight: "900",
+              color: "orange",
+              wordWrap: "break-word",
+              width: "120px",
+              textAlign: "left",
+              paddingLeft: 4,
+            }}
+          >
             לומדת עורב
           </Typography>
-          <Link href="/" sx={{ paddingLeft: 2, margin: 'auto' }}>
-            <img src={orevIconSrc} alt="orev logo" width={'78px'} height={'78px'} />
+          <Link href="/" sx={{ paddingLeft: 2, margin: "auto" }}>
+            <img
+              src={orevIconSrc}
+              alt="orev logo"
+              width={"78px"}
+              height={"78px"}
+            />
           </Link>
         </Box>
-        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <Box sx={{ display: "flex", flexDirection: "column" }}>
           {sideBarItems.map((item) => (
-            <Box key={item.href} >
+            <Box key={item.href}>
               <Link
                 href={item.href}
                 sx={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  paddingY: '0.25rem',
-                  gap: '1rem',
-                  alignItems: 'center',
-                  border: '2px solid #e5e5e5',
-                  borderRadius: '0.75rem',
-                  fontSize: '0.875rem',
-                  textDecoration: 'none',
-                  color: '#9CA3AF',
-                  '&:hover': { backgroundColor: '#F3F4e6' },
+                  display: "flex",
+                  flexDirection: "row",
+                  paddingY: "0.25rem",
+                  gap: "1rem",
+                  alignItems: "center",
+                  border: "2px solid #e5e5e5",
+                  borderRadius: "0.75rem",
+                  fontSize: "0.875rem",
+                  textDecoration: "none",
+                  color: "#9CA3AF",
+                  "&:hover": { backgroundColor: "#F3F4e6" },
                   ...(selectedTab === item.name
                     ? {
-                      borderColor: '#84d8ff',
-                      background: '#ddf4ff',
-                    }
+                        borderColor: "#84d8ff",
+                        background: "#ddf4ff",
+                      }
                     : {}),
                 }}
               >
                 {item.icon}
-                <Typography>
-                  {item.name}
-                </Typography>
+                <Typography>{item.name}</Typography>
               </Link>
             </Box>
           ))}
           <Box
             sx={{
-              display: "flex", paddingY: "0.25rem", paddingX: "0.5rem", gap: "0.75rem", alignItems: "center",
-              borderRadius: "0.75rem", color: "#9CA3AF", cursor: "default", "&:hover": { backgroundColor: "#F3F4e6" }
+              display: "flex",
+              paddingY: "0.25rem",
+              paddingX: "0.5rem",
+              gap: "0.75rem",
+              alignItems: "center",
+              borderRadius: "0.75rem",
+              color: "#9CA3AF",
+              cursor: "default",
+              "&:hover": { backgroundColor: "#F3F4e6" },
             }}
             onMouseEnter={() => setMoreMenuShown(true)}
             onMouseLeave={() => setMoreMenuShown(false)}
@@ -218,13 +282,13 @@ export const SideBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
           >
             {/* More info tab */}
             <LeftBarMoreMenuSvg />
-            <Typography sx={{ fontSize: "1rem", }}>לעוד</Typography>
+            <Typography sx={{ fontSize: "1rem" }}>לעוד</Typography>
             <Paper
               sx={{
                 position: "absolute",
                 top: 250,
                 left: 220,
-                minWidth: '270px',
+                minWidth: "270px",
                 borderRadius: "2xl",
                 display: moreMenuShown ? "block" : "none",
                 "&:hover": {
@@ -234,30 +298,54 @@ export const SideBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
               onMouseEnter={() => setMoreMenuShown(true)}
               onMouseLeave={() => setMoreMenuShown(false)}
             >
-              <Box sx={{
-                display: 'flex', flexDirection: "column", borderColor: "#D1D5DB",
-              }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  borderColor: "#D1D5DB",
+                }}
+              >
                 <Button
-                  sx={{ paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { "backgroundColor": "#2e1d02" } }}
-                // onClick={() => setLoginScreenState("SIGNUP")}
+                  sx={{
+                    paddingTop: "0.5rem",
+                    paddingBottom: "0.5rem",
+                    textAlign: "right",
+                    "&:hover": { backgroundColor: "#2e1d02" },
+                  }}
+                  // onClick={() => setLoginScreenState("SIGNUP")}
                 >
                   צור פרופיל
                 </Button>
                 <Button
-                  sx={{ paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { "backgroundColor": "#2e1d02" } }}
-                // href={loggedIn ? "/settings/account" : "/settings/sound"}
+                  sx={{
+                    paddingTop: "0.5rem",
+                    paddingBottom: "0.5rem",
+                    textAlign: "right",
+                    "&:hover": { backgroundColor: "#2e1d02" },
+                  }}
+                  // href={loggedIn ? "/settings/account" : "/settings/sound"}
                 >
                   הגדרות
                 </Button>
                 <Button
-                  sx={{ paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { "backgroundColor": "#2e1d02" } }}
-                // onClick={() => setLoginScreenState("LOGIN")}
+                  sx={{
+                    paddingTop: "0.5rem",
+                    paddingBottom: "0.5rem",
+                    textAlign: "right",
+                    "&:hover": { backgroundColor: "#2e1d02" },
+                  }}
+                  // onClick={() => setLoginScreenState("LOGIN")}
                 >
                   התחברות
                 </Button>
                 <Button
-                  sx={{ paddingTop: "0.5rem", paddingBottom: "0.5rem", textAlign: "right", "&:hover": { "backgroundColor": "#2e1d02" } }}
-                // onClick={logOut}
+                  sx={{
+                    paddingTop: "0.5rem",
+                    paddingBottom: "0.5rem",
+                    textAlign: "right",
+                    "&:hover": { backgroundColor: "#2e1d02" },
+                  }}
+                  // onClick={logOut}
                 >
                   התנתקות
                 </Button>
@@ -272,20 +360,42 @@ export const SideBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
                   }}
                 >
                   <Box sx={{ display: "flex", alignItems: "center" }}>
-                    <Typography sx={{ fontSize: "1rem", fontWeight: "normal" }}>מצב</Typography>
+                    <Typography sx={{ fontSize: "1rem", fontWeight: "normal" }}>
+                      מצב
+                    </Typography>
                     {isDarkModeChecked ? (
-                      <Typography sx={{ color: '#784c06', marginRight: 2, fontWeight: "medium" }}>לילה</Typography>
+                      <Typography
+                        sx={{
+                          color: "#784c06",
+                          marginRight: 2,
+                          fontWeight: "medium",
+                        }}
+                      >
+                        לילה
+                      </Typography>
                     ) : (
-                      <Typography sx={{ color: '#ffb238', marginRight: 2, fontWeight: "medium" }}>יום</Typography>
+                      <Typography
+                        sx={{
+                          color: "#ffb238",
+                          marginRight: 2,
+                          fontWeight: "medium",
+                        }}
+                      >
+                        יום
+                      </Typography>
                     )}
                   </Box>
-                  <Switch defaultChecked={isDarkModeChecked} color="warning" onChange={handleChange} />
+                  <Switch
+                    defaultChecked={isDarkModeChecked}
+                    color="warning"
+                    onChange={handleChange}
+                  />
                 </Box>
               </Box>
             </Paper>
           </Box>
-        </Box >
-      </Box >
+        </Box>
+      </Box>
     </>
   );
 };
